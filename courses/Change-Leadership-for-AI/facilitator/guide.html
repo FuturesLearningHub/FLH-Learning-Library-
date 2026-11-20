@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -86,7 +89,7 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>&lt;1</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>01 · Why AI change fails</td><td>9</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Name the fear</td><td>12</td><td>8</td></tr><tr><td>03 · Safety to stumble</td><td>12</td><td>9</td></tr><tr><td>04 · The ethics conversation</td><td>11</td><td>7</td></tr><tr><td>05 · The Change Lab</td><td>14</td><td>10</td></tr><tr><td>06 · Hold for the long arc</td><td>10</td><td>6</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My change card</td><td>6</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>4</td><td>1</td></tr>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>skip</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>01 · Why AI change fails</td><td>9</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Name the fear</td><td>12</td><td>8</td></tr><tr><td>03 · Safety to stumble</td><td>12</td><td>9</td></tr><tr><td>04 · The ethics conversation</td><td>11</td><td>7</td></tr><tr><td>05 · The Change Lab</td><td>14</td><td>10</td></tr><tr><td>06 · Hold for the long arc</td><td>10</td><td>6</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My change card</td><td>6</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>4</td><td>1</td></tr>
     <tr><th>Total</th><th>93</th><th>60</th></tr></table>
     <h3>Audience</h3><p>Managers and team leads facing a real AI change: a tool arriving, a workflow shifting, or a team already quietly worried. A Manager Voyage course. 8 to 24 works best (the naming-line and lab drills run in pairs); scales larger with room votes. No prerequisites, though Start Smarter helps with tool fluency; the traffic-light data rule from the AI courses is assumed and restated here, and Workflow &amp; Process Redesign is the natural mechanics companion.</p>
     <h3>Room setup</h3><p>Projector plus presenter device; learners on their own devices via the Welcome-slide QR; movable seating for pairs. Virtual: breakouts of 2 for the naming-line drill and the lab debrief. Set the norm in the first minute: situations and roles, never people's names, and nothing typed is saved or sent. Expect real anxiety in this room; some attendees are living the exact change the course describes, so keep the tone warm and never make anyone's situation an example.</p>
@@ -99,14 +102,13 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device and set the norm that makes real-change material safe: situations and roles, never names, and nothing typed leaves the screen.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Point your camera at that code before we start. Today is not about AI tools; it's about the part of AI change the tools can't touch: the fear in the room, the question nobody asks out loud, and what a leader does about both. We'll work on the real change in front of your real team, so one ground rule for the next ninety minutes: situations and roles, never people's names. And everything you type today stays on your screen; nothing is saved or sent anywhere.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Have this slide projected as people arrive.</li><li>Point at the QR and get phones up before you say anything else.</li><li>Set the norm explicitly and early: situations and roles, never people's names; typed exercises stay on their screens.</li><li>Confirm by show of hands that most of the room has the site open before advancing.</li></ol>
     <p class='tagline ask'>Ask</p><p class='script'>&ldquo;Quick calibration, shout it out: how many of you have an AI change already in motion on your team, or coming this year? And how many of you have talked with your team, directly, about what it means for them?&rdquo;</p><p class='mini'><b>Expect:</b></p><ul><li>Nearly every hand up on the first question</li><li>Most hands down on the second, with some sheepish looks</li><li>One or two who have had the conversation, usually because someone forced it</li></ul><p class='mini'><b>Respond:</b> Name the gap warmly: 'That gap between change arriving and change being talked about is where fear grows, and closing it is a learnable skill, which is the next ninety minutes.'</p>
-    
     <p class="mini"><b>Validate:</b> 80%+ of the room has the deck open on a device; the room can repeat the 'situations and roles, never names' norm back to you.</p>
     <p class="mini"><b>Watch for:</b> Anyone bracing for an AI tools workshop. The frame that relaxes the room: today has almost no AI in it; it is a leadership session about the humans the AI lands on.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's exactly what you'll walk out able to do.&rdquo;</p>
@@ -114,14 +116,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: five capabilities, ending in one real change carded with a first conversation and a date.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five things by the end. You'll know why AI change fails on human ground, and what the effective eighteen percent of leaders do differently. You'll be able to name the fear in the room, including the job question, without promising anything you can't keep. You'll know how to build safety around experimenting, so trying and missing is survivable on your team. You'll be ready to host your team's own ethics conversation instead of forwarding a policy. And it all lands in one artifact: a change card for the change your team is actually facing, with a date on it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the five objectives briskly, in plain language.</li><li>Land on the last one: this session ends with a REAL change card, one change, one conversation, one date.</li><li>Name the sources once for credibility: Accenture for the 18 percent and the differentiators, Gallup for the employee side.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Learners can say what the capstone will be (one change, one first conversation, one date).</p>
     <p class="mini"><b>Watch for:</b> Tool questions arriving early ('which AI is coming?'). Park them: the session is deliberately tool-agnostic, and the method outlives any tool.</p>
     <p class="mini"><b>Transition:</b> &ldquo;One page before the plan: why the university's whole bet depends on how you lead this change.&rdquo;</p>
@@ -129,14 +129,12 @@
     </div>
   </div>
   <div class="sec">
-    
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
-    <h2>The Chancellor's charge <span class="mins">Full 3 min · Core &lt;1</span></h2>
+    <h2>The Chancellor's charge <span class="mins">Full 3 min · Core skip</span></h2>
     <p class="purpose">Connect the course to the institutional vision: a university cannot move at uncommon speed unless its managers lead AI change on human ground, with curiosity, courage, and connection.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Before the plan, the institutional stakes. Chancellor Diermeier's vision is one sentence with no hedge in it: Vanderbilt will define the great university of the 21st Century and be it. The how is uncommon speed, agility, and scale, and notice that all three are change words. A university cannot move at uncommon speed if its teams meet every new tool with quiet dread, which is why the research keeps finding that the effective AI leaders differ on human ground: curiosity, courage, connection. Our motto is the dare, Crescere aude, dare to grow, and your team will only take that dare if you make it safe to take. That is this session.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the vision sentence off the slide, slowly; it carries the page.</li><li>Walk the three focus cards, landing on the 'The team translation' line in each.</li><li>Point at the flywheel card: values-driven leadership is a named flywheel input, and it is the one this course trains.</li><li>Keep it under three minutes; this page frames the session, and the sections do the teaching.</li></ol>
-
-
     <p class="mini"><b>Validate:</b> The room can connect the vision to the course in one line: the university's speed depends on teams that feel safe enough to change.</p>
     <p class="mini"><b>Watch for:</b> Eye-rolls at strategy language. Ground it fast: the flywheel's values-driven input is decided in team meetings like the ones they run every week.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Six ideas, in a deliberate order.&rdquo;</p>
@@ -144,14 +142,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each tool as it arrives: evidence, naming, safety, ethics, practice, endurance.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The arc is simple: first the evidence about why AI change fails, then the naming move, the conversation most managers never have. Then the two conditions that make change survivable: safety to stumble and an honest ethics conversation. Then the Change Lab, where you lead six months of a rollout and see what your choices do. And we end where real change lives: the long arc, months after the announcement.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the six items in one breath each.</li><li>Point out the shape: the evidence (01), the first conversation (02), the conditions (03 and 04), six months of practice (05), and the long haul (06).</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed; this is orientation.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the evidence, because the numbers are worse than most of you think, and more hopeful.&rdquo;</p>
@@ -159,7 +155,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-why.jpg" alt="Slide: 01 · Why AI change fails" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-why.jpg" alt="Slide: 01 · Why AI change fails" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · Why AI change fails <span class="mins">Full 9 min · Core 6</span></h2>
     <p class="purpose">Establish with guessed-at, missed numbers that AI change fails on human ground: few leaders lead it well, most teams hear no plan, trust is low, and the differentiators are curiosity, courage, and connection.</p>
@@ -174,14 +170,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness to lock the session's core idea before the method arrives.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;People don't resist change. They resist being changed.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Let the line animate word by word. Say nothing until it finishes.</li><li>Read it once, slowly, then advance.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; this is pacing.</p>
     <p class="mini"><b>Watch for:</b> The urge to talk over it. Don't.</p>
     <p class="mini"><b>Transition:</b> &ldquo;So the method starts by giving people the thing being-changed takes away: the truth, out loud, first.&rdquo;</p>
@@ -189,7 +183,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-fear.jpg" alt="Slide: 02 · Name the fear" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-fear.jpg" alt="Slide: 02 · Name the fear" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · Name the fear <span class="mins">Full 12 min · Core 8</span></h2>
     <p class="purpose">Install the naming move and the honesty rules: say the fear before it says itself, frame with honest scope, never promise what you can't keep. Introduce the full method: Name, Frame, Invite, Hold.</p>
@@ -204,7 +198,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-safety.jpg" alt="Slide: 03 · Safety to stumble" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-safety.jpg" alt="Slide: 03 · Safety to stumble" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · Safety to stumble <span class="mins">Full 12 min · Core 9</span></h2>
     <p class="purpose">Apply psychological safety to AI adoption: public experiments, no-blame misses, and the leader going first, with the quiet ones named as the real vote on whether change sticks.</p>
@@ -219,7 +213,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-ethics.jpg" alt="Slide: 04 · The ethics conversation" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-ethics.jpg" alt="Slide: 04 · The ethics conversation" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>04 · The ethics conversation <span class="mins">Full 11 min · Core 7</span></h2>
     <p class="purpose">Make the manager the host of the team's own ethics conversation: disagreement as material, escalation sorted honestly, the traffic light as the immovable floor, and a private conversation plan built for their real change.</p>
@@ -234,7 +228,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-lab.jpg" alt="Slide: 05 · The Change Lab" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-lab.jpg" alt="Slide: 05 · The Change Lab" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>05 · The Change Lab <span class="mins">Full 14 min · Core 10</span></h2>
     <p class="purpose">Give every learner a full felt rep of the method under pressure: four decisive moments across six months of an AI rollout, with month-six outcomes that reward the container rather than enthusiasm. The session's deepest practice block.</p>
@@ -249,7 +243,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-arc.jpg" alt="Slide: 06 · Hold for the long arc" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-arc.jpg" alt="Slide: 06 · Hold for the long arc" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>06 · Hold for the long arc <span class="mins">Full 10 min · Core 6</span></h2>
     <p class="purpose">Make holding a practice: the revisit cadence, the quiet signals, courage as a habit, connection as the multiplier, and trust measured alongside usage.</p>
@@ -264,14 +258,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Score the session's knowledge against the five objectives before the capstone applies it (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per big idea. This is the systems check before you write the card that leaves the room with you.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone takes it on their own device, all six questions.</li><li>Ask for hands on 5-or-better; celebrate briefly.</li><li>For any question the room visibly missed, do a 30-second reteach from the relevant slide, not a lecture.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Room mode at 5/6 or better. The quiz maps onto the objectives, so misses tell you exactly what to reteach.</p>
     <p class="mini"><b>Watch for:</b> Racing. Frame it as the systems check before the card, not a race.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the only part of today that changes anything.&rdquo;</p>
@@ -279,7 +271,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My change card" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My change card" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · My change card <span class="mins">Full 6 min · Core 6</span></h2>
     <p class="purpose">Convert the session into one dated commitment: one change, one first conversation, one named failure mode to refuse, and a date. The transfer artifact and the Level 3 seed.</p>
@@ -294,14 +286,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer; it lives here for after the session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here as flip cards, including 'compliance theater,' for the next time a dashboard is green and a meeting is silent.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Flip one card on the projector (Compliance Theater is a good pick; it gets a knowing laugh and reteaches the lab).</li><li>Tell them it's all here whenever they need the vocabulary back.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; reference material.</p>
     <p class="mini"><b>Watch for:</b> Don't tour all twelve cards; one flip makes the point.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One conversation left.&rdquo;</p>
@@ -309,7 +299,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 4 min · Core 1</span></h2>
     <p class="purpose">Convert cards into spoken commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p>
@@ -323,7 +313,7 @@
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>

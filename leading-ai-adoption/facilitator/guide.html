@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -86,7 +89,7 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>2</td><td>1</td></tr><tr><td>Objectives</td><td>1</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>&lt;1</td></tr><tr><td>Agenda</td><td>1</td><td>—</td></tr><tr><td>01 · Model it, visibly</td><td>8</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>—</td></tr><tr><td>02 · The three guardrails</td><td>8</td><td>6</td></tr><tr><td>03 · The AI-enabled work audit</td><td>8</td><td>6</td></tr><tr><td>Recap quiz</td><td>3</td><td>3</td></tr><tr><td>Capstone · My adoption plan</td><td>5</td><td>5</td></tr><tr><td>Glossary</td><td>1</td><td>—</td></tr><tr><td>Closing · commitment</td><td>2</td><td>2</td></tr>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>2</td><td>1</td></tr><tr><td>Objectives</td><td>1</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>&lt;1</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>01 · Model it, visibly</td><td>8</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · The three guardrails</td><td>8</td><td>6</td></tr><tr><td>03 · The AI-enabled work audit</td><td>8</td><td>6</td></tr><tr><td>Recap quiz</td><td>3</td><td>3</td></tr><tr><td>Capstone · My adoption plan</td><td>5</td><td>5</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>2</td><td>2</td></tr>
     <tr><th>Total</th><th>43</th><th>30</th></tr></table>
     <h3>Audience</h3><p>Part of the AI-enabled Education Series and the Manager Voyage. Managers and team leads who want their teams actually using AI well, safely and openly. 8 to 24 works best; drills run in pairs. Works as the connective course after Start Smarter and alongside Workflow &amp; Process Redesign.</p>
     <h3>Room setup</h3><p>Projector plus presenter device; learners on their own devices via the Welcome-slide QR; seating that pairs easily. Virtual: breakouts of 2. The norm, stated in minute one: teams and roles, never names, and nothing typed leaves the screen. Bring your own real AI-use story; this session's credibility runs on the facilitator modeling the modeling.</p>
@@ -99,14 +102,12 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Get learners in on their own devices and set the norm for honest self-assessment.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Scan the code before we start. Today is about the single highest-leverage thing a leader does for AI adoption, and it isn't buying tools or writing policy. It's what your team watches you do. You'll audit your own team honestly today, so the ground rule: teams and roles, never names, and everything you type stays on your screen.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Slide projected as people arrive; phones up before you speak.</li><li>State the norm once: teams and roles, never names, and the audit stays on their screens.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Most of the room has the deck open; the norm gets a nod.</p>
     <p class="mini"><b>Watch for:</b> Anyone expecting a tools demo. The frame: this is a leadership session; the tools are wherever VU put them.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's the contract.&rdquo;</p>
@@ -114,14 +115,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 1 min · Core 1</span></h2>
     <p class="purpose">Set the contract: four capabilities, ending in an audit run and a dated visible move.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Four things by the end: you'll know why modeling and workflow integration beat tools and mandates. You'll know what visible modeling actually looks like, down to the three sentences. You'll be able to write the three guardrails that make trying safe. And you'll run the AI-enabled work audit on your own team and leave with a dated first move.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the four objectives briskly.</li><li>Name the two research anchors once: Gallup on modeling and integration; Accenture's 18 percent and the three C's.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Learners can say what the capstone is (a dated first visible move).</p>
     <p class="mini"><b>Watch for:</b> Skeptics of survey research; the numbers are directional and the behaviors are cheap, say so.</p>
     <p class="mini"><b>Transition:</b> &ldquo;One minute on where this sits in the university's plan, then the three ideas.&rdquo;</p>
@@ -129,14 +128,12 @@
     </div>
   </div>
   <div class="sec">
-    
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>The Chancellor's charge <span class="mins">Full 3 min · Core &lt;1</span></h2>
     <p class="purpose">Anchor manager modeling in the Chancellor's vision so adoption reads as institutional work, not a tool rollout.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Before the audit, one minute on why this is bigger than your team. The Chancellor's vision has no hedge in it: Vanderbilt will define the great university of the 21st Century and be it, operating at uncommon speed, agility, and scale. No institution reaches uncommon speed by memo; it gets there one adopted workflow at a time, led by managers the team can watch. Crescere aude, dare to grow: your team will dare exactly as much as they see you dare first.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the vision sentence off the slide and let it land.</li><li>Walk the three focus areas, one team translation each.</li><li>Point at the flywheel: execution with ambition is adoption, and the manager is the lever.</li></ol>
-
-
     <p class="mini"><b>Validate:</b> Nods at the team-translation lines; no discussion needed here.</p>
     <p class="mini"><b>Watch for:</b> The urge to teach strategy; this page is a frame, and the three ideas are waiting.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the three ideas, in order.&rdquo;</p>
@@ -144,14 +141,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Orient: model, rails, audit.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The arc: first what the research says about modeling, and what visible use actually sounds like. Then the three guardrails that make it safe for your team to try. Then the audit: five honest questions about your team, scored, with your first three moves.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the three items in one breath each.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the finding that gives this course its name.&rdquo;</p>
@@ -159,7 +154,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-model.jpg" alt="Slide: 01 · Model it, visibly" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-model.jpg" alt="Slide: 01 · Model it, visibly" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · Model it, visibly <span class="mins">Full 8 min · Core 6</span></h2>
     <p class="purpose">Install the modeling finding (Gallup) and the three C's (Accenture), and teach the narrated-use move.</p>
@@ -174,14 +169,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness on the core idea.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Teams adopt what you model, not what you mandate.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Let the line animate; read it once, then advance.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; pacing.</p>
     <p class="mini"><b>Watch for:</b> The urge to talk over it.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Modeling opens the door. The guardrails are what your team walks through.&rdquo;</p>
@@ -189,7 +182,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-rails.jpg" alt="Slide: 02 · The three guardrails" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-rails.jpg" alt="Slide: 02 · The three guardrails" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · The three guardrails <span class="mins">Full 8 min · Core 6</span></h2>
     <p class="purpose">Install the three-rail structure (data, sign-off, ownership) and drill incident diagnosis by missing rail.</p>
@@ -204,7 +197,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-audit.jpg" alt="Slide: 03 · The AI-enabled work audit" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-audit.jpg" alt="Slide: 03 · The AI-enabled work audit" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · The AI-enabled work audit <span class="mins">Full 8 min · Core 6</span></h2>
     <p class="purpose">Every learner runs the five-question audit on their real team and leaves with a scored snapshot and three prioritized moves. The session's signature block.</p>
@@ -219,14 +212,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 3 min · Core 3</span></h2>
     <p class="purpose">Score the session's knowledge against the objectives before the capstone (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Four questions, one per big idea. The systems check before the plan.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone takes it on their own device, all four questions.</li><li>Hands for 3-or-better; 30-second reteach on anything missed.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Room mode at 3/4 or better.</p>
     <p class="mini"><b>Watch for:</b> Racing; it's the check before the plan.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the move your team will actually see.&rdquo;</p>
@@ -234,7 +225,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My adoption plan" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My adoption plan" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · My adoption plan <span class="mins">Full 5 min · Core 5</span></h2>
     <p class="purpose">Convert the audit into one dated, visible first move. The transfer artifact and Level 3 seed.</p>
@@ -249,14 +240,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here, including the amnesty, which is the difference between finding your team's shortcuts and driving them underground.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Flip one card (The Amnesty flips well and reteaches the rails).</li><li>Tell them it's here whenever they need it.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; reference.</p>
     <p class="mini"><b>Watch for:</b> Don't tour the cards.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. Monday is watching.&rdquo;</p>
@@ -264,21 +253,19 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 2 min · Core 2</span></h2>
     <p class="purpose">Convert plans into spoken commitments and capture the Level 1 check.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The whole session in one breath: they adopt what you model, the rails make trying safe, and the audit tells you what to fix next, quarterly, forever. You have a plan. Say your move and your day out loud; spoken commitments stick.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the featured next step: the first visible move, then the audit rerun in a month.</li><li>Fist-to-five on confidence; note the number; the 30-day re-poll asks it again.</li><li>Commitment round: move and day, out loud or in chat.</li><li>Point at the cheat sheet and worksheet; the 7-day pulse is coming; stop on time.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Fist-to-five mostly 3+; a majority state a move and a day.</p>
     <p class="mini"><b>Watch for:</b> Plans without dates; the round catches them.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Go make the move where they can see it. Curiosity, courage, connection, and three honest sentences at Monday's meeting.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast round.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>

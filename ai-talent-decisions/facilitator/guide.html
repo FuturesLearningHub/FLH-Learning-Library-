@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -86,8 +89,8 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>2</td><td>1</td></tr><tr><td>Objectives</td><td>1</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>&lt;1</td></tr><tr><td>Agenda</td><td>1</td><td>—</td></tr><tr><td>01 · Instruments, not verdicts</td><td>8</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>—</td></tr><tr><td>02 · The Rubric Lab</td><td>8</td><td>6</td></tr><tr><td>03 · Skills, gaps, and growth</td><td>8</td><td>6</td></tr><tr><td>Recap quiz</td><td>3</td><td>3</td></tr><tr><td>Capstone · My talent toolkit card</td><td>5</td><td>5</td></tr><tr><td>Glossary</td><td>1</td><td>—</td></tr><tr><td>Closing · commitment</td><td>2</td><td>2</td></tr>
-    <tr><th>Total</th><th>43</th><th>30</th></tr></table>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>2</td><td>1</td></tr><tr><td>Objectives</td><td>1</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>&lt;1</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>The data rule</td><td>3</td><td>2</td></tr><tr><td>01 · Instruments, not verdicts</td><td>8</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · The Rubric Lab</td><td>8</td><td>6</td></tr><tr><td>03 · Skills, gaps, and growth</td><td>8</td><td>6</td></tr><tr><td>Recap quiz</td><td>3</td><td>3</td></tr><tr><td>Capstone · My talent toolkit card</td><td>5</td><td>5</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>2</td><td>2</td></tr>
+    <tr><th>Total</th><th>46</th><th>32</th></tr></table>
     <h3>Audience</h3><p>Part of the AI-enabled Education Series and the Manager Voyage. Leaders and managers who hire, run talent reviews, plan succession, or own team capability: anyone whose decisions shape careers. 8 to 24 works best; drills run in pairs. Partner with HR before applying anything candidate-facing; this session says so repeatedly and means it.</p>
     <h3>Room setup</h3><p>Projector plus presenter device; learners on their own devices via the Welcome-slide QR; seating that pairs easily. Virtual: breakouts of 2. The norm, stated in minute one: roles and rubrics, never names, and nothing typed leaves the screen.</p>
     <h3>Materials</h3><ul><li>Projector or large display and the facilitator link open (this edition)</li><li>Facilitator laptop with arrow keys or clicker; all notifications off</li><li>Learner devices (BYOD) joining via the welcome-slide QR</li><li>A few printed cheat sheets (cheatsheet.html) for anyone without a device</li><li>Printed toolkit cards (worksheet.html) as the no-device fallback</li><li>One real (or realistic) job description on hand for the demo moments</li></ul>
@@ -99,14 +102,12 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Get learners in on their own devices and set the norm for high-stakes people material.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Scan the code before we start. Today is about the highest-stakes decisions you make, who gets hired, promoted, developed, and the discipline that lets AI make those decisions more consistent without ever letting it make them. Ground rule for the whole session: roles and rubrics, never names, and everything you type stays on your screen.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Slide projected as people arrive; phones up before you speak.</li><li>State the norm once, clearly: roles and rubrics, never names.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Most of the room has the deck open; the norm gets a nod.</p>
     <p class="mini"><b>Watch for:</b> Anyone hoping this is a tool tutorial. The frame: this is a decision-quality session that happens to use AI.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's the contract.&rdquo;</p>
@@ -114,14 +115,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 1 min · Core 1</span></h2>
     <p class="purpose">Set the contract: four capabilities, ending in one instrument with a build date.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Four things by the end: you'll know which talent tasks AI drafts and which stay human calls, always. You'll be able to build a rubric with real anchors, for interviews or the 9-box. You'll know how to turn a job description into a structured interview kit. And you'll be able to map your team's skills and draft the gap-closing plan, all de-identified, all in approved tools.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the four objectives briskly.</li><li>Land the frame once: instruments drafted, verdicts human.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Learners can say what the capstone is (an instrument with a build date).</p>
     <p class="mini"><b>Watch for:</b> Vendor-tool questions arriving early; park them for the contingency answer.</p>
     <p class="mini"><b>Transition:</b> &ldquo;One minute on where this sits in the university's plan, then the three ideas.&rdquo;</p>
@@ -129,14 +128,12 @@
     </div>
   </div>
   <div class="sec">
-    
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>The Chancellor's charge <span class="mins">Full 3 min · Core &lt;1</span></h2>
     <p class="purpose">Anchor instruments-not-verdicts in the Chancellor's vision so talent craft reads as institutional work, not admin.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;One minute of altitude before the craft. The Chancellor's vision has no hedge in it: Vanderbilt will define the great university of the 21st Century and be it, operating at uncommon speed, agility, and scale. Every part of that vision runs through talent: who we hire, who we grow, who we trust with the bold bet. That makes today's discipline institutional work: AI drafts the instruments, the kits, rubrics, and maps, and every verdict about a person stays human, signed, and defensible. Dare to grow includes daring to make talent calls you can explain out loud.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the vision sentence off the slide and let it land.</li><li>Walk the three focus areas, one team translation each.</li><li>Point at the flywheel: it turns on talent, and instruments decide whether talent gets recognized and grown.</li></ol>
-
-
     <p class="mini"><b>Validate:</b> Nods at the team-translation lines; no discussion needed here.</p>
     <p class="mini"><b>Watch for:</b> The urge to teach strategy; this page is a frame, and the three ideas are waiting.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the three ideas, in order.&rdquo;</p>
@@ -144,14 +141,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Orient: the line, the rubric, the map.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The arc: first the line that keeps all of this defensible. Then the deepest practice block, building a rubric worth trusting. Then the skills map, and what to do about the gaps it shows you.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the three items in one breath each.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here.</p>
     <p class="mini"><b>Transition:</b> &ldquo;The line first, because everything hangs on it.&rdquo;</p>
@@ -159,7 +154,20 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-line.jpg" alt="Slide: 01 · Instruments, not verdicts" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-datarule.jpg" alt="Slide: The data rule" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The data rule <span class="mins">Full 3 min · Core 2</span></h2>
+    <p class="purpose">Land the one rule every AI course in the library shares, on the same card, before any tool opens: green, yellow, red, and the never list.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Before anything goes into an AI tool today, one three-second question: what color is this? Green is public or generic, any approved tool. Yellow is your internal work, approved Vanderbilt tools only, signed in with your VU account. Red is private information about people, and it goes in no AI tool, full stop. This card is the same in every AI course in the library, so it is the one thing you never have to relearn.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the three-second question off the card: what color is this?</li><li>Walk the light top to bottom in one sentence each: green is public or generic, yellow is internal work in approved Vanderbilt tools on a VU account, red is private information about people and goes in no AI tool.</li><li>Point at the tool ceilings and say them once: ChatGPT EDU to Level 2, Amplify and Copilot to Level 3, children's information in no tool.</li><li>Name the hard case the room will meet first in this course, then move on; the card stays in the deck and in every other AI course they take.</li></ol>
+    <p class="mini"><b>Validate:</b> Anyone in the room can say the three colors and name one thing that never goes in, unprompted.</p>
+    <p class="mini"><b>Watch for:</b> Debate about edge cases. Take one, answer it with 'who is this about', and park the rest for the Go deeper panels; the rule is the point, not the taxonomy.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Rule in hand. Now the work.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> Core: read the question and the three colors, point at the never list, go.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/s-line.jpg" alt="Slide: 01 · Instruments, not verdicts" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · Instruments, not verdicts <span class="mins">Full 8 min · Core 6</span></h2>
     <p class="purpose">Install the instruments-verdicts line and the non-negotiable data rules for talent work.</p>
@@ -174,14 +182,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness on the core idea.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;AI can rank anything. Never let it rank people.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Let the line animate; read it once, then advance.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; pacing.</p>
     <p class="mini"><b>Watch for:</b> The urge to talk over it.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the deepest practice block: a rubric worth trusting.&rdquo;</p>
@@ -189,7 +195,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-rubric.jpg" alt="Slide: 02 · The Rubric Lab" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-rubric.jpg" alt="Slide: 02 · The Rubric Lab" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · The Rubric Lab <span class="mins">Full 8 min · Core 6</span></h2>
     <p class="purpose">Run every learner through building a defensible 9-box rubric: source, criteria, anchors, scoring.</p>
@@ -204,7 +210,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-skills.jpg" alt="Slide: 03 · Skills, gaps, and growth" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-skills.jpg" alt="Slide: 03 · Skills, gaps, and growth" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · Skills, gaps, and growth <span class="mins">Full 8 min · Core 6</span></h2>
     <p class="purpose">Teach the de-identified skills map and the grow-borrow-hire gap plan, with skills inference held as a draft.</p>
@@ -219,14 +225,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 3 min · Core 3</span></h2>
     <p class="purpose">Score the session's knowledge against the objectives before the capstone (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Four questions, one per big idea. The systems check before the card.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone takes it on their own device, all four questions.</li><li>Hands for 3-or-better; 30-second reteach on anything missed.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Room mode at 3/4 or better.</p>
     <p class="mini"><b>Watch for:</b> Racing; it's the check before the card.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the part that changes your next talent decision.&rdquo;</p>
@@ -234,7 +238,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My talent toolkit card" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My talent toolkit card" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · My talent toolkit card <span class="mins">Full 5 min · Core 5</span></h2>
     <p class="purpose">Convert the session into one dated instrument build. The transfer artifact and Level 3 seed.</p>
@@ -249,14 +253,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here, including bias magnet, for the next time culture fit shows up in a debrief.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Flip one card (Bias Magnet flips well).</li><li>Tell them it's here whenever they need it.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; reference.</p>
     <p class="mini"><b>Watch for:</b> Don't tour the cards.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One build session left.&rdquo;</p>
@@ -264,21 +266,19 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 2 min · Core 2</span></h2>
     <p class="purpose">Convert cards into spoken commitments and capture the Level 1 check.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The whole session in one breath: instruments drafted, verdicts human, red-light data in governed systems, criteria that pass the camera test, anchors a stranger could score with, inference verified by the person, gaps closed by grow-borrow-hire. You have a card. Say your instrument and your build day out loud; spoken commitments stick.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the featured next step: the build session, with the stranger-could-score standard.</li><li>Fist-to-five on confidence; note the number.</li><li>Commitment round: instrument and build day, out loud or in chat.</li><li>Point at the cheat sheet and toolkit card; the 7-day pulse is coming; stop on time.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Fist-to-five mostly 3+; a majority state an instrument and a day.</p>
     <p class="mini"><b>Watch for:</b> Cards without dates; the round catches them.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Go build the instrument. Your next talent decision will thank you, and so will the person on the other side of it.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast round.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>

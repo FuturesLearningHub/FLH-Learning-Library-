@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facilitator Guide (printable) · Ideas, Faster · Vanderbilt Learning Series</title>
+<meta name="robots" content="noindex">
+<style>
+  @font-face { font-family: 'Libre Caslon Display'; font-weight: 400;
+    src: url('../../../assets/fonts/libre-caslon-display-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-weight: 400;
+    src: url('../../../assets/fonts/inter-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-weight: 600;
+    src: url('../../../assets/fonts/inter-latin-600-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Antonio'; font-weight: 700;
+    src: url('../../../assets/fonts/antonio-latin-700-normal.woff2') format('woff2'); }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Inter', Arial, sans-serif; color: #1C1C1C; background: #fff;
+    font-size: 12.5px; line-height: 1.5; }
+  .sheet { max-width: 860px; margin: 0 auto; padding: 28px 32px; }
+  header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+    border-bottom: 2px solid #CFAE70; padding-bottom: 14px; margin-bottom: 16px; }
+  header img { width: 150px; }
+  h1 { font-family: 'Libre Caslon Display', serif; font-weight: 400; font-size: 26px; margin: 0; }
+  h1 em { font-style: italic; color: #8C6822; }
+  .eyebrow { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; font-size: 10px; color: #8C6822; margin: 0 0 6px; }
+  h2 { font-family: 'Libre Caslon Display', serif; font-weight: 400; font-size: 18px;
+    margin: 0 0 4px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  h3 { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .06em; font-size: 12px; color: #8C6822; margin: 14px 0 4px; }
+  .mins { font-family: 'Antonio', Impact, sans-serif; font-size: 11px; color: #8C6822;
+    letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+  .sec { border: 1px solid #E4E4E4; border-left: 3px solid #CFAE70; border-radius: 4px;
+    padding: 12px 16px; margin-bottom: 12px; break-inside: avoid;
+    display: grid; grid-template-columns: 290px 1fr; gap: 16px; align-items: start; }
+  .sec.noimg { grid-template-columns: 1fr; }
+  .sec.noimg .sec__shot { display: none; }
+  .sec__shot { position: sticky; top: 12px; }
+  .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
+  .sec__notes { min-width: 0; }
+  @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+  .purpose { font-weight: 600; margin: 2px 0 8px; }
+  .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
+    background: #CFAE70; display: inline-block; padding: 2px 7px; border-radius: 2px; }
+  .tagline.ask { background: #8BA18E; }
+  .script { font-family: 'Libre Caslon Display', serif; font-style: italic; font-size: 13.5px;
+    margin: 4px 0 6px; }
+  .mini { margin: 4px 0; color: #444; }
+  .mini.core { border-top: 1px dashed #CFAE70; padding-top: 6px; }
+  ol, ul { margin: 2px 0 8px; padding-left: 20px; }
+  li { margin-bottom: 3px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; }
+  th, td { border: 1px solid #E4E4E4; padding: 5px 9px; text-align: left; }
+  th { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 10px; color: #8C6822; }
+  .front { border: 1px solid #E4E4E4; border-radius: 4px; padding: 12px 16px; margin-bottom: 12px;
+    break-inside: avoid; }
+  .printbtn { position: fixed; right: 18px; top: 18px; background: #CFAE70; border: 0; border-radius: 4px;
+    padding: 9px 16px; font-family: Inter, Arial, sans-serif; font-weight: 600; font-size: 13px; cursor: pointer; }
+  @media print { .printbtn { display: none; } body { font-size: 11px; } .sheet { padding: 0; max-width: none; } }
+</style>
+<!-- Vercel Web Analytics (vercel-analytics): served only by Vercel, so it is skipped on GitHub Pages -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  if (!/(^|\.)github\.io$/.test(location.hostname)) {
+    var vaScript = document.createElement('script');
+    vaScript.defer = true;
+    vaScript.src = '/_vercel/insights/script.js';
+    document.head.appendChild(vaScript);
+  }
+</script>
+</head>
+<body>
+<button class="printbtn" onclick="window.print()">Print / Save as PDF</button>
+<main class="sheet">
+  <header>
+    <div>
+      <p class="eyebrow">Vanderbilt · The AI-enabled Education Series · facilitator guide · print edition</p>
+      <h1>Ideas, Faster, the <em>facilitator guide</em></h1>
+    </div>
+    <img src="../../../assets/img/vu-lockup-black.png" alt="Vanderbilt University">
+  </header>
+
+  <div class="front">
+    <h3>Run of show</h3>
+    <table><tr><th>Page</th><th>Time</th></tr><tr><td>Run this course</td><td>Before class</td></tr><tr><td>Welcome</td><td>Full 2 min · Core 2</td></tr><tr><td>The Chancellor’s charge</td><td>Full 3 min · Core: under 1</td></tr><tr><td>The evidence</td><td>Full 4 min · Core 2</td></tr><tr><td>The method</td><td>Full 9 min · Core 5</td></tr><tr><td>Example: blank page</td><td>Full 8 min · Core 7</td></tr><tr><td>Example: the mystery</td><td>Full 3 min · Core: skip</td></tr><tr><td>Example: vague goal</td><td>Full 4 min · Core: skip</td></tr><tr><td>Guardrails</td><td>Full 4 min · Core 3</td></tr><tr><td>Practice now</td><td>Full 8 min · Core 4</td></tr><tr><td>Knowledge check</td><td>Full 3 min · Core: skip</td></tr><tr><td>Recap</td><td>Full 3 min · Core 2</td></tr><tr><td>Appendix</td><td>As needed · Core: skip</td></tr>
+    <tr><th>Total</th><th>Full 51 min · Core 25 min</th></tr></table>
+    <h3>A week before · Learn it as a learner first</h3><ul><li>Run both editions end to end, this one and the learner classroom edition, doing every exercise, including typing a real brief into the practice builder.</li><li>Write your own CRIT brief for a real problem you’re stuck on. In the session you’ll say you’ve done it, so have done it.</li><li>Book a room where tables can talk and confirm guest wifi works for personal devices; the flood rounds need both.</li><li>Decide your path now: Full (48) or Core (25). The rail carries both timings on every page.</li><li>Rehearse the live flood out loud. You will run the fall-event prompt on the projector and pull 20 ideas onto the screen with the room’s constraints, so run it alone first and practice reading a flood back fast.</li></ul><h3>The day before · Test the room end to end</h3><ul><li>Test the projector with this facilitator link and confirm the script rail is readable from where you’ll stand.</li><li>Scan the welcome QR from the back of the room. It must land on the learner classroom edition, not this page.</li><li>Log in to ChatGPT EDU or Amplify and leave it ready; the live flood on the blank-page example depends on it.</li><li>Print a few one-page takeaways (the Print button on the practice page) for anyone without a device.</li><li>Re-read your tough-questions bank and say the answers out loud: “isn’t this just letting the machine think for me,” “what if the ideas are generic,” “can I brainstorm about people problems,” “do I have to credit the AI.”</li></ul><h3>30 minutes before · Set the stage</h3><ul><li>Welcome page up (the next page, with the QR) as people arrive, so scanning starts before you do.</li><li>Close every other tab and silence notifications on the machine that’s projecting.</li><li>Test the arrow keys, the copy buttons, and one run of the event prompt in your logged-in tool.</li><li>Write PARKING LOT on the whiteboard. Policy questions you can’t answer go there with a name, and you follow up by email.</li></ul><h3>Materials · What has to be in the room</h3><ul><li>Projector with this facilitator edition open.</li><li>Facilitator laptop with an approved AI tool logged in (ChatGPT EDU or Amplify) for the live flood.</li><li>Learner devices, joining through the welcome QR into the classroom edition.</li><li>A few printed takeaways for people without a device.</li><li>Whiteboard or flip chart for the parking lot, the backup URL, and the table flood tallies.</li></ul><h3>Pre-work invite (copy and paste)</h3><p style="white-space:pre-line">Subject: Ideas, Faster · [day], [time], [room]
+
+Hi everyone,
+
+On [day] at [time] in [room] we’re running Ideas, Faster, a short session from The AI-enabled Education Series on getting unstuck: brainstorming, problem-solving, and clearer thinking. You’ll leave with a three-step method and three prompts you can use the next morning.
+
+Two things before you come:
+1. Bring a phone or laptop. You’ll follow along on your own screen.
+2. Sign in to ChatGPT EDU or Amplify once with your Vanderbilt account, so login isn’t the first thing you do in the room.
+
+Bring one real problem you’re stuck on this week. Nothing you type in the session is collected or sent anywhere.
+
+See you there,
+[Your name]</p>
+  </div>
+
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/prep.jpg" alt="Page: Run this course" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Run this course <span class="mins">Before class</span></h2>
+    <p class="purpose">Your prep lives on this page; the card below is the invite that does half of it for you.</p>
+    <p class="mini">Send this a few days out so logins happen at desks, not in the room. Adjust the day, time, and room, and send it from your own address. The invite text is on the first page of the facilitator edition and in the printed packet below.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/home.jpg" alt="Page: Welcome" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Welcome <span class="mins">Full 2 min · Core 2</span></h2>
+    <p class="purpose">Get every device into the learner edition and set the deal for the session.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;This is Ideas, Faster, part of The AI-enabled Education Series. In the next forty-five minutes you’ll learn a three-step way to get unstuck with AI: it floods you with options, and you keep the judgment about what is worth doing. Scan the QR and the course opens on your phone. Everything I do up here, you can do down there.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Have this page projected as people arrive; the QR does its work before you start talking.</li><li>Give the room two minutes to scan and open the course; the whiteboard URL is the backup.</li><li>Point out the bottom-bar arrows so people can follow along page by page.</li><li>Say plainly that nothing they type is stored or sent anywhere.</li></ol>
+    <p class="mini"><b>Validate:</b> 80%+ of the room has the course open on a phone or laptop before you turn the page.</p>
+    <p class="mini"><b>Watch for:</b> Guest wifi stalls and half the room can’t load it. Point at the URL on the whiteboard, ask people to share a neighbor’s screen, and keep moving; don’t troubleshoot wifi in front of thirty people.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Before I ask you to change how you think through problems, one page on why the university is asking.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> Same page, same two minutes. The clock savings come later.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/mission.jpg" alt="Page: The Chancellor’s charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The Chancellor’s charge <span class="mins">Full 3 min · Core: under 1</span></h2>
+    <p class="purpose">Frame the course as part of the Chancellor’s vision before the evidence, so the method reads as institutional strategy, not a productivity tip.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;One page of why before the how. Chancellor Diermeier’s vision is one sentence: Vanderbilt will define the great university of the 21st Century and be it. Nobody grows while they’re stuck, and a university betting on bold ideas needs people who can get unstuck on demand. This course is your corner of that vision: twenty options on the table before the meeting ends.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the vision sentence from the page slowly; it can carry the moment on its own.</li><li>Walk the three focus cards left to right, one line each, and land on the At-your-desk line in each.</li><li>Point at the flywheel card and say plainly that bold bets start life as one option in somebody’s flood.</li><li>Keep the page under three minutes; it frames the course, it is not the course.</li></ol>
+    <p class="mini"><b>Validate:</b> Heads nod at the At-your-desk lines; the room hears its own stuck problems in the vision, not a strategy briefing.</p>
+    <p class="mini"><b>Watch for:</b> Eyes glazing over at the word “vision.” Jump straight to the At-your-desk line on the first card and let the concrete example pull the page back to earth.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;That’s the why from the Chancellor. Here’s the evidence the method is worth your time.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> Under a minute: read the vision sentence, gesture at the three focus cards, and turn the page.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/evidence.jpg" alt="Page: The evidence" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The evidence <span class="mins">Full 4 min · Core 2</span></h2>
+    <p class="purpose">Ground the method in the research so it lands as evidence, not enthusiasm.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Think about the last time you were properly stuck. In one Wharton experiment, a person working with AI generated two hundred ideas in about fifteen minutes, and most of the best ideas in the pool came from the AI. Slack’s workforce research puts brainstorming past creative blocks in the top three reasons daily AI users feel more productive. And the honest caveat, from Science Advances: AI ideas run alike, so the variety stays your job.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Project the three evidence cards and give each one sentence, not a lecture.</li><li>Run the gold Together card: one sentence each on what people are stuck on right now, no solving allowed.</li><li>Take two or three answers out loud; the stories do the persuading.</li><li>Mention that every number is cited in full on the Appendix page, one tap away in the bottom bar.</li></ol>
+    <p class="mini"><b>Validate:</b> At least two people name a real stuck problem out loud.</p>
+    <p class="mini"><b>Watch for:</b> Someone challenges the numbers. Don’t defend from memory: jump to the Appendix, show the citation, and offer to talk after. The course survives skepticism; improvised statistics don’t.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Here’s the method those studies point to. It fits on one page.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip the share-out. State the 200-ideas-in-15-minutes finding in one sentence and turn the page.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/method.jpg" alt="Page: The method" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The method <span class="mins">Full 9 min · Core 5</span></h2>
+    <p class="purpose">Teach Frame, Flood, Filter and the CRIT brief. This is the one page they must remember.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;The whole method is three steps in order. Frame the problem with CRIT: Context, Role, Interview, Task. Flood: ask for twenty options, wild ones included, and push for range. Filter: you pick, combine, and sharpen with criteria you own. The Interview line matters most: ‘ask me up to three questions before you answer’ makes it ask about what it doesn’t know instead of guessing.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Walk the three cards left to right, spending most of your time on the Frame card.</li><li>Read the four CRIT chips out loud and say in one line what each one buys you.</li><li>Run the Together card: pairs explain Frame, Flood, Filter back to each other in under a minute.</li><li>Point at the gold rule strip and read it word for word: the AI supplies the options, and you supply the judgment.</li><li>Run the filter step: give the room two minutes to tag two Develop and one Only-I-would-think-of-this, then compare with the exemplar on the projector and ask who picked something the exemplar missed.</li></ol>
+    <p class="mini"><b>Validate:</b> Cold-call one pair afterward: they can name the three steps and say what the Interview line does.</p>
+    <p class="mini"><b>Watch for:</b> People hearing Flood as “take the first answer.” Say now that twenty options is the ask, and that the live demo on the next page will show why quantity changes what you end up picking.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Enough theory. Let’s flood a real problem, live, and see what twenty options actually looks like.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: keep everything but the pair activity and the filter step. Name the steps yourself, then cold-call one person.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/ex-blank.jpg" alt="Page: Example: blank page" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Example: blank page <span class="mins">Full 8 min · Core 7</span></h2>
+    <p class="purpose">The live demo: the room watches a real flood come back and helps filter it.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Here’s the situation: the fall staff appreciation event. Sixty people, a modest budget, and two straight years of the same catered lunch. Watch what happens when we ask for twenty options instead of one good idea. I’m running this exact prompt right now, with your constraints, and whatever comes back, we filter together.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the situation from the page, then take two or three real constraints from the room (budget, building, month) and edit them into the Context line before you run it.</li><li>Run the prompt live in your logged-in tool and answer its interview questions out loud, taking the answers from the room.</li><li>Read the twenty options back fast, and ask the room to call out the two worth keeping and the wildest one worth taming.</li><li>Map what just happened onto the filter pass: pick two, combine them, sanity-check the budget and the date.</li></ol>
+    <p class="mini"><b>Validate:</b> The room calls out keepers without you pulling them out one by one.</p>
+    <p class="mini"><b>Watch for:</b> The flood comes back bland or repetitive. Don’t apologize and don’t quietly re-run it. Push it live (“give me five wilder ones and three that cost nothing”) so the room sees how to ask for range.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;That was a blank page. Now a problem where nobody even knows what’s wrong.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: keep the live run; it’s the heart of the session. Take one constraint from the room instead of three.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/ex-attendance.jpg" alt="Page: Example: the mystery" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Example: the mystery <span class="mins">Full 3 min · Core: skip</span></h2>
+    <p class="purpose">Show the ambiguous-problem move: causes, the skeptic, and the missing-information list.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Attendance at optional trainings fell from thirty to eight and nobody knows why. Notice the prompt doesn’t ask for a fix. It asks for ten possible causes, what a skeptic would say, and what information is missing. The missing-information list is the quiet star: it turns a vague worry into questions you can actually ask.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Give the situation in one breath and project the prompt; don’t run this one live.</li><li>Point at the amber keep-it-general note and say why: no names, no personnel details, and real internal detail goes to Amplify.</li><li>Walk the three-line filter pass and land on “take the missing-information list to a real colleague” as the step no tool can do.</li><li>Tell the room this prompt is on their printed takeaway, so nobody needs to copy anything now.</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “what do you do with the missing-information list?” and hear “ask a real person” back.</p>
+    <p class="mini"><b>Watch for:</b> The temptation to run a second live demo. Two live runs this early drains the clock; narrate this one from the page and save the live energy for practice.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;A mystery at least has a cause. The last example has no shape at all: a goal so vague it isn’t even a problem yet.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip this page. As you leave the live flood, say the takeaway carries two more worked prompts, a mystery and a vague goal.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/ex-goal.jpg" alt="Page: Example: vague goal" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Example: vague goal <span class="mins">Full 4 min · Core: skip</span></h2>
+    <p class="purpose">Turn a vague goal into twenty concrete options and a shortlist, and show whose criteria win.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;“Make onboarding better.” That sentence is the whole assignment. The prompt asks for twenty concrete improvements, then a shortlist of three scored on cost, effort, and impact. The scoring comes back looking authoritative, and it isn’t: the AI doesn’t know your budget, your team, or your politics. You re-score with your own weights.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Project the prompt and point at the Task line: the criteria are named in it, and the learner names them, not the tool.</li><li>Show the Try-it row: Copilot recommended because onboarding docs live in Office, Amplify equally right for internal detail.</li><li>Read the What-comes-back note and land on “the scoring looks authoritative and isn’t.”</li><li>Read the last filter line, “keep the other seventeen,” and say why: it answers “what else did you consider?”</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “whose criteria decide the shortlist?” and hear “mine” back from the room.</p>
+    <p class="mini"><b>Watch for:</b> The room disappearing into their own onboarding gripes. One story is useful; park the rest on the whiteboard and keep the page about the method.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Three examples, one pattern. Before you flood anything of your own, four rules that keep it safe.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip this page. The guardrails page carries the safe-data rule on its own.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/guardrails.jpg" alt="Page: Guardrails" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Guardrails <span class="mins">Full 4 min · Core 3</span></h2>
+    <p class="purpose">Make the four rules stick, especially safe data, before any table floods a real problem.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Four rules, thirty seconds each. Safe data only: describe internal problems in general terms, or take the real detail to Amplify or Copilot through your Vanderbilt account, and when in doubt, Amplify. Ideas are starters, not decisions: you own what gets proposed. Watch the sameness trap: AI ideas cluster, so bring your own weird. And credit people, not the tool: when AI helped substantively, say so.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Project the four cards and read each headline; add one sentence each, not a paragraph.</li><li>On rule one, ask the room to frame a people problem two ways: general enough to brainstorm anywhere, and too specific to paste at all.</li><li>Take the questions this page always raises, “isn’t this just letting the machine think for me” and “what if the ideas are generic,” with the answers you rehearsed in prep.</li><li>Show the three tool buttons and name the default this room should use.</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “you want ideas for a conflict between two named colleagues; where does that go?” and hear “general terms, or Amplify, or a human.”</p>
+    <p class="mini"><b>Watch for:</b> A policy question you can’t answer, like a specific data class. Don’t guess at policy. Put it on the parking lot with a name next to it and follow up by email.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Those are the rules. Now the part that makes this course stick: your table floods something real.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: cut the room examples. Read the four rules and run the one named-colleagues check question.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/practice.jpg" alt="Page: Practice now" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Practice now <span class="mins">Full 8 min · Core 4</span></h2>
+    <p class="purpose">Every table leaves having flooded one real problem and voted a shortlist. This page is the course.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Think of the problem you named at the start. Now, tables: pick one owner’s real stuck problem, flood it together, twenty options in five minutes, wild ones welcome. Then vote on a shortlist of three and hand it back to the owner. The table floods; the owner filters.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Put the brief builder on the projector and walk the three fields once, fast.</li><li>Set the tables, name the problem owner at each, and start the five-minute flood.</li><li>Circulate; nudge stalled tables past ten by asking for the skeptic’s version and three options that cost nothing.</li><li>Call the vote, then have two owners read their shortlist of three to the room.</li></ol>
+    <p class="mini"><b>Validate:</b> Every table hits at least fifteen options before the vote; no table stalls at four polite ones.</p>
+    <p class="mini"><b>Watch for:</b> The “our problem is too sensitive to share” table. Have them pick the owner’s second problem, or hand them a real fallback: flood ideas for the next staff meeting agenda.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;You’ve each seen a real flood and a real vote. Three quick questions to prove the method stuck.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: solo instead of tables. Everyone floods their own problem for three minutes, and one volunteer reads their top three.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/check.jpg" alt="Page: Knowledge check" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Knowledge check <span class="mins">Full 3 min · Core: skip</span></h2>
+    <p class="purpose">A room vote that surfaces the three failure modes without feeling like a quiz.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Three questions, no grades, and nothing leaves the room. Look up here for each one, vote by show of hands, and then somebody tells me why.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Project question one and read both prompts aloud; vote by hands.</li><li>Tap the winning answer on screen so the room sees the explanation.</li><li>Repeat for the named-colleagues question and the twenty-same-ideas question.</li><li>Where a vote splits, give the two sides thirty seconds to argue before you reveal.</li></ol>
+    <p class="mini"><b>Validate:</b> Near-unanimous hands on question two, the safe-data one. If that one splits, reteach rule one now.</p>
+    <p class="mini"><b>Watch for:</b> People answering on their phones before the vote. Ask them to keep eyes up during each vote and tap their own answers after; the argument is the point, not the tap.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Three for three. Last page: what you’re leaving with, and what you do tomorrow morning.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip the vote. Ask question three only, out loud, on the way to the recap: what do you do when all twenty ideas feel the same?</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/recap.jpg" alt="Page: Recap" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Recap <span class="mins">Full 3 min · Core 2</span></h2>
+    <p class="purpose">Land the three next actions: tomorrow’s flood, the printed plan, the two-week check-in.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;You learned one method, four rules, and the evidence behind both. Three things now. Flood your stuck problem tomorrow; your brief is already saved from practice. Take the one-page plan. And book the fifteen-minute check-in two weeks out: are you still flooding before you filter?&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Walk the three You-learned cards in one sentence each.</li><li>Point at the print button; hand your printed takeaways to anyone without a device.</li><li>Have everyone tap the calendar button and add the two-week check-in now, not later.</li><li>Name the Oracle Learning shelf (brainstorming, creativity, problem solving, critical thinking) for people who want more, and end on time.</li></ol>
+    <p class="mini"><b>Validate:</b> You see phones come out for the calendar file, not just nods.</p>
+    <p class="mini"><b>Watch for:</b> Running past the end. If you’re at time, the recap is three sentences and printouts by the door; never trade the ending for the shelf.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;The appendix has every source, and the course stays online at the same link. Thanks for your time; now go get unstuck on purpose.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: same three actions, one sentence each. The calendar tap is the one to keep.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/sources.jpg" alt="Page: Appendix" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Appendix <span class="mins">As needed · Core: skip</span></h2>
+    <p class="purpose">Reference, not a page you teach. Open it the moment a number gets challenged.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Every number in the course, cited in full. It stays online at this link, so nobody needs to copy anything down.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Show it for ten seconds so the room knows it exists.</li><li>Return to it live whenever someone questions a statistic; the Appendix button in the bottom bar jumps here from any page.</li><li>Point out the CRIT credit to Geoff Woods and the Working Smarter course link for anyone who wants the full framework.</li></ol>
+    <p class="mini"><b>Validate:</b> You can put the Wharton citation on screen within five seconds of being asked.</p>
+    <p class="mini"><b>Watch for:</b> A methodology debate in the last minutes. One citation on screen, then “happy to dig in after”; protect the ending.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;That’s the whole course. I’ll stay a few minutes for anything on the parking lot.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip; leave it on screen while people file out if you like.</p>
+    </div>
+  </div>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from the facilitator edition's page scripts and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+</main>
+</body>
+</html>

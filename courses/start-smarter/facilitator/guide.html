@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -86,7 +89,7 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>What you'll get</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>—</td></tr><tr><td>The plan</td><td>1</td><td>—</td></tr><tr><td>01 · What is AI?</td><td>3</td><td>1</td></tr><tr><td>Play · Is that AI?</td><td>4</td><td>2</td></tr><tr><td>Manifesto</td><td>2</td><td>1</td></tr><tr><td>02 · Why &amp; how</td><td>3</td><td>2</td></tr><tr><td>Play · Pick the next move</td><td>4</td><td>2</td></tr><tr><td>03 · When &amp; when not</td><td>4</td><td>2</td></tr><tr><td>Play · Green, yellow, or red?</td><td>4</td><td>3</td></tr><tr><td>04 · What it can do</td><td>3</td><td>1</td></tr><tr><td>Play · Match the superpower</td><td>4</td><td>2</td></tr><tr><td>The impact</td><td>3</td><td>1</td></tr><tr><td>The impact · Watch</td><td>2</td><td>1</td></tr><tr><td>05 · Your first try</td><td>9</td><td>6</td></tr><tr><td>Recap quiz</td><td>3</td><td>1</td></tr><tr><td>Capstone · My first try</td><td>4</td><td>1</td></tr><tr><td>Closing · commitment</td><td>2</td><td>1</td></tr>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>What you'll get</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>skip</td></tr><tr><td>The plan</td><td>1</td><td>skip</td></tr><tr><td>01 · What is AI?</td><td>3</td><td>1</td></tr><tr><td>Play · Is that AI?</td><td>4</td><td>2</td></tr><tr><td>Manifesto</td><td>2</td><td>1</td></tr><tr><td>02 · Why &amp; how</td><td>3</td><td>2</td></tr><tr><td>Play · Pick the next move</td><td>4</td><td>2</td></tr><tr><td>03 · When &amp; when not</td><td>4</td><td>2</td></tr><tr><td>Play · Green, yellow, or red?</td><td>4</td><td>3</td></tr><tr><td>04 · What it can do</td><td>3</td><td>1</td></tr><tr><td>Play · Match the superpower</td><td>4</td><td>2</td></tr><tr><td>The impact</td><td>3</td><td>1</td></tr><tr><td>The impact · Watch</td><td>2</td><td>1</td></tr><tr><td>05 · Your first try</td><td>9</td><td>6</td></tr><tr><td>Recap quiz</td><td>3</td><td>1</td></tr><tr><td>Capstone · My first try</td><td>4</td><td>1</td></tr><tr><td>Closing · commitment</td><td>2</td><td>1</td></tr>
     <tr><th>Total</th><th>63</th><th>30</th></tr></table>
     <h3>Audience</h3><p>Absolute beginners: staff who have never opened an AI tool, or who tried once and gave up. No prerequisites of any kind. Also delivered self-paced via the /web/ edition. Any size room works; 8 to 30 is the sweet spot.</p>
     <h3>Room setup</h3><p>Projector + presenter device; learners on their own devices via the Welcome-slide QR. Ideal but optional: learners able to reach a Vanderbilt-approved AI tool (Copilot with VU sign-in) on their own devices for the first-try moment. Virtual: run everything on main stage; breakouts unnecessary at this level. Tone matters more than tech: warm, unhurried, zero jargon, no question too basic.</p>
@@ -99,14 +102,13 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device and set the tone: the friendliest hour in the catalog, built for absolute beginners.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Point your camera at that code, it brings this whole session to your seat. Quick promise before we start: this is the beginner hour. No jargon, no code, no assumptions, and no question is too basic. If you have never touched an AI tool in your life, you are not behind, you are exactly who this session is for, and you'll make your first try before the week is out.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Have this slide projected as people arrive.</li><li>Point at the QR and get phones up before you say anything else.</li><li>Say the safety line early: no jargon today, no question too basic, and nobody will be asked to know anything.</li><li>Confirm by show of hands that most of the room has the site open before advancing.</li></ol>
     <p class='tagline ask'>Ask</p><p class='script'>&ldquo;Show of hands, totally judgment-free: who here has never used ChatGPT, Copilot, or any AI chat tool, or tried once and quietly gave up?&rdquo;</p><p class='mini'><b>Expect:</b></p><ul><li>A third to half the room, sometimes sheepishly</li><li>A few 'tried once and gave up' confessions</li><li>Some experienced users too</li></ul><p class='mini'><b>Respond:</b> Thank the honest hands warmly: 'Perfect: this hour was built for you.' To the experienced: 'You're my table helpers today, and AI 201 is your course; it's in the library.'</p>
-    
     <p class="mini"><b>Validate:</b> 80%+ of the room has the deck open on a device.</p>
     <p class="mini"><b>Watch for:</b> The person hanging back who 'isn't a tech person.' Make eye contact, smile, and remember them for the first-try moment: their success is the session's best story.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's everything you'll walk out with.&rdquo;</p>
@@ -114,14 +116,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: What you'll get" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: What you'll get" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>What you'll get <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: five plain-language abilities, ending in a real first try with a prompt they build themselves.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five things in the next hour. You'll be able to say what AI is in one sentence, no buzzwords. You'll know how to ask it for help in ordinary English, and the one trick that makes answers good. You'll know the traffic light: what's fine, what needs an approved tool, what never goes in. You'll know the five chores it does best. And before we're done, you'll build your first request for a real chore from your real week, and copy it, ready to use.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the five objectives in plain language, unhurried.</li><li>Land on the last one: you leave with a real prompt you built, for a real chore, with a day attached.</li><li>Point at the skills row once: this course carries real skill credit in the library.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Learners can say what they'll leave with (a prompt they built + a first try scheduled).</p>
     <p class="mini"><b>Watch for:</b> Don't oversell or speed up; calm confidence is the register for beginners.</p>
     <p class="mini"><b>Transition:</b> &ldquo;The whole plan fits on one slide.&rdquo;</p>
@@ -129,29 +129,23 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>The Chancellor's charge <span class="mins">Full 3 min · Core skip</span></h2>
     <p class="purpose">Anchor the hour in the institutional why: the Chancellor's vision makes a beginner's first AI try part of how the university grows.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;One minute on why Vanderbilt cares about this hour. Chancellor Diermeier's vision is a single sentence: Vanderbilt will define the great university of the 21st Century and be it. Doing that takes speed and careful bets, and both are made of ordinary work: the drafts, summaries, and rewrites on desks like yours. Your first try this week is a small piece of that. Our motto is literally 'dare to grow.'&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the vision sentence off the slide verbatim; let it land before you talk.</li><li>Walk the three focus cards left to right, one breath each, ending on the 'At your desk' line.</li><li>Point at the flywheel card and keep it plain: good work builds reputation, reputation brings resources, and safe everyday AI use is part of good work. Don't teach it; move.</li></ol>
-    
-    
-    
-    
     <p class="mini"><b>Transition:</b> &ldquo;That's the why over our shoulder. Here's the plan for the hour.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: read the vision sentence, gesture at the three focus areas, move on; under a minute.</p>
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: The plan" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: The plan" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>The plan <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the five ideas once so the room sees how small the mountain actually is.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five ideas. That's the whole course: what AI is, how to use it, when not to, what it can do for you, and your first try. Small mountain.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the five items in one breath each.</li><li>Name the shape out loud: what it is, how to use it, when not to, what it does, then you try it.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed; this is orientation.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here; every idea has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Idea one: and I promise it fits in one sentence.&rdquo;</p>
@@ -159,7 +153,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-what.jpg" alt="Slide: 01 · What is AI?" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-what.jpg" alt="Slide: 01 · What is AI?" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · What is AI? <span class="mins">Full 3 min · Core 1</span></h2>
     <p class="purpose">Land the one-sentence definition (a program that learned from examples) and dissolve intimidation by proving everyone already uses AI daily.</p>
@@ -174,14 +168,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-what-play.jpg" alt="Slide: Play · Is that AI?" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-what-play.jpg" alt="Slide: Play · Is that AI?" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Play · Is that AI? <span class="mins">Full 4 min · Core 2</span></h2>
     <p class="purpose">One scored rep of the definition: learned-from-examples versus regular program, on five everyday things.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five everyday things. For each one: did it learn from examples, or is it following rules a person wrote? Call it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Send them to their devices: five everyday things, call each one.</li><li>Run it as a room vote if devices are down; hands for 'AI' versus 'regular program.'</li><li>The calculator item is the teaching moment: fixed rules never surprise you; learned patterns do.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> 4+ of 5 for most of the room.</p>
     <p class="mini"><b>Watch for:</b> Anyone scoring 2 or less quietly: the debrief line ('learned = AI') usually fixes it on the retry.</p>
     <p class="mini"><b>Transition:</b> &ldquo;So AI is already in your pocket. One more sentence before we learn to drive it.&rdquo;</p>
@@ -189,7 +181,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Give beginners explicit permission to use AI without understanding its internals. This one line removes the biggest hidden barrier in the room: the belief that AI is for technical people.</p>
@@ -204,7 +196,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-how.jpg" alt="Slide: 02 · Why &amp; how" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-how.jpg" alt="Slide: 02 · Why &amp; how" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · Why &amp; how <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Install the three-step loop (ask in plain English, look, improve with one follow-up): the single skill that separates people who love AI from people who gave up.</p>
@@ -219,22 +211,19 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-how-play.jpg" alt="Slide: Play · Pick the next move" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-how-play.jpg" alt="Slide: Play · Pick the next move" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Play · Pick the next move <span class="mins">Full 4 min · Core 2</span></h2>
     <p class="purpose">One scored rep of the ask-look-improve loop, especially the follow-up habit that separates users from quitters.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five moments where the first answer wasn't perfect. Pick what a confident user does next. Notice how often the answer is just 'tell it what to fix.'&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Send them to their devices: five moments, pick the best next move.</li><li>Item 4 (the wrong date) plants the fact-checking habit; name it in the debrief.</li><li>Collect one aha out loud at the end.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> 4+ of 5 for most of the room.</p>
-    
     <p class="mini"><b>Transition:</b> &ldquo;You now know how to drive. Time for the rules of the road.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: run it as a fast room vote on the projector.</p>
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-when.jpg" alt="Slide: 03 · When &amp; when not" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-when.jpg" alt="Slide: 03 · When &amp; when not" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · When &amp; when not <span class="mins">Full 4 min · Core 2</span></h2>
     <p class="purpose">Install the traffic light as a three-second reflex (green/yellow/red) plus the fact-checking habit: the session's entire safety payload.</p>
@@ -249,22 +238,19 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-when-play.jpg" alt="Slide: Play · Green, yellow, or red?" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-when-play.jpg" alt="Slide: Play · Green, yellow, or red?" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Play · Green, yellow, or red? <span class="mins">Full 4 min · Core 3</span></h2>
     <p class="purpose">Drill the traffic light to reflex on five real situations, then lock the fact-checking rule with the quick check.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five real situations. Three seconds each: green, yellow, or red? The one you hesitate on is the one worth talking about.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Send them to their devices: five situations, call the color.</li><li>The performance-review item is the discussion magnet; let the debate run thirty seconds.</li><li>Run the quick check on the same screen: the other big don't is trusting unchecked facts.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> 4+ of 5 and a correct quick check.</p>
-    
     <p class="mini"><b>Transition:</b> &ldquo;Rules down. Now the fun part: what this thing can actually do for you.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: keep at nearly full length; this is the safety payload.</p>
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-cando.jpg" alt="Slide: 04 · What it can do" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-cando.jpg" alt="Slide: 04 · What it can do" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>04 · What it can do <span class="mins">Full 3 min · Core 1</span></h2>
     <p class="purpose">Install the five superpowers (draft, summarize, brainstorm, explain, rewrite) and get every learner to pick the chore for their first try.</p>
@@ -279,22 +265,19 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-cando-play.jpg" alt="Slide: Play · Match the superpower" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-cando-play.jpg" alt="Slide: Play · Match the superpower" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Play · Match the superpower <span class="mins">Full 4 min · Core 2</span></h2>
     <p class="purpose">One scored rep matching real chores to the five superpowers, priming each learner's own first-try chore.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five chores you'll recognize. Match each to its superpower, and while you play, keep asking: which chore of mine is next?&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Send them to their devices: five chores, pick the power.</li><li>As they finish, ask them to silently pick THEIR chore for the first try.</li><li>Collect two or three chores out loud with their matched power.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> 4+ of 5; every learner has a chore in mind.</p>
-    
     <p class="mini"><b>Transition:</b> &ldquo;Hold that chore. First, sixty seconds on why this is bigger than saved time.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: run it as a fast room vote on the projector.</p>
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-impact.jpg" alt="Slide: The impact" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-impact.jpg" alt="Slide: The impact" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>The impact <span class="mins">Full 3 min · Core 1</span></h2>
     <p class="purpose">Give the room a reason to care that's bigger than saved minutes: cited, true stories of AI helping in health, accessibility, voice, and communication, all sharing the pattern the course teaches (AI does the chore, a person stays in charge).</p>
@@ -309,22 +292,19 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-impact-video.jpg" alt="Slide: The impact · Watch" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-impact-video.jpg" alt="Slide: The impact · Watch" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>The impact · Watch <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Let the Be My Eyes video land emotionally, then lock the human-in-charge pattern with the quick check.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Two minutes. Watch what this technology means for someone who can't see the menu.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Play the video (2 minutes). Let it finish in silence for a beat.</li><li>Run the quick check: in the cancer trial, the AI helped doctors look; doctors made every call.</li><li>One line to close: same arrangement you're getting today, smaller stakes.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Quick check correct; the room's posture during the video tells you the rest.</p>
-    
     <p class="mini"><b>Transition:</b> &ldquo;Your chore is smaller than any of that. Let's build your request.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: keep the video if you possibly can; it's two minutes and it's the session's heart.</p>
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-first.jpg" alt="Slide: 05 · Your first try" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-first.jpg" alt="Slide: 05 · Your first try" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>05 · Your first try <span class="mins">Full 9 min · Core 6</span></h2>
     <p class="purpose">Every learner assembles a real, copyable prompt for their real chore: and ideally runs it in the room. This is the session's conversion moment.</p>
@@ -339,14 +319,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 3 min · Core 1</span></h2>
     <p class="purpose">Score the five ideas before the commitment (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five questions, one per idea, zero pressure. This is just proof of how much you picked up in an hour.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone takes it on their own device, all five questions.</li><li>Ask for hands on 4-or-better; celebrate briefly.</li><li>For any question the room visibly missed, do a 30-second reteach from the relevant slide.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Room mode at 4/5 or better. The quiz maps to the five ideas, so misses tell you exactly what to reteach.</p>
     <p class="mini"><b>Watch for:</b> Racing. Frame it as a friendly check, not a test: this room may carry test anxiety about tech topics.</p>
     <p class="mini"><b>Transition:</b> &ldquo;And now the only part that changes next week.&rdquo;</p>
@@ -354,14 +332,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My first try" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My first try" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · My first try <span class="mins">Full 4 min · Core 1</span></h2>
     <p class="purpose">Convert the session into one dated commitment: the chore, the superpower, the day. The transfer artifact and the 7-day pulse's target.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Name the chore: the real one. Pick the superpower. Pick the day, and I'll tell you now: today beats tomorrow, and tomorrow beats 'this week.' Your prompt is already built; the card just puts a date on it. That's the entire distance between someone who heard about AI and someone who uses it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Frame it: reading about AI changes nothing; one real try changes everything.</li><li>Give quiet time: chore typed, superpower picked, day picked, card built and copied.</li><li>Push for 'today' or 'tomorrow': first tries scheduled for 'someday this week' evaporate.</li><li>Remind: nothing typed is saved or sent; the card is theirs.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Every learner builds a card (all three parts). The card plus the 7-day pulse is the evidence chain, and the pulse's first-try count is the program metric.</p>
     <p class="mini"><b>Watch for:</b> The chore quietly shrinking to something trivial. The best first try is the chore they named in Idea 04: the one they actually resent.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. Go time.&rdquo;</p>
@@ -369,7 +345,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Convert cards into spoken commitments, capture the Level 1 check, and point at the follow-up and the next course.</p>
@@ -383,7 +359,7 @@
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a lightning commitment round; the ending survives every cut.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facilitator Guide (printable) · Decisions, Sharper · Vanderbilt Learning Series</title>
+<meta name="robots" content="noindex">
+<style>
+  @font-face { font-family: 'Libre Caslon Display'; font-weight: 400;
+    src: url('../../../assets/fonts/libre-caslon-display-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-weight: 400;
+    src: url('../../../assets/fonts/inter-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-weight: 600;
+    src: url('../../../assets/fonts/inter-latin-600-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Antonio'; font-weight: 700;
+    src: url('../../../assets/fonts/antonio-latin-700-normal.woff2') format('woff2'); }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Inter', Arial, sans-serif; color: #1C1C1C; background: #fff;
+    font-size: 12.5px; line-height: 1.5; }
+  .sheet { max-width: 860px; margin: 0 auto; padding: 28px 32px; }
+  header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+    border-bottom: 2px solid #CFAE70; padding-bottom: 14px; margin-bottom: 16px; }
+  header img { width: 150px; }
+  h1 { font-family: 'Libre Caslon Display', serif; font-weight: 400; font-size: 26px; margin: 0; }
+  h1 em { font-style: italic; color: #8C6822; }
+  .eyebrow { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; font-size: 10px; color: #8C6822; margin: 0 0 6px; }
+  h2 { font-family: 'Libre Caslon Display', serif; font-weight: 400; font-size: 18px;
+    margin: 0 0 4px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  h3 { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .06em; font-size: 12px; color: #8C6822; margin: 14px 0 4px; }
+  .mins { font-family: 'Antonio', Impact, sans-serif; font-size: 11px; color: #8C6822;
+    letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+  .sec { border: 1px solid #E4E4E4; border-left: 3px solid #CFAE70; border-radius: 4px;
+    padding: 12px 16px; margin-bottom: 12px; break-inside: avoid;
+    display: grid; grid-template-columns: 290px 1fr; gap: 16px; align-items: start; }
+  .sec.noimg { grid-template-columns: 1fr; }
+  .sec.noimg .sec__shot { display: none; }
+  .sec__shot { position: sticky; top: 12px; }
+  .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
+  .sec__notes { min-width: 0; }
+  @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+  .purpose { font-weight: 600; margin: 2px 0 8px; }
+  .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
+    background: #CFAE70; display: inline-block; padding: 2px 7px; border-radius: 2px; }
+  .tagline.ask { background: #8BA18E; }
+  .script { font-family: 'Libre Caslon Display', serif; font-style: italic; font-size: 13.5px;
+    margin: 4px 0 6px; }
+  .mini { margin: 4px 0; color: #444; }
+  .mini.core { border-top: 1px dashed #CFAE70; padding-top: 6px; }
+  ol, ul { margin: 2px 0 8px; padding-left: 20px; }
+  li { margin-bottom: 3px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; }
+  th, td { border: 1px solid #E4E4E4; padding: 5px 9px; text-align: left; }
+  th { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 10px; color: #8C6822; }
+  .front { border: 1px solid #E4E4E4; border-radius: 4px; padding: 12px 16px; margin-bottom: 12px;
+    break-inside: avoid; }
+  .printbtn { position: fixed; right: 18px; top: 18px; background: #CFAE70; border: 0; border-radius: 4px;
+    padding: 9px 16px; font-family: Inter, Arial, sans-serif; font-weight: 600; font-size: 13px; cursor: pointer; }
+  @media print { .printbtn { display: none; } body { font-size: 11px; } .sheet { padding: 0; max-width: none; } }
+</style>
+<!-- Vercel Web Analytics (vercel-analytics): served only by Vercel, so it is skipped on GitHub Pages -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  if (!/(^|\.)github\.io$/.test(location.hostname)) {
+    var vaScript = document.createElement('script');
+    vaScript.defer = true;
+    vaScript.src = '/_vercel/insights/script.js';
+    document.head.appendChild(vaScript);
+  }
+</script>
+</head>
+<body>
+<button class="printbtn" onclick="window.print()">Print / Save as PDF</button>
+<main class="sheet">
+  <header>
+    <div>
+      <p class="eyebrow">Vanderbilt · The AI-enabled Education Series · facilitator guide · print edition</p>
+      <h1>Decisions, Sharper, the <em>facilitator guide</em></h1>
+    </div>
+    <img src="../../../assets/img/vu-lockup-black.png" alt="Vanderbilt University">
+  </header>
+
+  <div class="front">
+    <h3>Run of show</h3>
+    <table><tr><th>Page</th><th>Time</th></tr><tr><td>Run this course</td><td>Before class</td></tr><tr><td>Welcome</td><td>Full 2 min · Core 2</td></tr><tr><td>The Chancellor’s charge</td><td>Full 3 min · Core: under 1</td></tr><tr><td>The evidence</td><td>Full 4 min · Core 2</td></tr><tr><td>The method</td><td>Full 6 min · Core 5</td></tr><tr><td>Example: recommendations</td><td>Full 4 min · Core: skip</td></tr><tr><td>Example: scenario test</td><td>Full 8 min · Core 7</td></tr><tr><td>Example: assumptions</td><td>Full 3 min · Core: skip</td></tr><tr><td>Guardrails</td><td>Full 5 min · Core 3</td></tr><tr><td>Practice now</td><td>Full 8 min · Core 4</td></tr><tr><td>Knowledge check</td><td>Full 3 min · Core: skip</td></tr><tr><td>Recap</td><td>Full 2 min · Core 2</td></tr><tr><td>Appendix</td><td>As needed · Core: skip</td></tr>
+    <tr><th>Total</th><th>Full 48 min · Core 25 min</th></tr></table>
+    <h3>A week before · Learn it as a learner first</h3><ul><li>Run both editions end to end, this one and the learner classroom edition, doing every exercise, including laying out a real decision in the practice builder.</li><li>Write your own decision brief for a call you actually own. In the session you'll say you've done it, so have done it.</li><li>Rehearse the scenario test out loud. On the coverage-hours page you'll take constraints from the room and run the prompt live, so run it alone first and practice reading a premortem back without flinching.</li><li>Book a room where tables can talk and confirm guest wifi works for personal devices; the practice page needs both.</li><li>Decide your path now: Full (48) or Core (25). The rail carries both timings on every page.</li></ul><h3>The day before · Test the room end to end</h3><ul><li>Test the projector with this facilitator link and confirm the script rail is readable from where you'll stand.</li><li>Scan the welcome QR from the back of the room. It must land on the learner classroom edition, not this page.</li><li>Log in to Amplify or Copilot and leave it ready; the live scenario test depends on it.</li><li>Print a few one-page takeaways (the Print button on the practice page) for anyone without a device.</li><li>Re-read your tough-questions bank and say the answers out loud: “can I ask it about a struggling employee,” “what if it recommends something wrong,” “does using it make the decision less mine,” “can I put budget numbers in.”</li></ul><h3>30 minutes before · Set the stage</h3><ul><li>Welcome page up (the next page, with the QR) as people arrive, so scanning starts before you do.</li><li>Close every other tab and silence notifications on the machine that's projecting.</li><li>Test the arrow keys, the copy buttons, and one run of the scenario prompt in your logged-in tool.</li><li>Write PARKING LOT on the whiteboard. Policy and HR questions you can't answer go there with a name, and you follow up by email.</li></ul><h3>Materials · What has to be in the room</h3><ul><li>Projector with this facilitator edition open.</li><li>Facilitator laptop with Amplify or Copilot logged in for the live scenario test.</li><li>Learner devices, joining through the welcome QR into the classroom edition.</li><li>A few printed takeaways for people without a device.</li><li>Whiteboard or flip chart for the parking lot and the backup URL.</li></ul><h3>Pre-work invite (copy and paste)</h3><p style="white-space:pre-line">Subject: Decisions, Sharper · [day], [time], [room]
+
+Hi everyone,
+
+On [day] at [time] in [room] we’re running Decisions, Sharper, a short session from The AI-enabled Education Series for managers and team leads on testing decisions before you make them. You’ll leave with a three-step method and three prompts you can use on a real decision the same week.
+
+Two things before you come:
+1. Bring a phone or laptop. You’ll follow along on your own screen.
+2. Sign in to Amplify or Copilot once with your Vanderbilt account, so login isn’t the first thing you do in the room.
+
+Bring one real decision you own that is still open, described in roles rather than names. Nothing you type in the session is collected or sent anywhere.
+
+See you there,
+[Your name]</p>
+  </div>
+
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/prep.jpg" alt="Page: Run this course" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Run this course <span class="mins">Before class</span></h2>
+    <p class="purpose">Your prep lives on this page; the card below is the invite that does half of it for you.</p>
+    <p class="mini">Send this a few days out so logins happen at desks, not in the room. Adjust the day, time, and room, and send it from your own address. The invite text is on the first page of the facilitator edition and in the printed packet below.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/home.jpg" alt="Page: Welcome" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Welcome <span class="mins">Full 2 min · Core 2</span></h2>
+    <p class="purpose">Get every device into the learner edition and set the deal: a wider view, the same owner.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;This is Decisions, Sharper, part of The AI-enabled Education Series and the Manager Voyage. In this session you’ll learn a three-step way to test a decision before you make it: the AI widens what you can see, and the call stays yours. Scan the QR and the course opens on your phone. Everything I do up here, you can do down there.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Have this page projected as people arrive; the QR does its work before you start talking.</li><li>Give the room two minutes to scan and open the course; the whiteboard URL is the backup.</li><li>Point out the bottom-bar arrows so people can follow along page by page.</li><li>Say plainly that nothing they type is stored or sent anywhere.</li></ol>
+    <p class="mini"><b>Validate:</b> 80%+ of the room has the course open on a phone or laptop before you turn the page.</p>
+    <p class="mini"><b>Watch for:</b> Guest wifi stalls and half the room can’t load it. Point at the URL on the whiteboard, ask people to share a neighbor’s screen, and keep moving; don’t troubleshoot wifi in front of thirty managers.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Before the research, one page on why the university cares how its managers decide.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> Same page, same two minutes.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/mission.jpg" alt="Page: The Chancellor’s charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The Chancellor’s charge <span class="mins">Full 3 min · Core: under 1</span></h2>
+    <p class="purpose">Connect the method to the Chancellor’s vision so managers hear this as institutional strategy, not another tool tip.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;One page on why the university cares how its managers decide. The Chancellor’s vision has no hedge in it: Vanderbilt will define the great university of the 21st Century and be it, operating at uncommon speed, agility, and scale. Our motto has always been the dare, Crescere aude, dare to grow, and the dare lands on managers like you, one open decision at a time. Widen, weigh, decide is how those decisions close fast without closing blind.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the vision sentence from the screen word for word; don’t paraphrase the one sentence the page exists for.</li><li>Walk the three focus cards left to right, one sentence each, and land on the team-translation lines.</li><li>Point at the flywheel card and trace the loop out loud: reputation attracts talent, funding, partnerships, and access, which build the reputation.</li><li>Hold it to three minutes; this page frames the course, it is not the course.</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “which focus area does the decision on your desk feed?” and hear managers answer in roles, never names.</p>
+    <p class="mini"><b>Watch for:</b> Eye-rolls at strategy talk. Don’t argue for the vision; point out the next page is evidence, not aspiration, and keep moving.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;That’s the why. Here’s the research on what AI does to a decision.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: under a minute. Read the vision sentence, gesture at the three focuses, and move on.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/evidence.jpg" alt="Page: The evidence" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The evidence <span class="mins">Full 4 min · Core 2</span></h2>
+    <p class="purpose">Ground the method in the survey, the field experiment, and the Stanford framing.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Think about the last decision you sat on for a week. Not because it was hard to say out loud, but because you couldn’t be sure what you were missing. In Deloitte’s latest survey of three thousand leaders, sixty percent named better decision-making among the benefits they’re getting from AI. And Stanford’s advice on how to get it is in the title of the piece we cite: you’re in charge.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Project the three evidence cards and give each one sentence, not a lecture.</li><li>Run the gold Together card: pending decisions in one sentence each, roles, never names.</li><li>Take two or three out loud; real open decisions do the persuading.</li><li>Mention that every number is cited in full on the Appendix page, one tap away in the bottom bar.</li></ol>
+    <p class="mini"><b>Validate:</b> At least two people name a real open decision, in roles, without using a name.</p>
+    <p class="mini"><b>Watch for:</b> Someone names a person mid-story. Interrupt gently, restate it as a role, and say that habit is the first guardrail of this course.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Here’s the method those findings point to. It fits on one page.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip the share-out. State the Deloitte figure in one sentence and turn the page.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/method.jpg" alt="Page: The method" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The method <span class="mins">Full 6 min · Core 5</span></h2>
+    <p class="purpose">Teach Widen, Weigh, Decide and the CRIT layout. This is the one page they must remember.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;The whole method is three steps in order. Widen: lay the decision out with CRIT, roles not names, including what a skeptic would say and what information you’re missing, and tell it to ask you about anything you haven’t considered. Weigh: best case, expected case, worst case, then the premortem: it’s six months later and this failed; write the honest retrospective. Decide: the call is yours. The AI informs or recommends; it never decides.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Walk the three cards left to right, spending most of your time on the Widen card.</li><li>Read the four CRIT chips out loud and say in one line what each one buys you.</li><li>Run the Together card: pairs explain Widen, Weigh, Decide back to each other in under a minute.</li><li>Point at the gold rule strip and read it word for word: the AI widens what you can see, and the decision stays yours.</li></ol>
+    <p class="mini"><b>Validate:</b> Cold-call one pair afterward: they can name the three steps and say what the premortem line does.</p>
+    <p class="mini"><b>Watch for:</b> People hearing “the AI recommends” as “the AI decides.” Draw the line now: a recommendation is an input, and the accountable name on the decision is still theirs.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;First test: two trusted leads, two opposite answers.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: keep everything but the pair activity. Name the steps yourself, then cold-call one person.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/ex-recs.jpg" alt="Page: Example: recommendations" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Example: recommendations <span class="mins">Full 4 min · Core: skip</span></h2>
+    <p class="purpose">Show the AI as a neutral mapper of a disagreement, never the referee of it.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Two team leads recommend opposite scheduling systems. Both are careful; both wrote solid one-pagers. Watch what we ask for: not a winner, but where they agree, where they truly differ, which facts would settle it, and three questions for each lead. The AI maps the disagreement. You still owe both leads a decision with your name on it.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the situation and the Task line aloud, and stress the last sentence: do not pick a winner.</li><li>Walk the tool row and say out loud why ChatGPT EDU is greyed: internal operations stay in Amplify or Copilot.</li><li>Read the what-comes-back note: it found the shape of the disagreement; only you know the room it lives in.</li><li>Land on judgment line one: check the map against the memos before you trust it.</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “why don’t we just let it pick?” and hear the rule back: it informs or recommends, it never decides.</p>
+    <p class="mini"><b>Watch for:</b> A manager wanting to paste both leads’ memos in. Fine in Amplify with names stripped to roles; say that out loud before someone does it with the names left in.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Mapping a disagreement is one move. Now the bigger one: testing a change before you commit to it.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip this page. As you enter the scenario test, say the takeaway carries a prompt for mapping dueling recommendations.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/ex-scenario.jpg" alt="Page: Example: scenario test" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Example: scenario test <span class="mins">Full 8 min · Core 7</span></h2>
+    <p class="purpose">The live run: the room supplies real constraints, and everyone watches the scenario test widen a decision.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Here’s the decision: extending service desk coverage to seven, two evenings a week. I’m going to run this live, and it’s going to use your constraints, not mine. Someone give me a real one: a budget ceiling, a staffing rule, a demand pattern, roles only. We’ll ask for best, expected, and worst case, then the premortem: six months later, it failed, write the honest retrospective.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Take two or three real constraints from the room and edit them into the Context line on screen, as roles, never names.</li><li>Run the prompt live in your logged-in tool and answer its interview questions with the room’s answers.</li><li>Read the worst case and the premortem aloud; ask which failure reasons the room can rule out and which it can’t.</li><li>In Full, split the tables: one takes best case, one worst case, one the premortem; two minutes, then each table reports one finding back.</li><li>Premortem lab (Full only): give the room three minutes to pick an option and write the failure story on their own device, then ask two people to read theirs against the exemplar.</li></ol>
+    <p class="mini"><b>Validate:</b> The room names at least one second-order effect nobody had said out loud before the run.</p>
+    <p class="mini"><b>Watch for:</b> The premortem coming back generic. Push one level down live: “which of these is actually true of our desk?” A generic list turns specific the moment the room scores it.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;That was a decision tested before it was real. One more move: stress-testing your own plan before your director does.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: keep the live run; it’s the heart of the session. Skip the table split and take findings from the floor.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/ex-assume.jpg" alt="Page: Example: assumptions" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Example: assumptions <span class="mins">Full 3 min · Core: skip</span></h2>
+    <p class="purpose">Show the assumptions check: fragile assumptions ranked, hard questions rehearsed in private.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;You’re pitching a budget request next week. The plan is solid in your head, and your head is where the untested assumptions live. This prompt has the AI list every assumption the plan makes, rank them by fragility, and write the three hardest questions your director will ask. Better to hear them here than in the meeting.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Point at the amber data note first: the plan lives in Office documents, so Copilot or Amplify; ChatGPT EDU only if nothing internal, which a budget plan almost never is.</li><li>Project the prompt and stress the phrase “stated or unstated”; the unstated ones are the point.</li><li>Show the fictional practice request for anyone without a live plan.</li><li>Land on judgment line one: answer the three hardest questions in writing before the meeting.</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “where does this prompt run?” and hear Copilot or Amplify back from the room.</p>
+    <p class="mini"><b>Watch for:</b> Someone asking whether salary figures can go in. Budget lines in approved tools, yes; anything about an identifiable person’s pay or performance, no: roles never names, and personnel matters go to HR.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Three moves, one pattern: the view gets wider and the call stays yours. Now the rules that keep it safe.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip this page. Say the takeaway carries the assumptions-check prompt and the data rule that goes with it.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/guardrails.jpg" alt="Page: Guardrails" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Guardrails <span class="mins">Full 5 min · Core 3</span></h2>
+    <p class="purpose">The program’s strictest set. Rule one, roles never names, has to leave the room intact.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Four rules, and the first is the strictest in the program. Never personal or sensitive data: no Social Security numbers, no health information, no performance records, and no names in people decisions. Describe situations as roles, never names, and personnel matters go to HR and your HR business partner, not a chatbot. Second: the AI informs or recommends; it never decides. Third: interrogate confident answers; it argues any side persuasively. Fourth: own it and show your work.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Project the four cards and read each headline; add one sentence of your own, not a paragraph.</li><li>On rule one, give the room the litmus test: if the sentence needs a name, it doesn’t go in a chatbot.</li><li>Take the tough-questions bank you rehearsed: a struggling employee means roles never names and it belongs with HR; a wrong recommendation is why you ask for the case against; “is the decision still mine” is answered by your reasoning in the record; budget numbers are fine in approved tools, personal pay and performance are not.</li><li>Name the default for this room out loud: when in doubt, Amplify; when it’s about a person, HR.</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “you want AI help thinking about a struggling employee; what do you do?” and hear: describe it as a role if you use AI at all, and take the matter to HR.</p>
+    <p class="mini"><b>Watch for:</b> A real personnel situation surfacing in front of everyone. Cut it off kindly; no live employee stories in the room. Parking lot, a name, and a follow-up with HR after.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Those are the rules. Now the part that makes this stick: you lay out a decision you actually own.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: read the four rules and run the struggling-employee check question; skip the wider Q&amp;A.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/practice.jpg" alt="Page: Practice now" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Practice now <span class="mins">Full 8 min · Core 4</span></h2>
+    <p class="purpose">Everyone leaves having laid out a real decision, roles not names. This page is the course.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Think of a decision you own that’s still open. Don’t make it; lay it out. Pair up. Interview your partner about their decision and fill in the brief for them, roles not names, then swap. When both briefs are done, trade assumption lists: write the three biggest assumptions in your partner’s plan and hand them over. In eight minutes I’ll ask a few pairs to read one aloud.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Put the builder on the projector and walk the three fields once, fast, pointing at the roles-not-names placeholder text.</li><li>Pair the room; an odd person joins a pair as a second interviewer.</li><li>Circulate while pairs type on their own devices; nudge vague Task lines toward scenarios plus a premortem.</li><li>Debrief: two pairs read a brief aloud, and the room adds what the AI should still ask about.</li></ol>
+    <p class="mini"><b>Validate:</b> Every pair has a filled brief and a swapped assumption list on at least one device before the share-out.</p>
+    <p class="mini"><b>Watch for:</b> Names creeping into Context fields as people type real situations. Fix them to roles on the spot; the printed takeaway will carry whatever they typed.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;You’ve each laid out something real. Three quick questions to prove the method stuck.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: solo instead of pairs. Everyone briefs their own decision, one volunteer reads theirs aloud, and the assumption swap is skipped.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/check.jpg" alt="Page: Knowledge check" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Knowledge check <span class="mins">Full 3 min · Core: skip</span></h2>
+    <p class="purpose">A room vote that surfaces the three failure modes without feeling like a quiz.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Three questions, no grades, and nothing leaves the room. Look up here for each one, vote by show of hands, and then somebody tells me why.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Project question one and read both briefs aloud; vote by hands.</li><li>Tap the winning answer on screen so the room sees the explanation.</li><li>Repeat for the performance-review question and the strong-recommendation question.</li><li>Where a vote splits, give the two sides thirty seconds to argue before you reveal.</li></ol>
+    <p class="mini"><b>Validate:</b> Near-unanimous hands on question two, the performance-review one. If that one splits, reteach rule one now.</p>
+    <p class="mini"><b>Watch for:</b> The performance-review question turning into a debate about what HR allows. Don’t adjudicate policy from the front. The course rule is simple: roles never names, and personnel matters go to HR; specifics go to the parking lot.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Three for three. Last page: what you’re leaving with, and what you do with the decision on your desk.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip the vote. Ask question two only, out loud, on the way to the recap.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/recap.jpg" alt="Page: Recap" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Recap <span class="mins">Full 2 min · Core 2</span></h2>
+    <p class="purpose">Land the three next actions: test the open decision, print the plan, book the check-in.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;One method: widen, weigh, decide. Four rules, and the first is roles never names. Three things now. Run your brief on the decision you laid out, and take the hardest questions to the people involved. Take the one-page plan. And book the fifteen-minute check-in two weeks out: did the AI widen the view, and did the calls stay yours?&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Walk the three You-learned cards in one sentence each.</li><li>Point at the print button; hand your printed takeaways to anyone without a device.</li><li>Have everyone tap the calendar button and add the two-week check-in now, not later.</li><li>Name the Oracle Learning shelf and the Manager Foundations course for people who want more, and end on time.</li></ol>
+    <p class="mini"><b>Validate:</b> You see phones actually come out for the calendar file, rather than polite nods.</p>
+    <p class="mini"><b>Watch for:</b> Running past the end. If you’re at time, the recap is three sentences and printouts by the door; never trade the ending for the shelf.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;The appendix has every source, and the course stays online at the same link. Thanks for your time; now go test the decision that’s been waiting on you.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: same three actions, one sentence each. The calendar tap is the one to keep.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/sources.jpg" alt="Page: Appendix" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Appendix <span class="mins">As needed · Core: skip</span></h2>
+    <p class="purpose">Reference, not a page you teach. Open it the moment a number gets challenged.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Every number and every piece of framing in the course, cited in full. It stays online at this link, so nobody needs to copy anything down.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Show it for ten seconds so the room knows it exists.</li><li>Return to it live whenever someone questions a statistic; the Appendix button in the bottom bar jumps here from any page.</li><li>Point out the Stanford GSB piece behind “it never decides,” and the CRIT credit to Geoff Woods with the Working Smarter course link.</li></ol>
+    <p class="mini"><b>Validate:</b> You can put the Deloitte citation on screen within five seconds of being asked.</p>
+    <p class="mini"><b>Watch for:</b> A methodology debate in the last minutes. One citation on screen, then “happy to dig in after”; protect the ending.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;That’s the whole course. I’ll stay a few minutes for anything on the parking lot.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip; leave it on screen while people file out if you like.</p>
+    </div>
+  </div>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from the facilitator edition's page scripts and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+</main>
+</body>
+</html>

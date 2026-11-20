@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -86,8 +89,8 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>Agenda</td><td>1</td><td>—</td></tr><tr><td>01 · Context &amp; attention</td><td>10</td><td>7</td></tr><tr><td>Manifesto</td><td>1</td><td>—</td></tr><tr><td>02 · Grounding with RAG</td><td>10</td><td>7</td></tr><tr><td>03 · Choosing your method</td><td>10</td><td>7</td></tr><tr><td>04 · Advanced prompt patterns</td><td>11</td><td>7</td></tr><tr><td>05 · Multimodal &amp; agentic AI</td><td>11</td><td>7</td></tr><tr><td>06 · Spot the hallucination</td><td>7</td><td>5</td></tr><tr><td>07 · Governance</td><td>8</td><td>5</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · Team AI workflow</td><td>8</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>—</td></tr><tr><td>Closing · commitment</td><td>3</td><td>2</td></tr>
-    <tr><th>Total</th><th>90</th><th>60</th></tr></table>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>2</td><td>skip</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>The data rule</td><td>3</td><td>2</td></tr><tr><td>01 · Context &amp; attention</td><td>10</td><td>7</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Grounding with RAG</td><td>10</td><td>7</td></tr><tr><td>03 · Choosing your method</td><td>10</td><td>7</td></tr><tr><td>04 · Advanced prompt patterns</td><td>11</td><td>7</td></tr><tr><td>05 · Multimodal &amp; agentic AI</td><td>11</td><td>7</td></tr><tr><td>06 · Spot the hallucination</td><td>7</td><td>5</td></tr><tr><td>07 · Governance</td><td>8</td><td>5</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · Team AI workflow</td><td>8</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>3</td><td>2</td></tr>
+    <tr><th>Total</th><th>95</th><th>62</th></tr></table>
     <h3>Audience</h3><p>Anyone who completed AI Basics (101) or equivalent: knowledge workers, managers, L&amp;D and talent teams. 8 to 24 works best for pairs; scales larger with polling instead of breakouts.</p>
     <h3>Room setup</h3><p>Projector + presenter device; learners on their own devices via the Welcome-slide QR; pairs for the method drill. Virtual: breakouts of 2 for the method and RAG discussions. Optional: a live chat tool open for the long-conversation demo.</p>
     <h3>Materials</h3><ul><li>Projector or large display and the facilitator link open (this edition)</li><li>Facilitator laptop with arrow keys or clicker; all notifications off</li><li>Learner devices (BYOD) joining via the welcome-slide QR</li><li>A few printed cheat sheets (cheatsheet.html) for anyone without a device</li><li>Printed workflow cards (worksheet.html) as the no-device and projector-failure fallback</li><li>Optional: a live chat tool open with a long document pasted in, for the context-window demo</li><li>Whiteboard or flip chart for the parking lot and the room's RAG question backlog</li></ul>
@@ -99,14 +102,13 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device and set the frame: same fundamentals as 101, now open the hood.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome back. Point your camera at that code before we start. You've all taken AI Basics, so you can write a prompt. Today we open the hood: why tools forget, where answers actually come from, what happens when AI starts taking actions, and how to run all of it responsibly. Still no code. Still no math.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Have this slide projected as people arrive.</li><li>Point at the QR and get phones up before you say anything else.</li><li>Set the frame: builds on AI Basics, still no code, still no math, and everything typed stays on their screen.</li><li>Confirm by show of hands that most of the room has the site open before advancing.</li></ol>
     <p class='tagline ask'>Ask</p><p class='script'>&ldquo;Quick recall, shout it out: what's one AI Basics idea you've actually used since that session, and one thing you're still unsure about?&rdquo;</p><p class='mini'><b>Expect:</b></p><ul><li>Used: the four-part prompt, the data colors, verify-before-trusting</li><li>Unsure: why it forgets, whether to trust it, what an agent is</li><li>Some quiet; people warm up slowly on recall</li></ul><p class='mini'><b>Respond:</b> Collect three or four of each. The 'unsure' list is your session preview: 'Everything you just named is on today's agenda. Watch for yours.'</p>
-    
     <p class="mini"><b>Validate:</b> 80%+ of the room has the deck open on a device.</p>
     <p class="mini"><b>Watch for:</b> Anyone who hasn't taken AI Basics: pair them with a veteran neighbor and point them at the 101 link in the footer for after.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's exactly what you'll be able to do in ninety minutes.&rdquo;</p>
@@ -114,14 +116,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: six capabilities, ending in a real governed workflow with a run date.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six things by the end: you'll explain why long chats lose the thread, what retrieval actually fixes, when to prompt versus RAG versus fine-tune, four prompt patterns beyond the basics, how agents fail and where the human checkpoint goes, and how to tier information before it ever touches a tool. It all lands in one artifact: a governed workflow card for a task you actually do.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the six objectives briskly, in plain language.</li><li>Land on the sixth: this session ends with a REAL workflow card: task, pattern, checkpoint, tier.</li><li>Name the sources once for credibility: 3Blue1Brown, IBM's research explainers, the Vanderbilt-led prompt pattern catalog, NIST.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Learners can say what the capstone will be (a governed AI workflow for a real recurring task).</p>
     <p class="mini"><b>Watch for:</b> Anxiety about the word 'governance.' Defuse early: it's three colors and four questions, not a compliance seminar.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Seven ideas, and the first one explains half the mysteries you've already met.&rdquo;</p>
@@ -129,14 +129,22 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The Chancellor's charge <span class="mins">Full 2 min · Core skip</span></h2>
+    <p class="purpose">Ground the session in the institutional mission before the working content begins: Vanderbilt will define the great university of the 21st Century and be it.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;One minute on why Vanderbilt cares about this session. The Chancellor's vision is a single sentence: Vanderbilt will define the great university of the 21st Century and be it. The university pursues it through three Areas of Focus, and the work in this course is one of the ways staff deliver on the first of them.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the vision line verbatim and let it land: Vanderbilt will define the great university of the 21st Century and be it.</li><li>Walk the three Areas of Focus in order: Exceptional Core Operations, Bold Strategic Initiatives, Values Leadership.</li><li>Connect the course to the mission using the statement on the slide, then move on; this moment is short by design.</li></ol>
+    <p class="mini"><b>Validate:</b> The room can see why the university cares about this hour before the first working slide appears.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each tool as it arrives.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Three moves: how the machine works, what happens when it starts acting on its own, and how you keep all of it honest.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the seven items in one breath each.</li><li>Point out the shape: how it works (01-04), what happens when it acts (05), how you keep it honest (06-07).</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed; this is orientation.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the window, because it explains the single most common complaint about these tools.&rdquo;</p>
@@ -144,7 +152,20 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-attention.jpg" alt="Slide: 01 · Context &amp; attention" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-datarule.jpg" alt="Slide: The data rule" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The data rule <span class="mins">Full 3 min · Core 2</span></h2>
+    <p class="purpose">Land the one rule every AI course in the library shares, on the same card, before any tool opens: green, yellow, red, and the never list.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Before anything goes into an AI tool today, one three-second question: what color is this? Green is public or generic, any approved tool. Yellow is your internal work, approved Vanderbilt tools only, signed in with your VU account. Red is private information about people, and it goes in no AI tool, full stop. This card is the same in every AI course in the library, so it is the one thing you never have to relearn.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the three-second question off the card: what color is this?</li><li>Walk the light top to bottom in one sentence each: green is public or generic, yellow is internal work in approved Vanderbilt tools on a VU account, red is private information about people and goes in no AI tool.</li><li>Point at the tool ceilings and say them once: ChatGPT EDU to Level 2, Amplify and Copilot to Level 3, children's information in no tool.</li><li>Name the hard case the room will meet first in this course, then move on; the card stays in the deck and in every other AI course they take.</li></ol>
+    <p class="mini"><b>Validate:</b> Anyone in the room can say the three colors and name one thing that never goes in, unprompted.</p>
+    <p class="mini"><b>Watch for:</b> Debate about edge cases. Take one, answer it with 'who is this about', and park the rest for the Go deeper panels; the rule is the point, not the taxonomy.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Rule in hand. Now the work.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> Core: read the question and the three colors, point at the never list, go.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/s-attention.jpg" alt="Slide: 01 · Context &amp; attention" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · Context &amp; attention <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Install the context-window mental model so 'it forgot' becomes a diagnosable, fixable event instead of a mystery.</p>
@@ -159,14 +180,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness to lock the session's warning label before the tooling continues.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;A wrong answer sounds exactly as confident as a right one.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Let the line animate word by word. Say nothing until it finishes.</li><li>Read it once, slowly, then advance.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; this is pacing.</p>
     <p class="mini"><b>Watch for:</b> The urge to talk over it. Don't.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Which is why the next tool exists: giving the model receipts.&rdquo;</p>
@@ -174,7 +193,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-rag.jpg" alt="Slide: 02 · Grounding with RAG" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-rag.jpg" alt="Slide: 02 · Grounding with RAG" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · Grounding with RAG <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Install the RAG mental model, retrieval fixes the raw material, not the brain, and surface where it belongs in learners' own work.</p>
@@ -189,7 +208,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-method.jpg" alt="Slide: 03 · Choosing your method" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-method.jpg" alt="Slide: 03 · Choosing your method" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · Choosing your method <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Install the cheapest-first decision framework (prompting → RAG → fine-tuning) and practice it to a one-sentence justification.</p>
@@ -204,7 +223,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-patterns.jpg" alt="Slide: 04 · Advanced prompt patterns" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-patterns.jpg" alt="Slide: 04 · Advanced prompt patterns" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>04 · Advanced prompt patterns <span class="mins">Full 11 min · Core 7</span></h2>
     <p class="purpose">Install the four patterns as sight-recognizable tools and get each learner one rewrite of a real prompt.</p>
@@ -219,7 +238,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agents.jpg" alt="Slide: 05 · Multimodal &amp; agentic AI" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agents.jpg" alt="Slide: 05 · Multimodal &amp; agentic AI" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>05 · Multimodal &amp; agentic AI <span class="mins">Full 11 min · Core 7</span></h2>
     <p class="purpose">Install the plan-act-observe loop, make the three documented failure modes sight-readable, and set up the checkpoint decision the capstone requires.</p>
@@ -234,7 +253,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-halluc.jpg" alt="Slide: 06 · Spot the hallucination" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-halluc.jpg" alt="Slide: 06 · Spot the hallucination" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>06 · Spot the hallucination <span class="mins">Full 7 min · Core 5</span></h2>
     <p class="purpose">Calibrate hallucination detection by hand, then name the discipline that does it at scale: red-teaming and evaluation.</p>
@@ -249,7 +268,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-govern.jpg" alt="Slide: 07 · Governance" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-govern.jpg" alt="Slide: 07 · Governance" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>07 · Governance <span class="mins">Full 8 min · Core 5</span></h2>
     <p class="purpose">Make NIST's four functions a usable checklist and drill the tiering habit that prevents most real incidents.</p>
@@ -264,14 +283,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Score the session's knowledge against the six objectives before the capstone applies it (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per objective. This is the systems check before you build the workflow that leaves the room with you.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone takes it on their own device, all six questions.</li><li>Ask for hands on 5-or-better; celebrate briefly.</li><li>For any question the room visibly missed, do a 30-second reteach from the relevant slide, not a lecture.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Room mode at 5/6 or better. The quiz maps one-to-one onto the objectives, so misses tell you exactly what to reteach.</p>
     <p class="mini"><b>Watch for:</b> Racing. Frame it as a systems check before the build, not a race.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the artifact this whole session was aiming at.&rdquo;</p>
@@ -279,7 +296,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · Team AI workflow" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · Team AI workflow" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · Team AI workflow <span class="mins">Full 8 min · Core 6</span></h2>
     <p class="purpose">Convert the session into one governed, dated workflow card: the transfer artifact, the Level 3 seed, and the input to the 30-day census.</p>
@@ -294,14 +311,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer; it lives here for after the session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here, flip cards, whenever you need the vocabulary back, including in the meeting where a vendor starts using it at you.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Flip one card on the projector (Human Checkpoint is a good pick).</li><li>Tell them it's all here whenever they need the vocabulary back.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; reference material.</p>
     <p class="mini"><b>Watch for:</b> Don't tour all thirteen cards; one flip makes the point.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One run left.&rdquo;</p>
@@ -309,7 +324,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Convert cards into public commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p>
@@ -323,7 +338,7 @@
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>

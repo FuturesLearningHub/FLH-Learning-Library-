@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -86,8 +89,8 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>&lt;1</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>01 · The repeat tax</td><td>9</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Spot it</td><td>12</td><td>8</td></tr><tr><td>03 · Template it</td><td>11</td><td>8</td></tr><tr><td>04 · Route it</td><td>12</td><td>7</td></tr><tr><td>05 · The Automation Lab</td><td>14</td><td>10</td></tr><tr><td>06 · Retire it and bank it</td><td>10</td><td>7</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My automation card</td><td>6</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>4</td><td>1</td></tr>
-    <tr><th>Total</th><th>93</th><th>60</th></tr></table>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>skip</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>The data rule</td><td>3</td><td>2</td></tr><tr><td>01 · The repeat tax</td><td>9</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Spot it</td><td>12</td><td>8</td></tr><tr><td>03 · Template it</td><td>11</td><td>8</td></tr><tr><td>04 · Route it</td><td>12</td><td>7</td></tr><tr><td>05 · The Automation Lab</td><td>14</td><td>10</td></tr><tr><td>06 · Retire it and bank it</td><td>10</td><td>7</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My automation card</td><td>6</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>4</td><td>1</td></tr>
+    <tr><th>Total</th><th>96</th><th>62</th></tr></table>
     <h3>Audience</h3><p>All Vanderbilt staff who live in email, calendars, and recurring reports: coordinators, administrators, analysts, program staff, and anyone whose week has a repetitive layer. 8 to 30 works well; every exercise runs on individual work, so it scales up easily. Start Smarter is the assumed foundation: learners know what a prompt is, and the traffic-light data rule is restated here, never introduced.</p>
     <h3>Room setup</h3><p>Projector plus presenter device; learners on their own devices via the Welcome-slide QR; any seating works, though pairs need to be able to turn toward each other. A whiteboard or flip chart for the candidate list in section 02 and the keep-shrink-retire calls in section 06. Virtual: breakouts of 2 for the pair drills. Set the norm in the first minute: your tasks and templates, never other people's names, and nothing typed is saved or sent.</p>
     <h3>Materials</h3><ul><li>Projector or large display and the facilitator link open (this edition)</li><li>Facilitator laptop with arrow keys or clicker; all notifications off</li><li>Learner devices (BYOD) joining via the welcome-slide QR</li><li>A few printed cheat sheets (cheatsheet.html) for anyone without a device</li><li>Printed repeat audit cards (worksheet.html) as the no-device and projector-failure fallback</li><li>Whiteboard or flip chart with markers for the candidate list and the keep-shrink-retire calls</li><li>Sticky notes for the section 02 candidate swap (one task per note works well)</li></ul>
@@ -99,14 +102,13 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device and set the norm that makes real-work material safe: your tasks and templates, never other people's names, and nothing typed leaves the screen.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Point your camera at that code before we start. Today is about the least glamorous and best-evidenced thing AI does: taking the repetitive layer of your week off your hands. We'll work on your own real tasks, so one ground rule for the next ninety minutes: your tasks and templates, never other people's names. And everything you type today stays on your screen; nothing is saved or sent anywhere.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Have this slide projected as people arrive.</li><li>Point at the QR and get phones up before you say anything else.</li><li>Set the norm explicitly and early: your own tasks and templates, never other people's names; typed exercises stay on their screens.</li><li>Confirm by show of hands that most of the room has the site open before advancing.</li></ol>
     <p class='tagline ask'>Ask</p><p class='script'>&ldquo;Quick calibration, shout it out: how many of you sent an email this week that you have sent, in nearly the same words, at least ten times before?&rdquo;</p><p class='mini'><b>Expect:</b></p><ul><li>Most hands up, with laughter</li><li>Someone names theirs immediately: the reimbursement answer, the room confirmation</li><li>A few holdouts who 'don't have repeats' (the audit will find them)</li></ul><p class='mini'><b>Respond:</b> Name the pattern warmly: 'Every one of those hands is holding a template that hasn't been built yet. Ninety minutes from now, one of them will be.'</p>
-    
     <p class="mini"><b>Validate:</b> 80%+ of the room has the deck open on a device; the room can repeat the 'your tasks, never names' norm back to you.</p>
     <p class="mini"><b>Watch for:</b> People bracing for either a tech tutorial or an AI sales pitch. The frame that relaxes both: today is about getting hours back from the boring layer of the week, and AI is just one of the tools.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's exactly what you'll walk out able to do.&rdquo;</p>
@@ -114,14 +116,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: five capabilities, ending in one real task carded for automation with a dated 20-minute build session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five things by the end. You'll be able to find the repetitive layer in your own week, because it hides. You'll build reusable templates with AI from your own past messages and reports. You'll set up email triage where AI drafts and you stay accountable for every send. You'll put calendar rules in place that defend the time you recover. And you'll make the bravest call in the course: what recurring work should simply stop. It all lands in one artifact: an automation card for a task you actually do, with a date on it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the five objectives briskly, in plain language.</li><li>Land on the last one: this session ends with a REAL automation card, one task, one move, one date.</li><li>Name the sources once for credibility: Gallup for the payoff evidence, Leadership Circle for the evaporation warning.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Learners can say what the capstone will be (one task, one move, one dated build session).</p>
     <p class="mini"><b>Watch for:</b> Tool questions arriving early ('which AI should we use?'). Park them: the moves work in any approved tool, and the traffic light in section 02 answers the which-tool question properly.</p>
     <p class="mini"><b>Transition:</b> &ldquo;One page before the plan: why the university needs those hours back as much as you do.&rdquo;</p>
@@ -129,14 +129,12 @@
     </div>
   </div>
   <div class="sec">
-    
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
-    <h2>The Chancellor's charge <span class="mins">Full 3 min · Core &lt;1</span></h2>
+    <h2>The Chancellor's charge <span class="mins">Full 3 min · Core skip</span></h2>
     <p class="purpose">Connect the course to the institutional vision: the university's speed is the sum of its staff hours, and automating the repetitive layer is how those hours come back.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Before the plan, the why. Chancellor Diermeier's vision is one sentence with no hedge in it: Vanderbilt will define the great university of the 21st Century and be it. The how is uncommon speed, agility, and scale, and here is the desk-level truth: an institution's speed is the sum of its staff hours, and the repeat tax is quietly spending yours. Automating the twentieth repeat, while you stay accountable for every send, is how a university this ambitious gets its operational capacity back. Our motto is the dare, Crescere aude, dare to grow, and the hour you reclaim this week is the room you grow in.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the vision sentence off the slide, slowly; it carries the page.</li><li>Walk the three focus cards, landing on the 'At your desk' line in each.</li><li>Point at the flywheel card: recovered hours, banked where they show, are the flywheel's rawest input.</li><li>Keep it under three minutes; this page frames the session, and the sections do the teaching.</li></ol>
-
-
     <p class="mini"><b>Validate:</b> The room can connect the vision to the course in one line: the university's speed is made of reclaimed staff hours like theirs.</p>
     <p class="mini"><b>Watch for:</b> Eye-rolls at strategy language. Ground it fast: the flywheel's inputs are decided at desks like theirs, one retired repeat at a time.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Six ideas, in a deliberate order.&rdquo;</p>
@@ -144,14 +142,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each tool as it arrives: evidence, then the four moves of the Repeat Audit, practiced in the lab, protected by the bank.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The arc is simple: first the evidence, then the Repeat Audit's four moves in order. Spot the repeats, template them, route what arrives, and, the brave one, retire what nobody needs. In the middle you'll rebuild a monthly report cycle in the lab and watch your design survive month two, or not. We end with the card that puts a date on your first move.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the six items in one breath each.</li><li>Point out the shape: the case (01), then the audit's four moves (02 spot, 03 template, 04 route, 06 retire), with the lab (05) as the practice run.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed; this is orientation.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the evidence, because the numbers are better than most people expect, and the trap is worse.&rdquo;</p>
@@ -159,7 +155,20 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-repeat.jpg" alt="Slide: 01 · The repeat tax" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-datarule.jpg" alt="Slide: The data rule" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The data rule <span class="mins">Full 3 min · Core 2</span></h2>
+    <p class="purpose">Land the one rule every AI course in the library shares, on the same card, before any tool opens: green, yellow, red, and the never list.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Before anything goes into an AI tool today, one three-second question: what color is this? Green is public or generic, any approved tool. Yellow is your internal work, approved Vanderbilt tools only, signed in with your VU account. Red is private information about people, and it goes in no AI tool, full stop. This card is the same in every AI course in the library, so it is the one thing you never have to relearn.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the three-second question off the card: what color is this?</li><li>Walk the light top to bottom in one sentence each: green is public or generic, yellow is internal work in approved Vanderbilt tools on a VU account, red is private information about people and goes in no AI tool.</li><li>Point at the tool ceilings and say them once: ChatGPT EDU to Level 2, Amplify and Copilot to Level 3, children's information in no tool.</li><li>Name the hard case the room will meet first in this course, then move on; the card stays in the deck and in every other AI course they take.</li></ol>
+    <p class="mini"><b>Validate:</b> Anyone in the room can say the three colors and name one thing that never goes in, unprompted.</p>
+    <p class="mini"><b>Watch for:</b> Debate about edge cases. Take one, answer it with 'who is this about', and park the rest for the Go deeper panels; the rule is the point, not the taxonomy.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Rule in hand. Now the work.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> Core: read the question and the three colors, point at the never list, go.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/s-repeat.jpg" alt="Slide: 01 · The repeat tax" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · The repeat tax <span class="mins">Full 9 min · Core 6</span></h2>
     <p class="purpose">Establish with guessed-at, missed numbers that repetitive admin is the highest-payoff AI use case (Gallup, around 77 percent) and that saved time evaporates unless banked (Leadership Circle). The tension between those two findings is the whole course.</p>
@@ -174,14 +183,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness to lock the session's core idea before the method arrives.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Anything you have typed three times is a template you have not met yet.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Let the line animate word by word. Say nothing until it finishes.</li><li>Read it once, slowly, then advance.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; this is pacing.</p>
     <p class="mini"><b>Watch for:</b> The urge to talk over it. Don't.</p>
     <p class="mini"><b>Transition:</b> &ldquo;So the first move is learning to notice. Most repeats hide in plain sight.&rdquo;</p>
@@ -189,7 +196,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-spot.jpg" alt="Slide: 02 · Spot it" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-spot.jpg" alt="Slide: 02 · Spot it" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · Spot it <span class="mins">Full 12 min · Core 8</span></h2>
     <p class="purpose">Teach the recurrence inventory (the audit's first move), install the three tells and the more-than-twice rule, restate the traffic light as the boundary, and get every learner a ranked top-three list of their own automation candidates.</p>
@@ -204,7 +211,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-template.jpg" alt="Slide: 03 · Template it" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-template.jpg" alt="Slide: 03 · Template it" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · Template it <span class="mins">Full 11 min · Core 8</span></h2>
     <p class="purpose">Install the template build (three de-identified past examples in, slotted skeleton out, voice intact) and the three hygiene rules, with the leftover-name incident as the cautionary tale that makes slot discipline stick.</p>
@@ -219,7 +226,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-route.jpg" alt="Slide: 04 · Route it" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-route.jpg" alt="Slide: 04 · Route it" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>04 · Route it <span class="mins">Full 12 min · Core 7</span></h2>
     <p class="purpose">Install the three-pile triage system with the accountability line (rules sort, AI drafts, you decide, read-then-send without exceptions) and the three calendar rules that give recovered time somewhere to live.</p>
@@ -234,7 +241,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-lab.jpg" alt="Slide: 05 · The Automation Lab" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-lab.jpg" alt="Slide: 05 · The Automation Lab" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>05 · The Automation Lab <span class="mins">Full 14 min · Core 10</span></h2>
     <p class="purpose">Give every learner a full felt rep of the method: four steps of a recognizable monthly report cycle, one design choice each, and a month-two outcome that rewards accountable design over raw automation enthusiasm. The session's deepest practice block.</p>
@@ -249,7 +256,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-retire.jpg" alt="Slide: 06 · Retire it and bank it" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-retire.jpg" alt="Slide: 06 · Retire it and bank it" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>06 · Retire it and bank it <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Install the test retirement (skip one cycle, manager in the loop, watch who notices) and visible banking (name the hour's purpose, give it a calendar home), the two halves of the audit's final move.</p>
@@ -264,14 +271,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Score the session's knowledge against the five objectives before the capstone applies it (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per big idea. This is the systems check before you write the card that leaves the room with you.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone takes it on their own device, all six questions.</li><li>Ask for hands on 5-or-better; celebrate briefly.</li><li>For any question the room visibly missed, do a 30-second reteach from the relevant slide, not a lecture.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Room mode at 5/6 or better. The quiz maps onto the objectives, so misses tell you exactly what to reteach.</p>
     <p class="mini"><b>Watch for:</b> Racing. Frame it as the systems check before the card, not a race.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the only part of today that changes anything.&rdquo;</p>
@@ -279,7 +284,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My automation card" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My automation card" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · My automation card <span class="mins">Full 6 min · Core 6</span></h2>
     <p class="purpose">Convert the session into one dated commitment: one task, one move, one named failure mode to avoid, and a dated 20-minute build session, with the bank named on the card. The transfer artifact and the Level 3 seed.</p>
@@ -294,14 +299,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer; it lives here for after the session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here as flip cards, including the leftover-name incident, for the next time someone forwards you a template with somebody's name still in it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Flip one card on the projector (The Leftover-Name Incident is a good pick; it gets a knowing laugh and reteaches section 03).</li><li>Tell them it's all here whenever they need the vocabulary back.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; reference material.</p>
     <p class="mini"><b>Watch for:</b> Don't tour all twelve cards; one flip makes the point.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One build session left.&rdquo;</p>
@@ -309,7 +312,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 4 min · Core 1</span></h2>
     <p class="purpose">Convert cards into spoken commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p>
@@ -323,7 +326,7 @@
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>

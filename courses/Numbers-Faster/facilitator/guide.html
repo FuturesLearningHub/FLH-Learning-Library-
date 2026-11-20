@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -86,7 +89,7 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>&lt;1</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>01 · The case for AI on numbers</td><td>9</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Safe data in</td><td>12</td><td>8</td></tr><tr><td>03 · Ask the sheet</td><td>12</td><td>8</td></tr><tr><td>04 · Check the math</td><td>11</td><td>8</td></tr><tr><td>05 · The Analysis Lab</td><td>14</td><td>10</td></tr><tr><td>06 · Tell the story</td><td>10</td><td>7</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My Data Loop card</td><td>6</td><td>5</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>4</td><td>1</td></tr>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>skip</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>01 · The case for AI on numbers</td><td>9</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Safe data in</td><td>12</td><td>8</td></tr><tr><td>03 · Ask the sheet</td><td>12</td><td>8</td></tr><tr><td>04 · Check the math</td><td>11</td><td>8</td></tr><tr><td>05 · The Analysis Lab</td><td>14</td><td>10</td></tr><tr><td>06 · Tell the story</td><td>10</td><td>7</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My Data Loop card</td><td>6</td><td>5</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>4</td><td>1</td></tr>
     <tr><th>Total</th><th>93</th><th>60</th></tr></table>
     <h3>Audience</h3><p>All Vanderbilt staff who touch a spreadsheet, a report, or a dashboard: program coordinators, analysts, finance and HR staff, managers who assemble the month-end numbers. 8 to 24 works best (the light-sorting and finding drills run in pairs); scales larger with room votes. Prerequisite: Start Smarter or equivalent comfort opening an AI tool; the traffic light from the AI courses is assumed and retaught here for files.</p>
     <h3>Room setup</h3><p>Projector plus presenter device; learners on their own devices via the Welcome-slide QR; movable seating for pairs. Learners should be able to picture their real datasets, so the pre-work matters more than usual. Virtual: breakouts of 2 for the light-sort and finding drills. Set the norm in the first minute: datasets and columns, never names or personal records, and nothing typed is saved or sent.</p>
@@ -99,14 +102,13 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device and set the norm that makes real-dataset material safe: datasets and columns, never names or personal records, and nothing typed leaves the screen.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Point your camera at that code before we start. Today is about the numbers you already produce: the exports, the month-end reports, the sheets you total by hand. The research says this is one of the highest-payoff places to use AI, and also one of the easiest places to get burned by it, so everything we do today comes with a check built in. One ground rule for the next ninety minutes: datasets and columns, never names or personal records. And everything you type today stays on your screen; nothing is saved or sent anywhere.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Have this slide projected as people arrive.</li><li>Point at the QR and get phones up before you say anything else.</li><li>Set the norm explicitly and early: datasets and columns, never names or personal records; typed exercises stay on their screens.</li><li>Confirm by show of hands that most of the room has the site open before advancing.</li></ol>
     <p class='tagline ask'>Ask</p><p class='script'>&ldquo;Quick calibration, shout it out: how many of you produced or updated a number this week, a report, a total, a dashboard cell? And how many of you used AI to do any of it?&rdquo;</p><p class='mini'><b>Expect:</b></p><ul><li>Nearly every hand up on the first question</li><li>Very few hands on the second</li><li>Someone jokes that they don't trust it with their numbers</li></ul><p class='mini'><b>Respond:</b> Take the joke seriously and warmly: 'That instinct is correct, and it's half of today's method. The other half is collecting the speed anyway. By the end you'll have both.'</p>
-    
     <p class="mini"><b>Validate:</b> 80%+ of the room has the deck open on a device; the room can repeat the 'datasets and columns, never names' norm back to you.</p>
     <p class="mini"><b>Watch for:</b> Anyone bracing for either a coding class or an AI sales pitch. The frame that relaxes both: today is a working session about the spreadsheets you already own, and every technique comes with its check attached.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's exactly what you'll walk out able to do.&rdquo;</p>
@@ -114,14 +116,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: five capabilities, ending in one real dataset carded for a dated first Data Loop run.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five things by the end. You'll know where AI genuinely helps with data work and where it fails, with numbers behind both. You'll be able to prepare a file safely, which includes knowing when a file must never go in at all. You'll run the Data Loop, the method this session is named for: Describe, Ask, Check, Tell. You'll build a comparison and a chart brief from your own numbers. And you'll verify every AI-produced figure before it travels, which is the habit that protects your name. It all lands in one artifact: a Data Loop card for a dataset you actually own, with a date on it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the five objectives briskly, in plain language.</li><li>Land on the last two together: build with AI, and verify before anything travels. They are one skill, not two.</li><li>Name the sources once for credibility: Gallup's workplace AI research for the payoff numbers, SHRM for the cost of skipping checks.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Learners can say what the capstone will be (one dataset, one first move, one dated first run).</p>
     <p class="mini"><b>Watch for:</b> Tool questions arriving early ('which AI is best for Excel?'). Park them: the loop runs the same in any approved tool, and the approved list is on the traffic light in section 02.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Before the plan, one minute on why the university wants exactly this from you.&rdquo;</p>
@@ -129,9 +129,9 @@
     </div>
   </div>
   <div class="sec">
-    
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
-    <h2>The Chancellor's charge <span class="mins">Full 3 min · Core &lt;1</span></h2>
+    <h2>The Chancellor's charge <span class="mins">Full 3 min · Core skip</span></h2>
     <p class="purpose">Anchor the session in the institution's own plan: the one-sentence vision, the three focus areas in data terms, and where trusted numbers feed the reputation flywheel.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Chancellor Diermeier's vision for this university is one sentence with no hedge in it: Vanderbilt will define the great university of the 21st Century and be it. The motto has always been the dare, Crescere aude, dare to grow, and growth shows up first in the numbers. The spreadsheets and month-end reports on your desks are the instruments the university reads itself with, and the loop you learn today makes them arrive sooner and truer. The bottom card is the reputation flywheel: reputation attracts talent, funding, partnerships, and access, and execution runs on numbers somebody trusted enough to act on. That somebody is in this room.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the vision sentence exactly as written, then pause; it lands better without commentary.</li><li>Walk the three focus cards in one breath each, landing each at-your-desk line.</li><li>Close on the flywheel card: execution runs on trusted numbers, and the Check pass of the Data Loop is where the trust comes from.</li></ol>
@@ -142,14 +142,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each tool as it arrives: evidence, safety, ask, check, practice, telling.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The arc is simple: first the evidence, then safety, because the file goes in before any question gets asked. Then the loop's front half, describe and ask, then the back half, the checking that makes the speed trustworthy. Then you'll run a whole month-end in the lab, and we finish with the part your readers actually see: telling the story.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the six items in one breath each.</li><li>Point out the shape: the case (01), safety before speed (02), the loop's two halves (03 and 04), practicing it whole (05), and landing it with readers (06).</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed; this is orientation.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the evidence, because some of you think AI can't be trusted with numbers, and some of you think it's magic. The data disagrees with both.&rdquo;</p>
@@ -157,7 +155,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-case.jpg" alt="Slide: 01 · The case for AI on numbers" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-case.jpg" alt="Slide: 01 · The case for AI on numbers" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · The case for AI on numbers <span class="mins">Full 9 min · Core 6</span></h2>
     <p class="purpose">Establish with guessed-at, missed numbers that data work is among AI's highest-payoff uses, that gains concentrate in frequent users, and that most staff haven't started, which makes the room early rather than late.</p>
@@ -172,14 +170,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness to lock the session's core idea, check before believe, before the method arrives.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;A number you haven't checked is a rumor with decimals.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Let the line animate word by word. Say nothing until it finishes.</li><li>Read it once, slowly, then advance.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; this is pacing.</p>
     <p class="mini"><b>Watch for:</b> The urge to talk over it. Don't.</p>
     <p class="mini"><b>Transition:</b> &ldquo;And before any number comes out, a file has to go in. That's where the safety lives.&rdquo;</p>
@@ -187,7 +183,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-safe.jpg" alt="Slide: 02 · Safe data in" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-safe.jpg" alt="Slide: 02 · Safe data in" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · Safe data in <span class="mins">Full 12 min · Core 8</span></h2>
     <p class="purpose">Apply the shared traffic light to data files, teach the five-minute de-identification ritual, and make the red line unmissable: people data never enters unapproved tools, whatever the deadline.</p>
@@ -202,7 +198,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-ask.jpg" alt="Slide: 03 · Ask the sheet" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-ask.jpg" alt="Slide: 03 · Ask the sheet" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · Ask the sheet <span class="mins">Full 12 min · Core 8</span></h2>
     <p class="purpose">Install the Data Loop's front half: describe the data before asking (columns, period, source, quirks), then climb the question ladder one rung at a time, and get every learner a private starter naming their real dataset and first questions.</p>
@@ -217,7 +213,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-check.jpg" alt="Slide: 04 · Check the math" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-check.jpg" alt="Slide: 04 · Check the math" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>04 · Check the math <span class="mins">Full 11 min · Core 8</span></h2>
     <p class="purpose">Install the check ritual (recompute one number, totals and counts, row trace on surprises) as a non-negotiable step, with the SHRM four-hours finding as the cost of checking too late.</p>
@@ -232,7 +228,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-lab.jpg" alt="Slide: 05 · The Analysis Lab" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-lab.jpg" alt="Slide: 05 · The Analysis Lab" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>05 · The Analysis Lab <span class="mins">Full 14 min · Core 10</span></h2>
     <p class="purpose">Give every learner a full felt rep of the Data Loop: four decisions on a realistic month-end, a four-week outcome that rewards the loop's design rather than AI enthusiasm, and a visceral FERPA near-miss for anyone who uploads the red file. The session's deepest practice block.</p>
@@ -247,7 +243,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-tell.jpg" alt="Slide: 06 · Tell the story" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-tell.jpg" alt="Slide: 06 · Tell the story" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>06 · Tell the story <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Install the two-sentence finding and the chart brief as the loop's output format, and draw the hardest boundary: AI narrates patterns, the recommendation stays human.</p>
@@ -262,14 +258,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Score the session's knowledge against the five objectives before the capstone applies it (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per big idea. This is the systems check before you write the card that leaves the room with you.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone takes it on their own device, all six questions.</li><li>Ask for hands on 5-or-better; celebrate briefly.</li><li>For any question the room visibly missed, do a 30-second reteach from the relevant slide, not a lecture.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Room mode at 5/6 or better. The quiz maps onto the objectives, so misses tell you exactly what to reteach.</p>
     <p class="mini"><b>Watch for:</b> Racing. Frame it as the systems check before the card, not a race.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the only part of today that changes anything.&rdquo;</p>
@@ -277,7 +271,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My Data Loop card" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My Data Loop card" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · My Data Loop card <span class="mins">Full 6 min · Core 5</span></h2>
     <p class="purpose">Convert the session into one dated commitment: one dataset, one first move, one named failure mode to avoid, and a dated first run. The transfer artifact and the Level 3 seed.</p>
@@ -292,14 +286,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer; it lives here for after the session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here as flip cards, including 'hallucinated number,' for the next time a total arrives in perfect formatting and matches nothing.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Flip one card on the projector (Hallucinated Number is a good pick; it gets a knowing laugh and reteaches section 04).</li><li>Tell them it's all here whenever they need the vocabulary back.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; reference material.</p>
     <p class="mini"><b>Watch for:</b> Don't tour all thirteen cards; one flip makes the point.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One first run left.&rdquo;</p>
@@ -307,7 +299,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 4 min · Core 1</span></h2>
     <p class="purpose">Convert cards into spoken commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p>
@@ -321,7 +313,7 @@
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>

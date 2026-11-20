@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facilitator Guide (printable) · Minutes, Faster · Vanderbilt Learning Series</title>
+<meta name="robots" content="noindex">
+<style>
+  @font-face { font-family: 'Libre Caslon Display'; font-weight: 400;
+    src: url('../../../assets/fonts/libre-caslon-display-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-weight: 400;
+    src: url('../../../assets/fonts/inter-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-weight: 600;
+    src: url('../../../assets/fonts/inter-latin-600-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Antonio'; font-weight: 700;
+    src: url('../../../assets/fonts/antonio-latin-700-normal.woff2') format('woff2'); }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Inter', Arial, sans-serif; color: #1C1C1C; background: #fff;
+    font-size: 12.5px; line-height: 1.5; }
+  .sheet { max-width: 860px; margin: 0 auto; padding: 28px 32px; }
+  header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+    border-bottom: 2px solid #CFAE70; padding-bottom: 14px; margin-bottom: 16px; }
+  header img { width: 150px; }
+  h1 { font-family: 'Libre Caslon Display', serif; font-weight: 400; font-size: 26px; margin: 0; }
+  h1 em { font-style: italic; color: #8C6822; }
+  .eyebrow { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; font-size: 10px; color: #8C6822; margin: 0 0 6px; }
+  h2 { font-family: 'Libre Caslon Display', serif; font-weight: 400; font-size: 18px;
+    margin: 0 0 4px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  h3 { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .06em; font-size: 12px; color: #8C6822; margin: 14px 0 4px; }
+  .mins { font-family: 'Antonio', Impact, sans-serif; font-size: 11px; color: #8C6822;
+    letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+  .sec { border: 1px solid #E4E4E4; border-left: 3px solid #CFAE70; border-radius: 4px;
+    padding: 12px 16px; margin-bottom: 12px; break-inside: avoid;
+    display: grid; grid-template-columns: 290px 1fr; gap: 16px; align-items: start; }
+  .sec.noimg { grid-template-columns: 1fr; }
+  .sec.noimg .sec__shot { display: none; }
+  .sec__shot { position: sticky; top: 12px; }
+  .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
+  .sec__notes { min-width: 0; }
+  @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+  .purpose { font-weight: 600; margin: 2px 0 8px; }
+  .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
+    background: #CFAE70; display: inline-block; padding: 2px 7px; border-radius: 2px; }
+  .tagline.ask { background: #8BA18E; }
+  .script { font-family: 'Libre Caslon Display', serif; font-style: italic; font-size: 13.5px;
+    margin: 4px 0 6px; }
+  .mini { margin: 4px 0; color: #444; }
+  .mini.core { border-top: 1px dashed #CFAE70; padding-top: 6px; }
+  ol, ul { margin: 2px 0 8px; padding-left: 20px; }
+  li { margin-bottom: 3px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; }
+  th, td { border: 1px solid #E4E4E4; padding: 5px 9px; text-align: left; }
+  th { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 10px; color: #8C6822; }
+  .front { border: 1px solid #E4E4E4; border-radius: 4px; padding: 12px 16px; margin-bottom: 12px;
+    break-inside: avoid; }
+  .printbtn { position: fixed; right: 18px; top: 18px; background: #CFAE70; border: 0; border-radius: 4px;
+    padding: 9px 16px; font-family: Inter, Arial, sans-serif; font-weight: 600; font-size: 13px; cursor: pointer; }
+  @media print { .printbtn { display: none; } body { font-size: 11px; } .sheet { padding: 0; max-width: none; } }
+</style>
+<!-- Vercel Web Analytics (vercel-analytics): served only by Vercel, so it is skipped on GitHub Pages -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  if (!/(^|\.)github\.io$/.test(location.hostname)) {
+    var vaScript = document.createElement('script');
+    vaScript.defer = true;
+    vaScript.src = '/_vercel/insights/script.js';
+    document.head.appendChild(vaScript);
+  }
+</script>
+</head>
+<body>
+<button class="printbtn" onclick="window.print()">Print / Save as PDF</button>
+<main class="sheet">
+  <header>
+    <div>
+      <p class="eyebrow">Vanderbilt · The AI-enabled Education Series · facilitator guide · print edition</p>
+      <h1>Minutes, Faster, the <em>facilitator guide</em></h1>
+    </div>
+    <img src="../../../assets/img/vu-lockup-black.png" alt="Vanderbilt University">
+  </header>
+
+  <div class="front">
+    <h3>Run of show</h3>
+    <table><tr><th>Page</th><th>Time</th></tr><tr><td>Run this course</td><td>Before class</td></tr><tr><td>Welcome</td><td>Full 2 min · Core 2</td></tr><tr><td>The Chancellor’s charge</td><td>Full 3 min · Core: under 1</td></tr><tr><td>The evidence</td><td>Full 4 min · Core 2</td></tr><tr><td>The method</td><td>Full 6 min · Core 5</td></tr><tr><td>Example: staff meeting</td><td>Full 8 min · Core 7</td></tr><tr><td>Example: long report</td><td>Full 3 min · Core: skip</td></tr><tr><td>Example: meeting you missed</td><td>Full 4 min · Core: skip</td></tr><tr><td>Guardrails</td><td>Full 4 min · Core 3</td></tr><tr><td>Practice now</td><td>Full 8 min · Core 4</td></tr><tr><td>Knowledge check</td><td>Full 3 min · Core: skip</td></tr><tr><td>Recap</td><td>Full 3 min · Core 2</td></tr><tr><td>Appendix</td><td>As needed · Core: skip</td></tr>
+    <tr><th>Total</th><th>Full 48 min · Core 25 min</th></tr></table>
+    <h3>A week before · Learn it as a learner first</h3><ul><li>Run both editions end to end, this one and the learner classroom edition, doing every exercise, including typing a real brief into the practice builder.</li><li>Run the practice transcript through Copilot or Amplify yourself and keep what came back. You will run it live in the session, and you want no surprises about the shape of the output.</li><li>Book a room where pairs can talk and confirm guest wifi works for personal devices; the practice page needs both.</li><li>Decide your path now: Full (48) or Core (25). The rail carries both timings on every page.</li><li>Read your unit’s guidance on recording meetings, so the tough questions on this topic get answers, not improvisation.</li></ul><h3>The day before · Test the room end to end</h3><ul><li>Test recording and transcription in a real Teams meeting with yourself. Start a meeting alone, select More actions &gt; Record and transcribe &gt; Start recording, talk for a minute, stop, and confirm the transcript shows up in Recap and downloads.</li><li>Test the projector with this facilitator link and confirm the script rail is readable from where you’ll stand.</li><li>Scan the welcome QR from the back of the room. It must land on the learner classroom edition, not this page.</li><li>Log in to Copilot or Amplify and leave it ready; the live transcript demo depends on it.</li><li>Rehearse the tough-questions bank out loud: “do I have to tell people I’m recording,” “can I record a disciplinary conversation,” “the transcript got someone’s words wrong,” “is the AI summary the official record.” Your answers: the tools announce it and you say it out loud anyway; not without guidance, ask HR first; that is what the confirm pass is for, ask the speaker; no, the summary links to the transcript and your unit’s retention practice governs the record.</li></ul><h3>30 minutes before · Set the stage</h3><ul><li>Welcome page up (the next page, with the QR) as people arrive, so scanning starts before you do.</li><li>Close every other tab and silence notifications on the machine that’s projecting.</li><li>Test the arrow keys, the copy buttons, and one run of the practice transcript in your logged-in tool.</li><li>Write PARKING LOT on the whiteboard. Recording-policy questions you can’t answer go there with a name, and you follow up by email.</li></ul><h3>Materials · What has to be in the room</h3><ul><li>Projector with this facilitator edition open.</li><li>Facilitator laptop with Copilot or Amplify logged in for the live transcript demo.</li><li>Learner devices, joining through the welcome QR into the classroom edition.</li><li>A few printed takeaways for people without a device.</li><li>Whiteboard or flip chart for the parking lot and the backup URL.</li></ul><h3>Pre-work invite (copy and paste)</h3><p style="white-space:pre-line">Subject: Minutes, Faster · [day], [time], [room]
+
+Hi everyone,
+
+On [day] at [time] in [room] we’re running Minutes, Faster, a short session from The AI-enabled Education Series on turning meetings and long documents into decisions, action items, and takeaways people actually read.
+
+Two things before you come:
+1. Bring a phone or laptop. You’ll follow along on your own screen.
+2. Sign in to Copilot or Amplify once with your Vanderbilt account, so login isn’t the first thing you do in the room.
+
+Think of one meeting you run or attend whose minutes are always late; you’ll brief its summary in the session. Nothing you type in the session is collected or sent anywhere.
+
+See you there,
+[Your name]</p>
+  </div>
+
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/prep.jpg" alt="Page: Run this course" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Run this course <span class="mins">Before class</span></h2>
+    <p class="purpose">Your prep lives on this page; the card below is the invite that does half of it for you.</p>
+    <p class="mini">Send this a few days out so logins happen at desks, not in the room. Adjust the day, time, and room, and send it from your own address. The invite text is on the first page of the facilitator edition and in the printed packet below.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/home.jpg" alt="Page: Welcome" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Welcome <span class="mins">Full 2 min · Core 2</span></h2>
+    <p class="purpose">Get every device into the learner edition and set the deal for the session.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;This is Minutes, Faster, part of The AI-enabled Education Series. In this session you’ll learn a three-step way to turn meetings and long documents into decisions, action items, and takeaways people actually read. Scan the QR and the course opens on your phone. Everything I do up here, you can do down there.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Have this page projected as people arrive; the QR does its work before you start talking.</li><li>Give the room two minutes to scan and open the course; the whiteboard URL is the backup.</li><li>Point out the bottom-bar arrows so people can follow along page by page.</li><li>Say plainly that nothing they type is stored or sent anywhere.</li></ol>
+    <p class="mini"><b>Validate:</b> 80%+ of the room has the course open on a phone or laptop before you turn the page.</p>
+    <p class="mini"><b>Watch for:</b> Guest wifi stalls and half the room can’t load it. Point at the URL on the whiteboard, ask people to share a neighbor’s screen, and keep moving; don’t troubleshoot wifi in front of thirty people.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Before the evidence, one page on why the university cares how minutes get made.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> Same page, same two minutes. The clock savings come later.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/mission.jpg" alt="Page: The Chancellor’s charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The Chancellor’s charge <span class="mins">Full 3 min · Core: under 1</span></h2>
+    <p class="purpose">Connect the method to the Chancellor’s vision so the course lands as institutional strategy, not a productivity tip.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;One page on why the university cares how minutes get made. The Chancellor’s vision has no hedge in it: Vanderbilt will define the great university of the 21st Century and be it, operating at uncommon speed, agility, and scale. Our motto has always been the dare, Crescere aude, dare to grow, and a dare that size cannot run on decisions that evaporate by lunch. Speed needs a record that keeps up, and that record is the minutes you are about to learn to make.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the vision sentence from the screen word for word; don’t paraphrase the one sentence the page exists for.</li><li>Walk the three focus cards left to right, one sentence each, and land on the At-your-desk lines.</li><li>Point at the flywheel card and trace the loop out loud: reputation attracts talent, funding, partnerships, and access, which build the reputation.</li><li>Hold it to three minutes; this page frames the course, it is not the course.</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “what do confirmed minutes have to do with speed and scale?” and hear some version of: fast operations need a record people can trust.</p>
+    <p class="mini"><b>Watch for:</b> Eye-rolls at strategy talk. Don’t argue for the vision; point out the next page is evidence, not aspiration, and keep moving.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;That’s the why. Here’s the evidence that the load is real.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: under a minute. Read the vision sentence, gesture at the three focuses, and move on.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/evidence.jpg" alt="Page: The evidence" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The evidence <span class="mins">Full 4 min · Core 2</span></h2>
+    <p class="purpose">Ground the method in the three findings so it lands as research, not enthusiasm.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Microsoft’s telemetry says you’re interrupted about every two minutes, and the average worker fields 117 emails and 153 Teams messages a day. SHRM finds workers who use AI save about six hours a week, and that they use it most for exactly this kind of research-and-analysis work. The catch, from the same survey: about four hours a week goes to fixing AI output nobody checked. This course is about keeping the six and losing the four.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Project the three evidence cards and give each one sentence, not a lecture.</li><li>Run the gold Together card: how many meetings last week, and how many produced minutes anyone read?</li><li>Take two or three answers out loud; the stories do the persuading.</li><li>Mention that every number is cited in full on the Appendix page, one tap away in the bottom bar.</li></ol>
+    <p class="mini"><b>Validate:</b> At least two people admit their minutes go out late, unread, or not at all.</p>
+    <p class="mini"><b>Watch for:</b> Someone challenges the numbers. Don’t defend from memory: jump to the Appendix, show the citation, and offer to talk after. The course survives skepticism; improvised statistics don’t.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Here’s the method that turns a transcript into minutes. It fits on one page.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip the share-out. State the two-minute and six-hour findings in one sentence and turn the page.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/method.jpg" alt="Page: The method" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The method <span class="mins">Full 6 min · Core 5</span></h2>
+    <p class="purpose">Teach Capture, Condense, Confirm and the CRIT brief. This is the one page they must remember.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Three steps in order. Capture: get a faithful record. In Teams that’s More actions, Record and transcribe, Start recording; everyone is notified, and the transcript is waiting for you afterward. Condense: brief it with CRIT, and make the Task line dictate the shape: decisions first, then action items with an owner and a date each, then a short summary. Confirm: read it against the transcript before anyone acts on it, because a transcript mishears, and a model summarizes confidently either way.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Walk the three cards left to right, spending your time on Capture’s mechanics and Confirm’s reasons.</li><li>Show where Record and transcribe lives in Teams if you have it open; don’t start a real recording.</li><li>Point at the gold rule strip and read it word for word: the transcript remembers the meeting, and you confirm what it heard.</li><li>Run the Together card: pairs explain Capture, Condense, Confirm back to each other in under a minute.</li></ol>
+    <p class="mini"><b>Validate:</b> Cold-call one pair afterward: they can name the three steps and say what the Task line dictates.</p>
+    <p class="mini"><b>Watch for:</b> Licensing questions about Copilot’s intelligent recap. Don’t guess at what the account includes; that’s a parking-lot item for ITS, and the method works from the plain transcript either way.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Enough theory. Let’s turn a real transcript into minutes, live, and see what it gets wrong.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: keep everything but the pair activity. Name the steps yourself, then cold-call one person.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/ex-meeting.jpg" alt="Page: Example: staff meeting" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Example: staff meeting <span class="mins">Full 8 min · Core 7</span></h2>
+    <p class="purpose">The live demo: the room watches a transcript become minutes and hunts for what the AI missed.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Fifty minutes of Monday staff meeting, recorded and transcribed. Two decisions and at least four action items are in there, and one line the microphone lost. I’m running the prompt with the practice transcript right now. When the minutes come back, work in pairs: check them against the transcript, and find what the AI missed or mangled.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Run the prompt plus the practice transcript live in Copilot or Amplify on the projector.</li><li>While it generates, have pairs open the practice transcript on their own devices.</li><li>Give pairs two minutes to compare the AI’s minutes against the transcript: wrong owners, wrong dates, missed items.</li><li>Take the room’s vote on the worst failure mode found, and land on the [inaudible] session cap: whatever the model did with it, the fix is asking the speaker, never letting it guess.</li></ol>
+    <p class="mini"><b>Validate:</b> At least one pair catches what the model did with the [inaudible] session cap.</p>
+    <p class="mini"><b>Watch for:</b> The model behaves perfectly and flags the [inaudible] line itself. That isn’t a failed demo; point out the prompt told it to flag instead of guess, and ask the room what “summarize this transcript” would have done with the same line.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Meetings talk to you. Next: thirty pages that won’t read themselves.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: keep the live run; it’s the heart of the session. One comparison out loud instead of the pair hunt and vote.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/ex-report.jpg" alt="Page: Example: long report" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Example: long report <span class="mins">Full 3 min · Core: skip</span></h2>
+    <p class="purpose">Same method on a document, plus the data rule: a pasted report needs an approved home.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;A thirty-page committee report, your team named in it, thirty minutes before you brief them. Same three steps, new source. And notice what changed on this page: the moment you paste a report, where you paste it matters.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Point at the amber before-you-paste warning first, before the prompt.</li><li>Show the Try-it row: Amplify recommended, ChatGPT EDU greyed out, and say the reason out loud.</li><li>Open the fictional excerpt and point at the numbers a summary most often bends: the 38-to-71 occupancy range and the dollar figures.</li><li>Read the first confirm line: check every number against the original, because summaries are where AI sounds most sure of itself.</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “which tool takes a pasted internal report?” and hear Amplify or Copilot back from the room.</p>
+    <p class="mini"><b>Watch for:</b> The room disappearing into the excerpt on their phones. Tell them it’s fictional and it will still be there after; only the numbers matter right now.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Reports you brief. Some meetings you just plain miss.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip this page. As you leave the demo, say the takeaway carries the report prompt and the catch-up prompt.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/ex-missed.jpg" alt="Page: Example: meeting you missed" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Example: meeting you missed <span class="mins">Full 4 min · Core: skip</span></h2>
+    <p class="purpose">The catch-up pattern, and the rule that ambiguity goes to the owner, not to a guess.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;You missed Tuesday’s meeting and the transcript lands in your chat. You want five bullets and one honest answer: what am I on the hook for? Look at the Task line: anything ambiguous goes under “check with the owner” instead of being decided for you. That line is the whole trick.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Walk the prompt on screen; don’t run this one live.</li><li>Point at the confirm line about messaging the owner of anything ambiguous rather than guessing.</li><li>Give one sentence to the last confirm step: replying to the sender with your items closes the loop and shares the record.</li><li>Tell the room all three prompts are on the printed takeaway, so nobody needs to copy anything now.</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “the summary says an item might be yours; what do you do?” and hear: message the owner, don’t guess.</p>
+    <p class="mini"><b>Watch for:</b> Someone proposing the AI email the owners itself. The confirm pass is human on purpose; the message comes from you, in your words.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Three examples, one pattern. Before you try your own, four rules that keep it safe.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip this page. The guardrails page carries the confirm rule on its own.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/guardrails.jpg" alt="Page: Guardrails" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Guardrails <span class="mins">Full 4 min · Core 3</span></h2>
+    <p class="purpose">Make the four rules stick, especially safe data and recording etiquette, before anyone runs their own.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Four rules, thirty seconds each. Safe data only: transcripts and internal reports live in Amplify or Copilot through your Vanderbilt account, and when in doubt, Amplify. Recording is announced, not assumed: the tools notify people, and you say it out loud anyway; some conversations shouldn’t be recorded at all, and HR-sensitive ones need guidance first. Confirm before it circulates. And the summary is the start, not the record: keep the transcript per your unit’s retention practice, and link it from the minutes.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Project the four cards and read each headline; add one sentence each, not a paragraph.</li><li>On rule two, take the questions this page always raises: “do I have to tell people I’m recording” and “can I record a disciplinary conversation,” with the answers you rehearsed in prep.</li><li>On rule one, ask the room for examples of what counts as internal from their actual work.</li><li>Show the three tool buttons and name the default this room should use.</li></ol>
+    <p class="mini"><b>Validate:</b> Ask “an HR-sensitive conversation needs summarizing; what happens first?” and hear: ask for guidance before recording.</p>
+    <p class="mini"><b>Watch for:</b> A policy question you can’t answer, like a specific records-retention rule. Don’t guess at policy. Put it on the parking lot with a name next to it and follow up by email.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Those are the rules. Now the part that makes this course stick: you brief something real.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: cut the room examples. Read the four rules and run the one HR-sensitive check question.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/practice.jpg" alt="Page: Practice now" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Practice now <span class="mins">Full 8 min · Core 4</span></h2>
+    <p class="purpose">Everyone leaves having briefed the minutes for a real meeting or report. This page is the course.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Think of the next meeting you run or attend, or the report sitting unread in your inbox. Don’t write its summary; brief it. Pair up. Interview your partner about their meeting, fill in the three fields for them, then swap. In eight minutes I’ll ask a few pairs to read a brief to the room.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Put the builder on the projector and walk the three fields once, fast.</li><li>Pair the room; an odd person joins a pair as a second interviewer.</li><li>Circulate while pairs type on their own devices; nudge vague Task lines toward decisions, owners, and dates.</li><li>Debrief: two or three pairs read a brief aloud, and you ask the room what the AI would still have to guess.</li></ol>
+    <p class="mini"><b>Validate:</b> Every pair has all three fields filled on at least one device before the share-out.</p>
+    <p class="mini"><b>Watch for:</b> The “my meetings don’t need minutes” person. Everyone has one meeting that leaks action items or one document they’re avoiding; help them find it, or hand them the practice transcript as a fallback.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;You’ve each briefed something real. Three quick questions to prove the method stuck.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: solo instead of pairs. Everyone briefs their own meeting, and one volunteer reads theirs aloud.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/check.jpg" alt="Page: Knowledge check" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Knowledge check <span class="mins">Full 3 min · Core: skip</span></h2>
+    <p class="purpose">A room vote that surfaces the three failure modes without feeling like a quiz.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Three questions, no grades, and nothing leaves the room. Look up here for each one, vote by show of hands, and then somebody tells me why.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Project question one and read both prompts aloud; vote by hands.</li><li>Tap the winning answer on screen so the room sees the explanation.</li><li>Repeat for the personal-account question and the [inaudible] question.</li><li>Where a vote splits, give the two sides thirty seconds to argue before you reveal.</li></ol>
+    <p class="mini"><b>Validate:</b> Near-unanimous hands on question two, the safe-data one. If that one splits, reteach rule one now.</p>
+    <p class="mini"><b>Watch for:</b> People answering on their phones before the vote. Ask them to keep eyes up during each vote and tap their own answers after; the argument is the point, not the tap.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Three for three. Last page: what you’re leaving with, and what you do tomorrow morning.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip the vote. Ask the [inaudible] question only, out loud, on the way to the recap.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/recap.jpg" alt="Page: Recap" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Recap <span class="mins">Full 3 min · Core 2</span></h2>
+    <p class="purpose">Land the three next actions: the next meeting’s brief, the printed plan, the two-week check-in.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;One method: capture, condense, confirm. Four rules. And the evidence says the hours are real. Three things now. Brief your next meeting’s minutes; yours is already saved from practice. Take the one-page plan; the Teams and Zoom capture cheat-lines are on it. And book the fifteen-minute check-in two weeks out: are your summaries confirmed, or just fast?&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Walk the three You-learned cards in one sentence each.</li><li>Point at the print button; hand your printed takeaways to anyone without a device.</li><li>Have everyone tap the calendar button and add the two-week check-in now, not later.</li><li>Name the Oracle Learning shelf for people who want more, and end on time.</li></ol>
+    <p class="mini"><b>Validate:</b> You see phones come out for the calendar file, instead of polite nods.</p>
+    <p class="mini"><b>Watch for:</b> Running past the end. If you’re at time, the recap is three sentences and printouts by the door; never trade the ending for the shelf.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;The appendix has every source, and the course stays online at the same link. Thanks for your time; now go send minutes someone will actually read.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: same three actions, one sentence each. The calendar tap is the one to keep.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/sources.jpg" alt="Page: Appendix" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>Appendix <span class="mins">As needed · Core: skip</span></h2>
+    <p class="purpose">Reference, not a page you teach. Open it the moment a number gets challenged.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Every number in the course, cited in full, including the Microsoft and Zoom support pages behind the capture steps. It stays online at this link, so nobody needs to copy anything down.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Show it for ten seconds so the room knows it exists.</li><li>Return to it live whenever someone questions a statistic; the Appendix button in the bottom bar jumps here from any page.</li><li>Point out the CRIT credit to Geoff Woods and the Working Smarter course link for anyone who wants the full framework.</li></ol>
+    <p class="mini"><b>Validate:</b> You can put the Microsoft two-minute interruption citation on screen within five seconds of being asked.</p>
+    <p class="mini"><b>Watch for:</b> A methodology debate in the last minutes. One citation on screen, then “happy to dig in after”; protect the ending.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;That’s the whole course. I’ll stay a few minutes for anything on the parking lot.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> 25-min core: skip; leave it on screen while people file out if you like.</p>
+    </div>
+  </div>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from the facilitator edition's page scripts and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+</main>
+</body>
+</html>

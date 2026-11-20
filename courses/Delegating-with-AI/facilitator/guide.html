@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -86,8 +89,8 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>&lt;1</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>01 · The new triage</td><td>9</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · The Routing Test</td><td>12</td><td>9</td></tr><tr><td>03 · Stretch vs grunt</td><td>11</td><td>7</td></tr><tr><td>04 · Role math</td><td>12</td><td>8</td></tr><tr><td>05 · The Routing Lab</td><td>14</td><td>10</td></tr><tr><td>06 · The handoff</td><td>10</td><td>6</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My routing card</td><td>6</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>4</td><td>1</td></tr>
-    <tr><th>Total</th><th>93</th><th>60</th></tr></table>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>skip</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>The data rule</td><td>3</td><td>2</td></tr><tr><td>01 · The new triage</td><td>9</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · The Routing Test</td><td>12</td><td>9</td></tr><tr><td>03 · Stretch vs grunt</td><td>11</td><td>7</td></tr><tr><td>04 · Role math</td><td>12</td><td>8</td></tr><tr><td>05 · The Routing Lab</td><td>14</td><td>10</td></tr><tr><td>06 · The handoff</td><td>10</td><td>6</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My routing card</td><td>6</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>4</td><td>1</td></tr>
+    <tr><th>Total</th><th>96</th><th>62</th></tr></table>
     <h3>Audience</h3><p>Managers and team leads who route real work: anyone deciding daily whether a task goes to AI, to a team member, or stays on their own plate. A Manager Voyage course. 8 to 24 works best (the routing and briefing drills run in pairs); scales larger with room votes. Assumes Start Smarter or equivalent tool fluency; the traffic-light data rule from the AI courses is assumed and restated here.</p>
     <h3>Room setup</h3><p>Projector plus presenter device; learners on their own devices via the Welcome-slide QR; movable seating for pairs. A whiteboard helps: you will draw the three destinations and the three questions early and point at them all session. Virtual: breakouts of 2 for the routing, role-math, and briefing drills. Set the norm in the first minute: tasks and roles, never people's names, and nothing typed is saved or sent.</p>
     <h3>Materials</h3><ul><li>Projector or large display and the facilitator link open (this edition)</li><li>Facilitator laptop with arrow keys or clicker; all notifications off</li><li>Learner devices (BYOD) joining via the welcome-slide QR</li><li>A few printed cheat sheets (cheatsheet.html) for anyone without a device</li><li>Printed routing cards (worksheet.html) as the no-device and projector-failure fallback</li><li>Whiteboard or flip chart with markers for the three destinations, the three questions, and the brief-aloud rewrites</li><li>Index cards for the pair routing drill (one task per card works well)</li></ul>
@@ -99,14 +102,13 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device and set the norm that makes real-task material safe: tasks and roles, never names, and nothing typed leaves the screen.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Point your camera at that code before we start. Today is about a decision you now make a dozen times a week, mostly without noticing: the same task can go to AI, to a person on your team who would grow on it, or stay with you. Nobody trained managers for that triage, and by the end of today you will have a method for it. We'll work on your real tasks and your real roles, so one ground rule for the next ninety minutes: tasks and roles, never people's names. And everything you type today stays on your screen; nothing is saved or sent anywhere.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Have this slide projected as people arrive.</li><li>Point at the QR and get phones up before you say anything else.</li><li>Set the norm explicitly and early: tasks and roles, never people's names; typed exercises stay on their screens.</li><li>Confirm by show of hands that most of the room has the site open before advancing.</li></ol>
     <p class='tagline ask'>Ask</p><p class='script'>&ldquo;Quick calibration, shout it out: in the last week, how many of you handed at least one task to AI? And how many of you can say, honestly, that it was a decision rather than a reflex?&rdquo;</p><p class='mini'><b>Expect:</b></p><ul><li>Nearly every hand up on the first question</li><li>Most hands down, with laughter, on the second</li><li>One or two people defending their reflex as a decision</li></ul><p class='mini'><b>Respond:</b> Name the gap warmly: 'That gap is the session. The routing is already happening on your team every day; the deciding is the part that's missing, and deciding is a management skill.'</p>
-    
     <p class="mini"><b>Validate:</b> 80%+ of the room has the deck open on a device; the room can repeat the 'tasks and roles, never names' norm back to you.</p>
     <p class="mini"><b>Watch for:</b> Anyone bracing for either an AI sales pitch or a headcount conversation. The frame that relaxes both: today is a delegation session that happens to involve AI, and the first question it teaches is about growing people.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's exactly what you'll walk out able to do.&rdquo;</p>
@@ -114,14 +116,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: five capabilities, ending in one real task carded for routing with a dated handoff conversation.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five things by the end. You'll be able to run the Routing Test, three questions in an order that matters, on any task that crosses your desk. You'll tell stretch work from grunt work before you route either one. You'll know how to keep the apprenticeship alive on your team while AI absorbs the tasks juniors used to learn by. You'll be able to redesign a role instead of just shrinking its task list. And you'll brief a delegation, to a person or to AI, so it actually lands. It all comes together in one artifact: a routing card for a task you have genuinely been holding, with a date on it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the five objectives briskly, in plain language.</li><li>Land on the last one: this session ends with a REAL routing card, one task, one destination, one date.</li><li>Name the sources once for credibility: Gallup's workplace tracking for the adoption numbers, Stanford GSB for the redesign framing.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Learners can say what the capstone will be (one task, one destination, one dated handoff conversation).</p>
     <p class="mini"><b>Watch for:</b> Tool questions arriving early ('which AI should we use?'). Park them: the session is deliberately tool-agnostic, and the routing decision outlives any tool choice.</p>
     <p class="mini"><b>Transition:</b> &ldquo;One page before the plan: why the university's talent pipeline runs through your routing decisions.&rdquo;</p>
@@ -129,14 +129,12 @@
     </div>
   </div>
   <div class="sec">
-    
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
-    <h2>The Chancellor's charge <span class="mins">Full 3 min · Core &lt;1</span></h2>
+    <h2>The Chancellor's charge <span class="mins">Full 3 min · Core skip</span></h2>
     <p class="purpose">Connect the course to the institutional vision: the university scales on people, and the routing decisions managers make are what keep the talent pipeline growing while AI absorbs the routine.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Before the plan, the institutional why. Chancellor Diermeier's vision is one sentence with no hedge in it: Vanderbilt will define the great university of the 21st Century and be it. The how is uncommon speed, agility, and scale, and speed is the easy half; AI will happily absorb your routine work today. The hard half is scale, because an institution scales on people, and people grow on the very tasks AI now finishes in minutes. The Routing Test you learn today is how you take the speed without spending the pipeline. Our motto is the dare, Crescere aude, dare to grow, and your routing decisions are where your people get to take it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the vision sentence off the slide, slowly; it carries the page.</li><li>Walk the three focus cards, landing on the 'The team translation' line in each.</li><li>Point at the flywheel card: talent is the first thing reputation attracts, and routing is how a manager keeps it compounding.</li><li>Keep it under three minutes; this page frames the session, and the sections do the teaching.</li></ol>
-
-
     <p class="mini"><b>Validate:</b> The room can connect the vision to the course in one line: the university scales on people, and routing decides whether people keep growing.</p>
     <p class="mini"><b>Watch for:</b> Eye-rolls at strategy language. Ground it fast: the flywheel's talent input is decided one delegated task at a time, on desks like theirs.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Six ideas, in a deliberate order.&rdquo;</p>
@@ -144,14 +142,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each tool as it arrives: triage, test, distinction, redesign, practice, handoff.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The arc is simple: first the new triage and the evidence that it's already on your desk. Then the method, the Routing Test, and the distinction it depends on, stretch versus grunt. Then role math, for when AI changes a role's shape. Then you'll route a full quarter in the lab, and we finish with the handoff, because a right routing with a bad brief still fails.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the six items in one breath each.</li><li>Point out the shape: the dilemma (01), the method (02 and 03), the redesign (04), the practice (05), and the craft of handing off (06).</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed; this is orientation.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the evidence, because most of us think we have more time on this than we do.&rdquo;</p>
@@ -159,7 +155,20 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-triage.jpg" alt="Slide: 01 · The new triage" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-datarule.jpg" alt="Slide: The data rule" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The data rule <span class="mins">Full 3 min · Core 2</span></h2>
+    <p class="purpose">Land the one rule every AI course in the library shares, on the same card, before any tool opens: green, yellow, red, and the never list.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Before anything goes into an AI tool today, one three-second question: what color is this? Green is public or generic, any approved tool. Yellow is your internal work, approved Vanderbilt tools only, signed in with your VU account. Red is private information about people, and it goes in no AI tool, full stop. This card is the same in every AI course in the library, so it is the one thing you never have to relearn.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the three-second question off the card: what color is this?</li><li>Walk the light top to bottom in one sentence each: green is public or generic, yellow is internal work in approved Vanderbilt tools on a VU account, red is private information about people and goes in no AI tool.</li><li>Point at the tool ceilings and say them once: ChatGPT EDU to Level 2, Amplify and Copilot to Level 3, children's information in no tool.</li><li>Name the hard case the room will meet first in this course, then move on; the card stays in the deck and in every other AI course they take.</li></ol>
+    <p class="mini"><b>Validate:</b> Anyone in the room can say the three colors and name one thing that never goes in, unprompted.</p>
+    <p class="mini"><b>Watch for:</b> Debate about edge cases. Take one, answer it with 'who is this about', and park the rest for the Go deeper panels; the rule is the point, not the taxonomy.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Rule in hand. Now the work.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> Core: read the question and the three colors, point at the never list, go.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/s-triage.jpg" alt="Slide: 01 · The new triage" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · The new triage <span class="mins">Full 9 min · Core 6</span></h2>
     <p class="purpose">Establish with guessed-at, missed numbers that AI use is spreading far faster than anyone is managing it, and that both routing reflexes (default-to-AI and default-to-people) fail, which makes the triage a designed managerial decision.</p>
@@ -174,14 +183,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness to lock the session's core idea before the method arrives.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every task you route is a lesson you give or take away.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Let the line animate word by word. Say nothing until it finishes.</li><li>Read it once, slowly, then advance.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; this is pacing.</p>
     <p class="mini"><b>Watch for:</b> The urge to talk over it. Don't.</p>
     <p class="mini"><b>Transition:</b> &ldquo;So the first question about any task can't be about speed. Here's the order that works.&rdquo;</p>
@@ -189,7 +196,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-routing.jpg" alt="Slide: 02 · The Routing Test" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-routing.jpg" alt="Slide: 02 · The Routing Test" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · The Routing Test <span class="mins">Full 12 min · Core 9</span></h2>
     <p class="purpose">Install the Routing Test as a fixed-order method (growth, judgment, volume) with the order itself as the teaching, and the traffic-light data rule as a hard boundary on the AI lane.</p>
@@ -204,7 +211,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-stretch.jpg" alt="Slide: 03 · Stretch vs grunt" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-stretch.jpg" alt="Slide: 03 · Stretch vs grunt" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · Stretch vs grunt <span class="mins">Full 11 min · Core 7</span></h2>
     <p class="purpose">Install the stretch-versus-grunt distinction from the junior's point of view, and state the decade's trap honestly: yesterday's apprenticeship tasks are today's AI lane, so managers must deliberately build replacement reps.</p>
@@ -219,7 +226,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-rolemath.jpg" alt="Slide: 04 · Role math" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-rolemath.jpg" alt="Slide: 04 · Role math" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>04 · Role math <span class="mins">Full 12 min · Core 8</span></h2>
     <p class="purpose">Teach role math (name what drains, name what backfills, say what the freed capacity is for) and get every learner one privately sketched role redesign plus the three-sentence conversation that delivers it.</p>
@@ -234,7 +241,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-lab.jpg" alt="Slide: 05 · The Routing Lab" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-lab.jpg" alt="Slide: 05 · The Routing Lab" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>05 · The Routing Lab <span class="mins">Full 14 min · Core 10</span></h2>
     <p class="purpose">Give every learner a full felt rep of the method: four real tasks, one routing each, and a quarter-end outcome that rewards designed routing over reflex. The session's deepest practice block.</p>
@@ -249,7 +256,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-handoff.jpg" alt="Slide: 06 · The handoff" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-handoff.jpg" alt="Slide: 06 · The handoff" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>06 · The handoff <span class="mins">Full 10 min · Core 6</span></h2>
     <p class="purpose">Install both handoff briefs (person: outcome, context, checkpoints, struggle room; AI: draft assignment plus named verifier) and the invariant that accountability never moves: you own what ships.</p>
@@ -264,14 +271,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Score the session's knowledge against the five objectives before the capstone applies it (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per big idea. This is the systems check before you write the card that leaves the room with you.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone takes it on their own device, all six questions.</li><li>Ask for hands on 5-or-better; celebrate briefly.</li><li>For any question the room visibly missed, do a 30-second reteach from the relevant slide, never a lecture.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Room mode at 5/6 or better. The quiz maps onto the objectives, so misses tell you exactly what to reteach.</p>
     <p class="mini"><b>Watch for:</b> Racing. Frame it as the systems check before the card, never a race.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the only part of today that changes anything.&rdquo;</p>
@@ -279,7 +284,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My routing card" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My routing card" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · My routing card <span class="mins">Full 6 min · Core 6</span></h2>
     <p class="purpose">Convert the session into one dated commitment: one held task, one chosen destination, one named failure mode, and a dated handoff conversation. The transfer artifact and the Level 3 seed.</p>
@@ -294,14 +299,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer; it lives here for after the session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here as flip cards, including the rep-30 test, for the next time someone calls the fortieth data pull a learning opportunity.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Flip one card on the projector (Grunt Work is a good pick; the rep-30 line gets a knowing laugh and reteaches section 03).</li><li>Tell them it's all here whenever they need the vocabulary back.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; reference material.</p>
     <p class="mini"><b>Watch for:</b> Don't tour all twelve cards; one flip makes the point.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One handoff conversation left.&rdquo;</p>
@@ -309,7 +312,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 4 min · Core 1</span></h2>
     <p class="purpose">Convert cards into spoken commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p>
@@ -323,7 +326,7 @@
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>

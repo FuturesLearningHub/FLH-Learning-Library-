@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -61,11 +64,6 @@
   .printbtn { position: fixed; right: 18px; top: 18px; background: #CFAE70; border: 0; border-radius: 4px;
     padding: 9px 16px; font-family: Inter, Arial, sans-serif; font-weight: 600; font-size: 13px; cursor: pointer; }
   @media print { .printbtn { display: none; } body { font-size: 11px; } .sheet { padding: 0; max-width: none; } }
-
-@media (prefers-reduced-motion: reduce){
-  *, *::before, *::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important;
-    transition-duration:.001ms !important; scroll-behavior:auto !important; }
-}
 </style>
 <!-- Vercel Web Analytics (vercel-analytics): served only by Vercel, so it is skipped on GitHub Pages -->
 <script>
@@ -91,7 +89,7 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Arrival &amp; Inclusion Ritual</td><td>6</td><td>5</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>4</td><td>2</td></tr><tr><td>Our why (Golden Circle)</td><td>4</td><td>2</td></tr><tr><td>Agenda</td><td>1</td><td>—</td></tr><tr><td>01 · What safety is (and isn't)</td><td>8</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>—</td></tr><tr><td>02 · Where your team stands</td><td>8</td><td>6</td></tr><tr><td>03 · The evidence</td><td>10</td><td>6</td></tr><tr><td>04 · The Johari Window</td><td>28</td><td>24</td></tr><tr><td>05 · Expand or contract</td><td>17</td><td>12</td></tr><tr><td>06 · The candor rehearsal</td><td>17</td><td>14</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · The commitment card</td><td>7</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>—</td></tr><tr><td>Resources</td><td>0</td><td>—</td></tr><tr><td>Commitment &amp; closing ritual</td><td>2</td><td>2</td></tr>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Arrival &amp; Inclusion Ritual</td><td>6</td><td>5</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>4</td><td>2</td></tr><tr><td>Our why (Golden Circle)</td><td>4</td><td>2</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>01 · What safety is (and isn't)</td><td>8</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Where your team stands</td><td>8</td><td>6</td></tr><tr><td>03 · The evidence</td><td>10</td><td>6</td></tr><tr><td>04 · The Johari Window</td><td>28</td><td>24</td></tr><tr><td>05 · Expand or contract</td><td>17</td><td>12</td></tr><tr><td>06 · The candor rehearsal</td><td>17</td><td>14</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · The commitment card</td><td>7</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Resources</td><td>0</td><td>skip</td></tr><tr><td>Commitment &amp; closing ritual</td><td>2</td><td>2</td></tr>
     <tr><th>Total</th><th>120</th><th>90</th></tr></table>
     <h3>Audience</h3><p>Intact teams and cohorts of managers or team members. 12 to 24 works best in table pods of 5 to 6; scalable to 30. Intact teams get the deepest transfer; mixed cohorts get safer practice. Know which you have before you plan the Candor Rehearsal.</p>
     <h3>Room setup</h3><p>Round tables of 5 to 6, walls clear, no fixed rows. On each table: printed Johari worksheets, sticky notes in three colors, fine-tip Sharpies, index cards, table-norms placard. Walls before arrival, A: Clark's 4 Stages printed large; B: Edmondson's 7 items on butcher paper; C: blank Commitment Wall; D: anonymized pre-work intention themes. Facilitator kit: visible timer, chime (not clapping), oversized first-name tents. Music instrumental ~60 BPM during reflection, silent during dialogue.</p>
@@ -104,14 +102,13 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Arrival &amp; Inclusion Ritual" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Arrival &amp; Inclusion Ritual" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Arrival &amp; Inclusion Ritual <span class="mins">Full 6 min · Core 5</span></h2>
     <p class="purpose">Establish Inclusion safety (Clark Stage 1) before any content. If people don't feel they belong in the room, no downstream learning holds.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Before we do anything, I want to acknowledge: some of you know each other well, some don't. Some of you were told to be here, some chose it. All of that is welcome. For the next two hours we're going to practice the very thing we're studying, so the room itself is the lab. Four norms on your table, thirty seconds, then we begin.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Greet every person BY NAME at the door. This is non-negotiable, it is the intervention, not hospitality.</li><li>Music on, intention themes visible on Wall D; point them out: 'You told us what would make this worth it. It's on the wall.'</li><li>Get phones up on the QR before anything else; confirm by hands that most of the room has the site open.</li><li>Run 'Two Truths &amp; a Learning' at tables (5 min): name, one thing true about how you show up in teams, one thing you're actively learning. Deliberately near the topic, not icebreaker trivia.</li><li>Read the table norms aloud in 30 seconds: stories stay, lessons leave; speak from I; notice airtime; okay to pass, not okay to disengage.</li></ol>
     <p class='tagline ask'>Ask</p><p class='script'>&ldquo;At your table, your name, one thing that's true about how you show up in teams, and one thing you're actively learning.&rdquo;</p><p class='mini'><b>Expect:</b></p><ul><li>Surface-level answers at first ('I'm organized', 'learning delegation')</li><li>One or two genuinely open answers per table, mark who they are</li><li>Occasional deflection through humor</li></ul><p class='mini'><b>Respond:</b> Don't correct shallow answers; the depth arrives with the Johari block. The early open answers tell you which tables will carry the dialogue later.</p>
-    
     <p class="mini"><b>Validate:</b> Every person has spoken at their table at least once, and 80%+ have the deck open on a device.</p>
     <p class="mini"><b>Watch for:</b> Anyone still standing, phone-out, or arms-crossed after the table round, note them and return gently; they are your Inclusion-stage work for the morning.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's the course in one breath, the hook, and the contract: six things you'll be able to do by the end.&rdquo;</p>
@@ -119,14 +116,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Open the course proper: the hook (why the smartest person stays quiet) and the contract, six capabilities ending in a dated, witnessed commitment.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six things by the end: you'll define this construct precisely enough to defend it, locate your team on a four-stage ladder, know why hospitals and cockpits and Google all landed on the same finding, practice the two moves that grow trust, disclosure and feedback, rehearse candor with an actual frame, and leave with one commitment your team will feel within fourteen days. Not agree with. Feel.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the six objectives briskly, in plain language.</li><li>Land on the sixth: this session ends with a REAL commitment card, start, stop, question, note, stage, with a 14-day window.</li><li>Name the lineage once for credibility: Edmondson at Harvard, Clark's four stages, Luft and Ingham's window, Google's Project Aristotle.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Learners can say what the capstone will be (a commitment card their team will feel within 14 days).</p>
     <p class="mini"><b>Watch for:</b> Eye-rolls at 'psychological safety', the phrase carries baggage. Pre-empt: 'If the phrase is worn out for you, watch the evidence section; the data doesn't care what we call it.'</p>
     <p class="mini"><b>Transition:</b> &ldquo;That's the what. Before the six ideas: two whys, the university's, then yours.&rdquo;</p>
@@ -134,7 +129,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>The Chancellor's charge <span class="mins">Full 4 min · Core 2</span></h2>
     <p class="purpose">Open with the institutional why: the Chancellor's vision (define the great university of the 21st Century, and be it), the three areas of focus, and each learner locating their own team's share of it via the alignment builder.</p>
@@ -149,14 +144,13 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-why.jpg" alt="Slide: Our why (Golden Circle)" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-why.jpg" alt="Slide: Our why (Golden Circle)" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Our why (Golden Circle) <span class="mins">Full 4 min · Core 2</span></h2>
     <p class="purpose">Move from the institutional why to each learner's personal why: Sinek's Golden Circle taught inside-out, then every learner constructs their own circle in the builder, the fuel for the commitment card.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The university just gave you its why. Simon Sinek's rule is that people and movements work the same way, inside-out: why, then how, then what. People don't buy what you do; they buy why you do it. Our why, stated flat: every person on your team deserves to matter out loud, and the work gets better the moment they do. Now build yours. Three rings: WHY, I want a braver team because, and make it about a real person. HOW, the behavior you'll practice. WHAT, what your team will visibly see. It has to survive day nine, so write it like it matters.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the three cards inside-out, one breath each: why, how, what.</li><li>Play the first ~4 minutes of Sinek's TED talk on the Full path, stop once the Golden Circle is drawn.</li><li>Run the circle builder on devices (2 to 3 min, silent, music on): all three rings, then build. Private by design.</li><li>Run the real-person test by show of hands: 'who has a WHY with a real person or moment in it?' Normalize the not-yets.</li><li>Say explicitly: the WHY ring returns at the commitment card; the HOW ring is a head start on it.</li></ol>
     <p class='tagline ask'>Ask</p><p class='script'>&ldquo;Without sharing the sentence itself: does your WHY ring have a real person or a real moment in it?&rdquo;</p><p class='mini'><b>Expect:</b></p><ul><li>Most hands up after a beat</li><li>A few honest 'not yet', normalize: borrowed whys are where everyone starts</li><li>Occasionally someone wants to read theirs aloud, allow one, don't harvest more</li></ul><p class='mini'><b>Respond:</b> One line: 'If there's no person in it yet, leave the ring open in the back of your mind. By the commitment card, there will be.'</p>
-    
     <p class="mini"><b>Validate:</b> Every learner has a built circle with all three rings; spot-checked by the real-person show of hands.</p>
     <p class="mini"><b>Watch for:</b> Borrowed whys ('leadership says', 'it's on my review'). Don't correct publicly; the real-person test does the correcting. Also watch the HOW ring filling with values instead of behaviors, 'be more open' isn't a camera-visible how.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Institutional why, personal why, contract set. Here's the plan, six ideas, in order.&rdquo;</p>
@@ -164,14 +158,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each experience as it arrives.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Three moves today: understand what this thing actually is, experience it in your own hands with the window exercise, then rehearse the behaviors that build it. Definitions first, because most of what wears this label isn't it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the six items in one breath each.</li><li>Point out the shape: understand it (01 to 03), experience it (04), then act on it (05 to 06).</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed; this is orientation.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;So: what it is, and the three things it keeps getting confused with.&rdquo;</p>
@@ -179,7 +171,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-safety.jpg" alt="Slide: 01 · What safety is (and isn't)" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-safety.jpg" alt="Slide: 01 · What safety is (and isn't)" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · What safety is (and isn't) <span class="mins">Full 8 min · Core 6</span></h2>
     <p class="purpose">Anchor Edmondson's definition and dismantle the three myths, so the room stops hearing 'niceness' when you say 'safety'.</p>
@@ -194,14 +186,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">A beat of silence around the core idea before the diagnostic asks people to apply it to their own team.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;High-performing teams are not comfortable teams. They are candid ones.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Let the words reveal on screen; don't talk over them.</li><li>Read it once, slowly, then pause three full seconds before advancing.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; this is pacing.</p>
     <p class="mini"><b>Watch for:</b> The urge to explain it. Don't; the next section is the explanation.</p>
     <p class="mini"><b>Transition:</b> &ldquo;So where is YOUR team? There's an instrument for that, the actual one from the research.&rdquo;</p>
@@ -209,7 +199,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-diagnose.jpg" alt="Slide: 02 · Where your team stands" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-diagnose.jpg" alt="Slide: 02 · Where your team stands" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · Where your team stands <span class="mins">Full 8 min · Core 6</span></h2>
     <p class="purpose">Locate each learner's team on Clark's ladder using Edmondson's real 7-item instrument, and convert scores into a buildable next rung.</p>
@@ -224,7 +214,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-case.jpg" alt="Slide: 03 · The evidence" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-case.jpg" alt="Slide: 03 · The evidence" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · The evidence <span class="mins">Full 10 min · Core 6</span></h2>
     <p class="purpose">Deliver the abstract conceptualization through cases, not lecture: hospitals, Tenerife, Project Aristotle, and the working equation.</p>
@@ -239,7 +229,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-johari.jpg" alt="Slide: 04 · The Johari Window" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-johari.jpg" alt="Slide: 04 · The Johari Window" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>04 · The Johari Window <span class="mins">Full 28 min · Core 24</span></h2>
     <p class="purpose">The keystone experiential block: move the room from Learner into Contributor safety by practicing disclosure and feedback inside a bounded, low-stakes structure.</p>
@@ -254,7 +244,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-expand.jpg" alt="Slide: 05 · Expand or contract" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-expand.jpg" alt="Slide: 05 · Expand or contract" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>05 · Expand or contract <span class="mins">Full 17 min · Core 12</span></h2>
     <p class="purpose">Convert insight into observable behaviors across all four stages, the section where the workshop earns its behavior-change objective.</p>
@@ -269,7 +259,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-candor.jpg" alt="Slide: 06 · The candor rehearsal" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-candor.jpg" alt="Slide: 06 · The candor rehearsal" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>06 · The candor rehearsal <span class="mins">Full 17 min · Core 14</span></h2>
     <p class="purpose">Rehearse the highest-stakes behavior, Challenger-stage candor, in a controlled triad structure. Skills only transfer if practiced out loud, in-room.</p>
@@ -284,14 +274,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Level 2 check: six questions mapped one-to-one onto the six objectives, individually answered.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per objective, ninety seconds. This isn't a test of you, it's a test of me: whatever the room misses is what I taught badly, and I want to know.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone runs it solo on their own device; it doubles as the exit-ticket knowledge half.</li><li>Call for scores by hands (4+, 5+, 6), celebrate, don't interrogate.</li><li>Name misses in aggregate only, and point each miss back to its slide for the after-session reread.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> The distribution is the Level 2 measure: aim for 80% of the room at 4/6 or better. Note which question missed most, it names your weakest teaching block this run.</p>
     <p class="mini"><b>Watch for:</b> Question 5 (judgment vs. behavior) misses most when the rehearsal ran short, that's diagnostic, not random.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Knowledge proven. Now the part your team actually experiences: the card.&rdquo;</p>
@@ -299,7 +287,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · The commitment card" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · The commitment card" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · The commitment card <span class="mins">Full 7 min · Core 6</span></h2>
     <p class="purpose">Convert learning into a specific, dated, witnessed commitment: start, stop, question, note, and stage, the artifact the next 14 days run on.</p>
@@ -314,14 +302,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference so learners know the vocabulary survives the session; not a teaching moment.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Twelve terms, flip to reveal, yours forever, including everything your team will ask when you bring the card back.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Gesture at it in passing: twelve terms, flip cards, on their devices forever.</li><li>Point to it as the pre-read for whoever they teach this to next.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed.</p>
     <p class="mini"><b>Watch for:</b> Don't walk the cards; the closing ritual needs its time.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now stand up and make a circle. The last two minutes have no slides.&rdquo;</p>
@@ -329,14 +315,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-resources.jpg" alt="Slide: Resources" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-resources.jpg" alt="Slide: Resources" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Resources <span class="mins">Full 0 min · Core skip</span></h2>
     <p class="purpose">Signpost the curated shelf, Vanderbilt Oracle Learning courses, talks, podcasts, and source documents, without spending session time on it.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Everything on this shelf maps to a rung you practiced today, and half of it is already inside Vanderbilt's Oracle Learning with your VUnetID. One rule: pick one item, the one that matches the rung on your card, finish it inside your fourteen days, and bring one idea from it to your team's thirty-day retro. One resource applied beats seven collected.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Gesture at it in passing during the close: four shelves, two of Vanderbilt courses in Oracle Learning, one to watch and listen, one to read.</li><li>Say the one rule: pick ONE item matching your commitment card's rung, finish it in the 14-day window, bring one idea to the day-30 retro.</li><li>Mention the ELE live offerings by name, the 4 Stages session and the Thriving Together series are the team-level next steps.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None in-session; the day-14 pulse asks whether the one chosen resource got started.</p>
     <p class="mini"><b>Watch for:</b> Resource enthusiasm replacing commitment, seven tabs open, zero conversations had. The one-item rule is the guardrail; say it.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now stand up and make a circle. The last two minutes have no slides.&rdquo;</p>
@@ -344,13 +328,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Commitment &amp; closing ritual" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Commitment &amp; closing ritual" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Commitment &amp; closing ritual <span class="mins">Full 2 min · Core 2</span></h2>
     <p class="purpose">End with ritual, not with a slide: the one-word circle and the fist-to-five, then the final line.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;One word for what you're taking with you. Just the word, no commentary. I'll start.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone stands in a circle, including you. Chairs stay where they are.</li><li>One at a time, each person says ONE word for what they're taking with them. No commentary, yours included. Model it by going first, with one word only.</li><li>When the circle closes, run the fist-to-five: 'how equipped do you feel to have candid conversations, compared to two hours ago?' Note the room's shape; it's your Level 1 record alongside the exit tickets.</li><li>Deliver the final line, then stop talking. Resist the closing lecture; the silence after is doing the work.</li></ol>
-    
     <p class="mini"><b>Debrief:</b> After the circle closes, the final line, verbatim, then silence: 'This is not something we finished today. It's something we started. Your team is watching you tomorrow.'</p>
     <p class="mini"><b>Validate:</b> Level 1: fist-to-five distribution noted; every person spoke one word (or consciously passed), participation in the ritual is itself the Inclusion-stage bookend.</p>
     <p class="mini"><b>Watch for:</b> Your own urge to summarize. The word circle already did it, in the room's own words.</p>
@@ -358,7 +341,7 @@
     <p class="mini core"><b>Core path:</b> Core: untouched. The ritual is two minutes and it is the ending; cutting it saves nothing worth having.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>

@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -86,7 +89,7 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>—</td></tr><tr><td>Agenda</td><td>1</td><td>—</td></tr><tr><td>01 · The case for coaching</td><td>9</td><td>5</td></tr><tr><td>Manifesto</td><td>1</td><td>—</td></tr><tr><td>02 · Your telling default</td><td>8</td><td>5</td></tr><tr><td>03 · The GROW conversation</td><td>16</td><td>12</td></tr><tr><td>04 · Powerful questions</td><td>9</td><td>6</td></tr><tr><td>05 · Feedforward</td><td>12</td><td>8</td></tr><tr><td>06 · Choose your model</td><td>7</td><td>3</td></tr><tr><td>07 · When NOT to coach</td><td>6</td><td>4</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My coaching plan</td><td>8</td><td>7</td></tr><tr><td>Glossary</td><td>1</td><td>—</td></tr><tr><td>Closing · commitment</td><td>3</td><td>3</td></tr>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>skip</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>01 · The case for coaching</td><td>9</td><td>5</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Your telling default</td><td>8</td><td>5</td></tr><tr><td>03 · The GROW conversation</td><td>16</td><td>12</td></tr><tr><td>04 · Powerful questions</td><td>9</td><td>6</td></tr><tr><td>05 · Feedforward</td><td>12</td><td>8</td></tr><tr><td>06 · Choose your model</td><td>7</td><td>3</td></tr><tr><td>07 · When NOT to coach</td><td>6</td><td>4</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My coaching plan</td><td>8</td><td>7</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>3</td><td>3</td></tr>
     <tr><th>Total</th><th>93</th><th>60</th></tr></table>
     <h3>Audience</h3><p>People managers, team leads, and HR/talent partners. Best with 8 to 24 people for pair and triad practice.</p>
     <h3>Room setup</h3><p>Projector + presenter device; learners on their own devices via the Welcome-slide QR; movable seating for pairs (GROW) and triads (Feedforward). Virtual: breakouts of 2 for GROW, 3 for Feedforward.</p>
@@ -99,14 +102,12 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device, and set the practice norms: real topics, low stakes, roles not names.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Point your camera at that code before we start. Today you will coach, and you will be coached, on real work topics you choose. Ground rules: keep your practice topics low-stakes, use roles instead of names, and everything you type stays on your screen.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Have this slide projected as people arrive.</li><li>Point at the QR and get phones up before you say anything else.</li><li>State the norms: you'll coach and be coached on REAL but low-stakes topics; roles, never names; nothing typed leaves your screen.</li><li>Confirm by show of hands that most of the room has the site open before advancing.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> 80%+ of the room has the deck open on a device.</p>
     <p class="mini"><b>Watch for:</b> Anyone without a device: pair them with a neighbor now and hand them a printed worksheet for the private exercises.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Everyone in? Then here's the promise of the next hour.&rdquo;</p>
@@ -114,14 +115,13 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: five capabilities, ending in a real coaching conversation with a date and a written opening question.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;You were promoted because you were good at the work, which means you're carrying a habit: when someone brings you a problem, you solve it. Google studied ten thousand of its own managers to find what the best ones do, and the answer wasn't faster solving. By the end of this hour you'll have a coaching structure, a bank of questions that actually work, and one real conversation planned with a date on it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the five objectives briskly, in plain language.</li><li>Land on the fifth: this session ends with a REAL conversation planned, opening question written, date set.</li><li>Name the sources once for credibility: Google's Project Oxygen, McKinsey, the ICF, Whitmore's GROW, Goldsmith, HBR.</li></ol>
     <p class='tagline ask'>Ask</p><p class='script'>&ldquo;Show of hands: who has ever left a one-on-one having done all the talking?&rdquo;</p><p class='mini'><b>Expect:</b></p><ul><li>Most hands, with laughter</li><li>A few proud holdouts</li><li>Someone says 'that's every one-on-one'</li></ul><p class='mini'><b>Respond:</b> Keep it light: 'Good, you're in the right room. By the end of today the goal is that THEY do the talking, and you do the asking.'</p>
-    
     <p class="mini"><b>Validate:</b> Learners can say what the capstone will be (a planned, dated coaching conversation with a written opening question).</p>
     <p class="mini"><b>Watch for:</b> The 'soft skills' eye-roll. The counter is on the slide: this is the number one behavior in the largest manager study ever run.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Seven ideas get us there. Here's the road.&rdquo;</p>
@@ -129,29 +129,23 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>The Chancellor's charge <span class="mins">Full 3 min · Core skip</span></h2>
     <p class="purpose">Tie coaching to the Chancellor's charge: a university built for speed and bold bets needs teams that think without queueing at the manager's door.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;One minute on why this is a university priority and not a management fad. Chancellor Diermeier's vision is one sentence: Vanderbilt will define the great university of the 21st Century and be it. Speed at scale and bold bets both need people who can think past their manager's answer, and coaching is how a team learns to do that. Our motto is 'dare to grow'; a coaching question is that dare handed across the table.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the vision sentence verbatim; give it a beat.</li><li>Walk the three focus cards, one line each, landing on each 'team translation.'</li><li>Point at the flywheel card: coached teams create capacity the university never had to hire. Then move; the evidence for coaching is the next section.</li></ol>
-    
-    
-    
-    
     <p class="mini"><b>Transition:</b> &ldquo;That's the institutional why. Here's the road for the session.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: read the vision sentence, gesture at the three focuses, move on; under a minute.</p>
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each tool as it arrives.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Four moves: why coaching wins, the craft of it, the judgment of when to use it, and your plan to run one this week.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the seven items in one breath each.</li><li>Point out the shape: the case (01-02), the craft (03-05), the judgment (06-07), then the plan.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed; this is orientation.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here; every framework has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the evidence, because 'be a coach' is advice, and data is a reason.&rdquo;</p>
@@ -159,7 +153,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-case.jpg" alt="Slide: 01 · The case for coaching" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-case.jpg" alt="Slide: 01 · The case for coaching" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · The case for coaching <span class="mins">Full 9 min · Core 5</span></h2>
     <p class="purpose">Establish the research case (Project Oxygen, McKinsey) and capture each learner's private baseline coaching ratio for the 30-day measure.</p>
@@ -174,14 +168,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness to lock the core idea before the toolkit starts.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;A manager's answer solves today. A manager's question builds tomorrow.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Let the line animate word by word. Say nothing until it finishes.</li><li>Read it once, slowly, then advance.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; this is pacing.</p>
     <p class="mini"><b>Watch for:</b> The urge to talk over it. Don't.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's why the answer keeps winning anyway.&rdquo;</p>
@@ -189,7 +181,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-default.jpg" alt="Slide: 02 · Your telling default" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-default.jpg" alt="Slide: 02 · Your telling default" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · Your telling default <span class="mins">Full 8 min · Core 5</span></h2>
     <p class="purpose">Name the telling default without shame, give it Goleman's vocabulary, and have each learner catch it in real manager language.</p>
@@ -204,7 +196,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-grow.jpg" alt="Slide: 03 · The GROW conversation" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-grow.jpg" alt="Slide: 03 · The GROW conversation" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · The GROW conversation <span class="mins">Full 16 min · Core 12</span></h2>
     <p class="purpose">Install GROW as the conversation spine, feel it work in the simulator, then run it live in the no-advice pair roleplay: the session's core rep.</p>
@@ -219,7 +211,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-questions.jpg" alt="Slide: 04 · Powerful questions" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-questions.jpg" alt="Slide: 04 · Powerful questions" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>04 · Powerful questions <span class="mins">Full 9 min · Core 6</span></h2>
     <p class="purpose">Install the ICF's three tests (open, clean, theirs) and train the ear to catch advice wearing a question mark.</p>
@@ -234,7 +226,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-feedforward.jpg" alt="Slide: 05 · Feedforward" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-feedforward.jpg" alt="Slide: 05 · Feedforward" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>05 · Feedforward <span class="mins">Full 12 min · Core 8</span></h2>
     <p class="purpose">Run Goldsmith's Feedforward exchange live in triads: the session's highest-energy rep and the tool learners reuse with their teams the same week.</p>
@@ -249,7 +241,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-models.jpg" alt="Slide: 06 · Choose your model" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-models.jpg" alt="Slide: 06 · Choose your model" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>06 · Choose your model <span class="mins">Full 7 min · Core 3</span></h2>
     <p class="purpose">Position CLEAR and OSKAR beside GROW and have each learner choose a structure on purpose, a rehearsal for the capstone.</p>
@@ -264,7 +256,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-when.jpg" alt="Slide: 07 · When NOT to coach" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-when.jpg" alt="Slide: 07 · When NOT to coach" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>07 · When NOT to coach <span class="mins">Full 6 min · Core 4</span></h2>
     <p class="purpose">Install situational judgment (Ibarra &amp; Scoular) so the new coaching habit doesn't overcorrect into coaching fire alarms.</p>
@@ -279,14 +271,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Score the session's knowledge against the objectives before the capstone applies it (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per tool. This isn't a grade; it's a check on what's loaded before you aim it at a real conversation.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone takes it on their own device, all six questions.</li><li>Ask for hands on 5-or-better; celebrate briefly.</li><li>For any question the room visibly missed, do a 30-second reteach from the relevant slide, not a lecture.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Room mode at 5/6 or better. The quiz maps one-to-one onto the objectives, so misses tell you exactly what to reteach.</p>
     <p class="mini"><b>Watch for:</b> Racing. Frame it as a mirror, not a race; the real test is a human on their calendar this week.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the reason we're here. One real person, one model, one opening question, one date.&rdquo;</p>
@@ -294,7 +284,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My coaching plan" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My coaching plan" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · My coaching plan <span class="mins">Full 8 min · Core 7</span></h2>
     <p class="purpose">Convert the session into one dated, planned coaching conversation with a written opening question: the transfer artifact and Level 3 seed.</p>
@@ -309,14 +299,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer; it lives here for after the session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here, flip cards, whenever you need them back. It'll still be here the morning of your conversation.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Flip one card on the projector ('What Else?' is a good pick).</li><li>Tell them it's all here whenever they need the vocabulary back.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; reference material.</p>
     <p class="mini"><b>Watch for:</b> Don't tour all twelve cards; one flip makes the point.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One question left to ask.&rdquo;</p>
@@ -324,7 +312,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 3 min · Core 3</span></h2>
     <p class="purpose">Convert plans into public commitments, capture the Level 1 reaction check, and close the loop on the one next step.</p>
@@ -338,7 +326,7 @@
     <p class="mini core"><b>Core path:</b> Core: keep at full length; the commitment round IS the ending.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>

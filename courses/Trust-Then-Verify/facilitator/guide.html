@@ -38,9 +38,12 @@
   .sec.noimg .sec__shot { display: none; }
   .sec__shot { position: sticky; top: 12px; }
   .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__shot figcaption { font-family: 'Antonio', Impact, sans-serif; text-transform: uppercase; letter-spacing: .06em;
+    font-size: 9px; color: #8C6822; margin-top: 4px; }
   .sec__notes { min-width: 0; }
   @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
-  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; }
+    .sec__shot img { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -86,8 +89,8 @@
 
   <div class="front">
     <h3>Run of show</h3>
-    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>&lt;1</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>01 · The cost of belief</td><td>9</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Know the failure modes</td><td>11</td><td>8</td></tr><tr><td>03 · The Three Reads</td><td>13</td><td>9</td></tr><tr><td>04 · Size the check</td><td>11</td><td>7</td></tr><tr><td>05 · The Verification Lab</td><td>14</td><td>10</td></tr><tr><td>06 · Make it a habit</td><td>9</td><td>6</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My verification card</td><td>6</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>5</td><td>1</td></tr>
-    <tr><th>Total</th><th>93</th><th>60</th></tr></table>
+    <table><tr><th>Screen</th><th>Full (min)</th><th>Core (min)</th></tr><tr><td>Welcome / QR</td><td>3</td><td>2</td></tr><tr><td>Objectives</td><td>2</td><td>1</td></tr><tr><td>The Chancellor's charge</td><td>3</td><td>skip</td></tr><tr><td>Agenda</td><td>1</td><td>skip</td></tr><tr><td>The data rule</td><td>3</td><td>2</td></tr><tr><td>01 · The cost of belief</td><td>9</td><td>6</td></tr><tr><td>Manifesto</td><td>1</td><td>skip</td></tr><tr><td>02 · Know the failure modes</td><td>11</td><td>8</td></tr><tr><td>03 · The Three Reads</td><td>13</td><td>9</td></tr><tr><td>04 · Size the check</td><td>11</td><td>7</td></tr><tr><td>05 · The Verification Lab</td><td>14</td><td>10</td></tr><tr><td>06 · Make it a habit</td><td>9</td><td>6</td></tr><tr><td>Recap quiz</td><td>4</td><td>4</td></tr><tr><td>Capstone · My verification card</td><td>6</td><td>6</td></tr><tr><td>Glossary</td><td>1</td><td>skip</td></tr><tr><td>Closing · commitment</td><td>5</td><td>1</td></tr>
+    <tr><th>Total</th><th>96</th><th>62</th></tr></table>
     <h3>Audience</h3><p>All Vanderbilt staff who use AI output in real work: coordinators, analysts, communicators, managers, anyone who ships AI-assisted text, summaries, or numbers. 8 to 24 works best (the plant-a-failure and ritual swaps run in pairs); scales larger with room votes. Prerequisite: Start Smarter or equivalent comfort with everyday AI tools; the traffic-light data rule from the AI courses is assumed and restated here. Learners who took Answers, Faster will recognize ask-anchor-check as the research special case of this skill.</p>
     <h3>Room setup</h3><p>Projector plus presenter device; learners on their own devices via the Welcome-slide QR; movable seating for pairs. A whiteboard or flip chart helps: the worked example wants live underlining, and the failure-mode boxes fill fast. Virtual: breakouts of 2 for the plant-a-failure and ritual swaps. Set the norm in the first minute: outputs and tasks, never private information about people, and nothing typed is saved or sent.</p>
     <h3>Materials</h3><ul><li>Projector or large display and the facilitator link open (this edition)</li><li>Facilitator laptop with arrow keys or clicker; all notifications off</li><li>Learner devices (BYOD) joining via the welcome-slide QR</li><li>A few printed cheat sheets (cheatsheet.html) for anyone without a device</li><li>Printed verification cards (worksheet.html) as the no-device and projector-failure fallback</li><li>Whiteboard or flip chart with markers for the worked example underlining and the five failure-mode boxes</li><li>One deliberately flawed AI paragraph of your own, printed or on a slide, as a backup exercise if devices fail</li></ul>
@@ -99,14 +102,13 @@
   </div>
 
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device and set the norm that makes real-output material safe: outputs and tasks, never private information about people, and nothing typed leaves the screen.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Point your camera at that code before we start. Today is about the skill that decides whether AI saves you time or quietly costs you more: catching its mistakes before they ship. We'll work on the AI outputs you actually use, so one ground rule for the next ninety minutes: outputs and tasks, never private information about people. And everything you type today stays on your screen; nothing is saved or sent anywhere.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Have this slide projected as people arrive.</li><li>Point at the QR and get phones up before you say anything else.</li><li>Set the norm explicitly and early: outputs and tasks, never private information about people; typed exercises stay on their screens.</li><li>Confirm by show of hands that most of the room has the site open before advancing.</li></ol>
     <p class='tagline ask'>Ask</p><p class='script'>&ldquo;Quick calibration, shout it out: how many of you used AI for real work this week? And how many of you fully checked the last output before you used it?&rdquo;</p><p class='mini'><b>Expect:</b></p><ul><li>Nearly every hand up on the first question</li><li>Most hands down on the second, with some laughter</li><li>One or two proud checkers, usually people who got burned once</li></ul><p class='mini'><b>Respond:</b> Name the gap warmly: 'That gap is the whole session, and it isn't a character flaw; fluent output is built to be believed. By the end you'll have a ninety-second answer to it.'</p>
-    
     <p class="mini"><b>Validate:</b> 80%+ of the room has the deck open on a device; the room can repeat the 'outputs and tasks, never people's private information' norm back to you.</p>
     <p class="mini"><b>Watch for:</b> Anyone bracing for an anti-AI lecture or an AI cheerleading session. The frame that relaxes both: today is a quality-control skill for people who are keeping AI in their work, and the research is unusually practical.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's exactly what you'll walk out able to do.&rdquo;</p>
@@ -114,14 +116,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: five capabilities, ending in one real recurring output carded for verification with a dated first move.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Five things by the end. You'll know how AI errors actually look, because they don't look like errors. You'll run the Three Reads, claim, source, slant, on any output in about ninety seconds. You'll name the five failure modes by their tells. You'll size the check to the stakes, from no check at all up to a human expert. And you'll know the three stop rules: the signs that AI should come off a task entirely. It all lands in one artifact: a verification card for an output you actually use, with a date on it.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the five objectives briskly, in plain language.</li><li>Land on the last one: this session ends with a REAL verification card, one output, one first move, one date.</li><li>Name the sources once for credibility: SHRM's workplace research for the cleanup number, the Stanford AI Index for the incident trend, and the Three Reads as the method.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Learners can say what the capstone will be (one recurring output, one first move, one date).</p>
     <p class="mini"><b>Watch for:</b> Tool questions arriving early ('which AI is most accurate?'). Park them: the session is deliberately tool-agnostic, and the reads work on any model's output, and on human writing too.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Before the plan, one minute on why the university wants exactly this from you.&rdquo;</p>
@@ -129,9 +129,9 @@
     </div>
   </div>
   <div class="sec">
-    
+    <figure class="sec__shot"><img src="img/s-mission.jpg" alt="Slide: The Chancellor's charge" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
-    <h2>The Chancellor's charge <span class="mins">Full 3 min · Core &lt;1</span></h2>
+    <h2>The Chancellor's charge <span class="mins">Full 3 min · Core skip</span></h2>
     <p class="purpose">Anchor the session in the institution's own plan: the one-sentence vision, the three focus areas in verification terms, and where checked work feeds the reputation flywheel.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Chancellor Diermeier's vision for this university is one sentence with no hedge in it: Vanderbilt will define the great university of the 21st Century and be it. The motto has always been the dare, Crescere aude, dare to grow, and daring work travels on facts somebody bothered to check. Reputation is the first word on the flywheel card: it attracts talent, funding, partnerships, and access, and an unverified number in a public report is exactly what burns it. Every output you catch before it ships keeps the university's name worth what it is, which is why the checking discipline you learn today is an all-staff skill.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Read the vision sentence exactly as written, then pause; it lands better without commentary.</li><li>Walk the three focus cards in one breath each, landing each at-your-desk line.</li><li>Close on the flywheel card: reputation is the fuel, and verification sized to the stakes is how what leaves every desk protects it.</li></ol>
@@ -142,14 +142,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each tool as it arrives: cost, taxonomy, method, sizing, practice, habit.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The arc is simple: first what unverified AI actually costs, then the five ways output goes wrong, then the method, the Three Reads. Then the judgment call of sizing the check to the stakes, a lab where you rescue a briefing under time pressure, and finally how the check becomes a habit you and your team keep.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Walk the six items in one breath each.</li><li>Point out the shape: the evidence (01), knowing the enemy (02), the method (03), sizing it (04), practicing it (05), and keeping it alive (06).</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None needed; this is orientation.</p>
     <p class="mini"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the cost, because some of you think checking is paranoia and some of you think AI is unusable, and the data disagrees with both.&rdquo;</p>
@@ -157,7 +155,20 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-cost.jpg" alt="Slide: 01 · The cost of belief" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-datarule.jpg" alt="Slide: The data rule" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
+    <div class="sec__notes">
+    <h2>The data rule <span class="mins">Full 3 min · Core 2</span></h2>
+    <p class="purpose">Land the one rule every AI course in the library shares, on the same card, before any tool opens: green, yellow, red, and the never list.</p>
+    <p class="tagline say">Say</p><p class="script">&ldquo;Before anything goes into an AI tool today, one three-second question: what color is this? Green is public or generic, any approved tool. Yellow is your internal work, approved Vanderbilt tools only, signed in with your VU account. Red is private information about people, and it goes in no AI tool, full stop. This card is the same in every AI course in the library, so it is the one thing you never have to relearn.&rdquo;</p>
+    <p class="tagline">Do</p><ol><li>Read the three-second question off the card: what color is this?</li><li>Walk the light top to bottom in one sentence each: green is public or generic, yellow is internal work in approved Vanderbilt tools on a VU account, red is private information about people and goes in no AI tool.</li><li>Point at the tool ceilings and say them once: ChatGPT EDU to Level 2, Amplify and Copilot to Level 3, children's information in no tool.</li><li>Name the hard case the room will meet first in this course, then move on; the card stays in the deck and in every other AI course they take.</li></ol>
+    <p class="mini"><b>Validate:</b> Anyone in the room can say the three colors and name one thing that never goes in, unprompted.</p>
+    <p class="mini"><b>Watch for:</b> Debate about edge cases. Take one, answer it with 'who is this about', and park the rest for the Go deeper panels; the rule is the point, not the taxonomy.</p>
+    <p class="mini"><b>Transition:</b> &ldquo;Rule in hand. Now the work.&rdquo;</p>
+    <p class="mini core"><b>Core path:</b> Core: read the question and the three colors, point at the never list, go.</p>
+    </div>
+  </div>
+  <div class="sec">
+    <figure class="sec__shot"><img src="img/s-cost.jpg" alt="Slide: 01 · The cost of belief" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>01 · The cost of belief <span class="mins">Full 9 min · Core 6</span></h2>
     <p class="purpose">Establish with guessed-at, missed numbers that unverified AI carries a measured cleanup tax, that errors arrive fluent and confident, and that checking is the trainable skill that keeps the speed.</p>
@@ -172,14 +183,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness to lock the session's core idea before the method arrives.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The most expensive sentence in AI is 'looks right to me.'&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Let the line animate word by word. Say nothing until it finishes.</li><li>Read it once, slowly, then advance.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; this is pacing.</p>
     <p class="mini"><b>Watch for:</b> The urge to talk over it. Don't.</p>
     <p class="mini"><b>Transition:</b> &ldquo;So what does wrong actually look like? It turns out there are five kinds, and each one leaves a fingerprint.&rdquo;</p>
@@ -187,7 +196,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-failures.jpg" alt="Slide: 02 · Know the failure modes" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-failures.jpg" alt="Slide: 02 · Know the failure modes" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>02 · Know the failure modes <span class="mins">Full 11 min · Core 8</span></h2>
     <p class="purpose">Install the five-mode taxonomy (hallucination, staleness, slant, omission, faked math) with a tell for each, so learners can diagnose an error and pick the matching check.</p>
@@ -202,7 +211,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-reads.jpg" alt="Slide: 03 · The Three Reads" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-reads.jpg" alt="Slide: 03 · The Three Reads" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>03 · The Three Reads <span class="mins">Full 13 min · Core 9</span></h2>
     <p class="purpose">Install the session's named method: the claim read (underline every checkable claim), the source read (trace the riskiest to an opened source), and the slant read (assumptions, absences, the opposite case), worked live on one flawed example.</p>
@@ -217,7 +226,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-size.jpg" alt="Slide: 04 · Size the check" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-size.jpg" alt="Slide: 04 · Size the check" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>04 · Size the check <span class="mins">Full 11 min · Core 7</span></h2>
     <p class="purpose">Install the verification budget (no check, claim read, all three reads, human expert), the three stop rules for abandoning AI on a task, and the traffic light as the rule that outranks everything.</p>
@@ -232,7 +241,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-lab.jpg" alt="Slide: 05 · The Verification Lab" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-lab.jpg" alt="Slide: 05 · The Verification Lab" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>05 · The Verification Lab <span class="mins">Full 14 min · Core 10</span></h2>
     <p class="purpose">Give every learner a full felt rep of the method under time pressure: four verification moves on a real briefing, and a two-week outcome that rewards checking discipline rather than AI enthusiasm. The session's deepest practice block.</p>
@@ -247,7 +256,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-habit.jpg" alt="Slide: 06 · Make it a habit" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-habit.jpg" alt="Slide: 06 · Make it a habit" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>06 · Make it a habit <span class="mins">Full 9 min · Core 6</span></h2>
     <p class="purpose">Convert the method into a personal ritual (trigger, 90-second check, miss tally) and a team practice (blame-free miss log, the 'caught one' ritual, slant review as a checklist question), and get every learner a built ritual for their own most-trusted output.</p>
@@ -262,14 +271,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Score the session's knowledge against the five objectives before the capstone applies it (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per big idea. This is the systems check before you write the card that leaves the room with you.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Everyone takes it on their own device, all six questions.</li><li>Ask for hands on 5-or-better; celebrate briefly.</li><li>For any question the room visibly missed, do a 30-second reteach from the relevant slide, not a lecture.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> Room mode at 5/6 or better. The quiz maps onto the objectives, so misses tell you exactly what to reteach.</p>
     <p class="mini"><b>Watch for:</b> Racing. Frame it as the systems check before the card, not a race.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the only part of today that changes anything.&rdquo;</p>
@@ -277,7 +284,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My verification card" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · My verification card" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Capstone · My verification card <span class="mins">Full 6 min · Core 6</span></h2>
     <p class="purpose">Convert the session into one dated commitment: one recurring output, one first move, one named line not to cross, and a dated first verified output. The transfer artifact and the Level 3 seed.</p>
@@ -292,14 +299,12 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer; it lives here for after the session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here as flip cards, including 'automation bias,' for the next time an output has been right so many times that nobody's reading it anymore.&rdquo;</p>
     <p class="tagline">Do</p><ol><li>Flip one card on the projector (Automation Bias is a good pick; it names the force everyone just felt in the lab).</li><li>Tell them it's all here whenever they need the vocabulary back.</li></ol>
-    
-    
     <p class="mini"><b>Validate:</b> None; reference material.</p>
     <p class="mini"><b>Watch for:</b> Don't tour all twelve cards; one flip makes the point.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One output left to verify: the next one.&rdquo;</p>
@@ -307,7 +312,7 @@
     </div>
   </div>
   <div class="sec">
-    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <figure class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" loading="eager" onerror="this.closest('.sec').classList.add('noimg')"><figcaption>What learners see</figcaption></figure>
     <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 5 min · Core 1</span></h2>
     <p class="purpose">Convert cards into spoken commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p>
@@ -321,7 +326,7 @@
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p>
     </div>
   </div>
-  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
+  <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json and the learner edition on screen. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </main>
 </body>
 </html>
