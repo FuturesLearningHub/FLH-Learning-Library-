@@ -1,8 +1,8 @@
 # The Vanderbilt Staff Learning Collection
 
 The Learning on Demand catalog. Live at
-https://me5231979.github.io/Course_Library/ (GitHub Pages, `gh-pages`
-branch — publish with `git branch -f gh-pages main && git push -f origin gh-pages`).
+https://futureslearninghub.github.io/FLH-Learning-Library-/ (GitHub Pages, served
+from the `main` branch root; every push to `main` publishes).
 
 ## Rules
 
@@ -13,6 +13,7 @@ branch — publish with `git branch -f gh-pages main && git push -f origin gh-pa
    one italic word, Inter body, Antonio eyebrows, motion ≤400ms.
 3. **No frameworks.** One HTML file, one CSS file, inline JS only,
    self-hosted fonts, VU lockups authorized-use only.
-4. Sibling repos: me5231979/AI_Classroom, me5231979/Difficult_Conversations.
-   Their footers link back here. When a new course ships, add its card here
-   and a library link in its footer.
+4. This repository, FuturesLearningHub/FLH-Learning-Library-, is the home of
+   every course; the older standalone copies on the me5231979 account are
+   retired. When a new course ships, add its card here and a library link in
+   its footer.

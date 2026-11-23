@@ -7,10 +7,10 @@ launch page gets a small SCORM 1.2 shim (initialize -> completed -> finish)
 that stays inert outside an LMS."""
 import re, os, glob, html, shutil, zipfile, posixpath, unicodedata
 
-ROOT = '/home/user/Course_Library'
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 OUT = os.path.join(ROOT, 'scorm')
-STAGE = '/tmp/claude-0/-home-user/06c38174-c772-502e-9c0c-38998ade2b5b/scratchpad/scorm_stage'
-SITE = 'https://me5231979.github.io/Course_Library/'
+STAGE = os.path.join(os.environ.get('TMPDIR', '/tmp'), 'scorm_stage')
+SITE = 'https://futureslearninghub.github.io/FLH-Learning-Library-/'
 os.chdir(ROOT)
 
 SHIM = """<script>

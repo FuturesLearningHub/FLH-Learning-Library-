@@ -6,10 +6,10 @@ setting the three team guardrails, and running the AI-enabled work audit.
 Part of the AI-enabled Education Series and the Manager Voyage.
 
 Part of the Vanderbilt Learning Series. Catalog:
-[Course Library](https://me5231979.github.io/Course_Library/)
+[Course Library](https://futureslearninghub.github.io/FLH-Learning-Library-/)
 
-- **Learner edition:** https://me5231979.github.io/Course_Library/leading-ai-adoption/
-- **Facilitator edition:** https://me5231979.github.io/Course_Library/leading-ai-adoption/facilitator/
+- **Learner edition:** https://futureslearninghub.github.io/FLH-Learning-Library-/leading-ai-adoption/
+- **Facilitator edition:** https://futureslearninghub.github.io/FLH-Learning-Library-/leading-ai-adoption/facilitator/
 
 ## What it teaches (3 sections)
 

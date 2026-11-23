@@ -24,7 +24,7 @@
      No timed redirect: an automatic bounce between 1 and 20 seconds fails
      WCAG 2.2.1, and it hides the fact that the URL was wrong. */
   (function () {
-    var REPO = 'Course_Library';
+    var REPO = 'FLH-Learning-Library-';
     var seg = ["courses", "AI-Across-Your-Week"];
     var base = location.pathname.indexOf('/' + REPO + '/') === 0 ? '/' + REPO + '/' : '/';
     var home = base + (seg.length ? seg.join('/') + '/' : '');

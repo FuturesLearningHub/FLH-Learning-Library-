@@ -775,7 +775,7 @@ def build(c):
   /* Printed syllabi show the course address; resolve it from wherever this site is served
      so the printout is correct on any domain. */
   document.querySelectorAll('a[href]').forEach(function (a) {{
-    if (/^(me5231979\.github\.io|https?:\/\/)/.test(a.textContent.trim())) {{
+    if (/^(futureslearninghub\.github\.io|me5231979\.github\.io|https?:\/\/)/.test(a.textContent.trim())) {{
       a.textContent = a.href.replace(/^https?:\/\//, '');
     }}
   }});

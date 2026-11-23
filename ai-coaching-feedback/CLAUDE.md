@@ -1,9 +1,9 @@
 # Feedback, Ready — Vanderbilt Learning Series
 
 Short-format course (Classroom 40 / Core 30 / self-paced ~15). Live at
-https://me5231979.github.io/Course_Library/ai-coaching-feedback/ (GitHub Pages, `gh-pages`
+https://futureslearninghub.github.io/FLH-Learning-Library-/ai-coaching-feedback/ (GitHub Pages, `gh-pages`
 branch). Part of the AI-enabled Education Series and Manager Voyage; catalog at
-me5231979/Course_Library. Same engine and standing principles as the other
+FuturesLearningHub/FLH-Learning-Library-. Same engine and standing principles as the other
 Learning Series courses (see the Workflow repo's CLAUDE.md for the family).
 
 ## Course-specific principles (do not regress)

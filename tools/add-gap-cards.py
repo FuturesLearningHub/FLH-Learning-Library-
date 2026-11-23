@@ -4,7 +4,7 @@ import json, re, os, html as H
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = json.load(open('/tmp/claude-0/-home-user-FLH-Portfolio-and-Imact-/8c92505e-dece-5d8d-ad77-0879e809df13/scratchpad/courses.json'))
-BASE = "https://me5231979.github.io/Course_Library/courses"
+BASE = "https://futureslearninghub.github.io/FLH-Learning-Library-/courses"
 
 CLOCK = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"'
          ' aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>')

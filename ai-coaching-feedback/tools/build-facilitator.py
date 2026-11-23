@@ -10,7 +10,7 @@ Run after editing index.html or notes.json:
 import json, re, html, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LEARNER_URL = "https://me5231979.github.io/Course_Library/ai-coaching-feedback/"
+LEARNER_URL = "https://futureslearninghub.github.io/FLH-Learning-Library-/ai-coaching-feedback/"
 
 s = open(os.path.join(ROOT, 'index.html')).read()
 notes = json.load(open(os.path.join(ROOT, 'facilitator', 'notes.json')))
@@ -238,7 +238,7 @@ s = s.replace('</body>', FAC_JS + '</body>')
 
 # ---- 7. footer marker ----
 s = s.replace('Feedback, Ready · A Vanderbilt learning experience',
-              'Feedback, Ready · Facilitator Edition · learner link: <a href="' + LEARNER_URL + '" style="color:rgba(255,255,255,.7);text-decoration:underline">me5231979.github.io/Course_Library/ai-coaching-feedback</a>')
+              'Feedback, Ready · Facilitator Edition · learner link: <a href="' + LEARNER_URL + '" style="color:rgba(255,255,255,.7);text-decoration:underline">futureslearninghub.github.io/FLH-Learning-Library-/ai-coaching-feedback</a>')
 
 out = os.path.join(ROOT, 'facilitator', 'index.html')
 open(out, 'w').write(s)

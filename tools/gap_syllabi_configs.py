@@ -1,6 +1,6 @@
 """Syllabus configs for the ten AI-enabled Education Series gap courses (spliced into build-syllabi.py)."""
 
-B = "https://me5231979.github.io/Course_Library/courses"
+B = "https://futureslearninghub.github.io/FLH-Learning-Library-/courses"
 
 def _c(slug, repo, title, subtitle, audience, core, skills, description,
        objectives, topics, activities, outcomes, frameworks, takelabel, voyage=False):

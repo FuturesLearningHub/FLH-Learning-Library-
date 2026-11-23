@@ -7,10 +7,10 @@ succession profiles) and every verdict about a person stays human. Part of
 the AI-enabled Education Series and the Manager Voyage.
 
 Part of the Vanderbilt Learning Series. Catalog:
-[Course Library](https://me5231979.github.io/Course_Library/)
+[Course Library](https://futureslearninghub.github.io/FLH-Learning-Library-/)
 
-- **Learner edition:** https://me5231979.github.io/Course_Library/ai-talent-decisions/
-- **Facilitator edition:** https://me5231979.github.io/Course_Library/ai-talent-decisions/facilitator/
+- **Learner edition:** https://futureslearninghub.github.io/FLH-Learning-Library-/ai-talent-decisions/
+- **Facilitator edition:** https://futureslearninghub.github.io/FLH-Learning-Library-/ai-talent-decisions/facilitator/
 
 ## What it teaches (3 sections)
 

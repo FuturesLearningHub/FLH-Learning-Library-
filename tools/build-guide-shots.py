@@ -18,7 +18,7 @@ from playwright.sync_api import sync_playwright
 PORT = 8894
 CHROME = os.environ.get('PW_CHROME') or next(iter(glob.glob('/opt/pw-browsers/chromium-*/chrome-linux*/chrome')), None)
 W, H = 1440, 900
-LIVE = 'https://me5231979.github.io/Course_Library/'   # the welcome QR encodes the published learner edition
+LIVE = 'https://futureslearninghub.github.io/FLH-Learning-Library-/'   # the welcome QR encodes the published learner edition
 
 QR = """(url) => { const box = document.getElementById('qrBox'); if (!box || typeof qrcode !== 'function') return;
   const q = qrcode(0, 'M'); q.addData(url); q.make(); box.innerHTML = q.createSvgTag({ scalable: true, margin: 2 });
@@ -27,7 +27,8 @@ QR = """(url) => { const box = document.getElementById('qrBox'); if (!box || typ
 DECKS = sorted(glob.glob('courses/*/facilitator/notes.json') + glob.glob('*/facilitator/notes.json'))
 LEARN = [('learn/classroom', 'learn/classroom/facilitator')] + \
         [(d[:-len('/facilitator')], d) for d in sorted(glob.glob('learn/*-class/facilitator'))]
-only = set(a.rstrip('/') for a in sys.argv[1:])
+only = set(a.rstrip('/') for a in sys.argv[1:] if a != '--qr-only')
+QR_ONLY = '--qr-only' in sys.argv   # recapture only the screens that carry the welcome QR
 
 REVEAL = """() => { document.querySelectorAll('[data-reveal]').forEach(e => e.classList.add('in'));
   document.querySelectorAll('.reveal').forEach(e => e.classList.add('in'));
@@ -60,6 +61,7 @@ def main():
                 course = nf[:-len('/facilitator/notes.json')]
                 if only and course not in only: continue
                 ids = [s['id'] for s in json.load(open(nf, encoding='utf-8'))['sections']]
+                if QR_ONLY: ids = [i for i in ids if i == 's-welcome']
                 out = f'{course}/facilitator/img'; os.makedirs(out, exist_ok=True)
                 learner = open(f'{course}/index.html', encoding='utf-8').read()
                 for edition in ('index.html', 'facilitator/index.html'):
@@ -85,6 +87,7 @@ def main():
                 notes = notes_js(f'{fac}/index.html')
                 out = f'{fac}/img'; os.makedirs(out, exist_ok=True)
                 keys = list(notes.keys())
+                if QR_ONLY: keys = [k for k in keys if k == 'home']
                 for edition, want in ((f'{classroom}/index.html', [k for k in keys if k not in ('prep', 'run')]),
                                       (f'{fac}/index.html', [k for k in keys if k in ('prep', 'run')])):
                     if not want: continue
