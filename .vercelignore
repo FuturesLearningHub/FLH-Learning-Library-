@@ -3,7 +3,7 @@
 # needed at runtime; excluding it keeps the runbook source and the
 # generators out of the deployed site.
 tools/
-facilitator/notes.json
+**/facilitator/notes.json
 .claude/
 .agents/
 .github/
